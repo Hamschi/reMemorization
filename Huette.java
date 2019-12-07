@@ -10,14 +10,10 @@ public class Huette extends World
     
     public Huette(Emrael emrael)
     {    
-
-        super(600, 400, 1);
-        
+        super(400, 400, 1);
         setBackground(huetteBoden);
         //backgroundMusic.playLoop();
         prepare(emrael);
-
-
     }
     
     public Lebensleiste getLebensleiste()
@@ -31,4 +27,6 @@ public class Huette extends World
         addObject(emrael, 300, 370);
         addObject(alterEmrael.getLebensleiste(), 100, 40);
     }
+    
+
 }

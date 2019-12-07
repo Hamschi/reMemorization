@@ -30,6 +30,7 @@ public class Wald1 extends Wald
         {
             addObject(new NachWald2(), (570), 30+(20*i));
         }
+        
     }
 
 }
