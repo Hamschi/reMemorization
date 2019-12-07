@@ -1,7 +1,6 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-
-public class Baum extends Actor
+public class Baum extends Hindernis
 {
     private GreenfootImage baum = new GreenfootImage("Baum.png");
     public Baum()
@@ -11,6 +10,6 @@ public class Baum extends Actor
     
     public void act() 
     {
-        // Add your action code here.
+
     }    
 }

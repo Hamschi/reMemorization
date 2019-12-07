@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Banditenteil here.
+ * Write a description of class Haus2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Banditenteil extends Elshin
+public class Haus2 extends Haeuser
 {
 
     /**
-     * Constructor for objects of class Banditenteil.
+     * Constructor for objects of class Haus2.
      * 
      */
-    public Banditenteil()
+    public Haus2()
     {
     }
 }

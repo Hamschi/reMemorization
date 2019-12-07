@@ -4,7 +4,6 @@ public class Wald extends World
 {
     private GreenfootSound backgroundMusic = new GreenfootSound("Wald.mp3");
     
-    Lebensleiste lebensleiste = new Lebensleiste();
     
     public Wald()
     {    
@@ -14,19 +13,12 @@ public class Wald extends World
 
     }
     
-    public Lebensleiste getLebensleiste()
-    {
-        return lebensleiste;
-    }
-    
     private void prepare()
     {
         Emrael emrael = new Emrael();
-        addObject(emrael, 317, 210);
-        addObject(lebensleiste, 100, 40);
+        addObject(emrael, 433, 239);
+        addObject(emrael.getLebensleiste(), 100, 40);
         //Wald wald = new Wald();
     }
-    
-
-    
+   
 }

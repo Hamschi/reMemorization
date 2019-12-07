@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Banditenteil here.
+ * Write a description of class ElshinZentrum here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Banditenteil extends Elshin
+public class ElshinZentrum extends Elshin
 {
 
     /**
-     * Constructor for objects of class Banditenteil.
+     * Constructor for objects of class ElshinZentrum.
      * 
      */
-    public Banditenteil()
+    public ElshinZentrum()
     {
     }
 }
