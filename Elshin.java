@@ -1,23 +1,25 @@
 import greenfoot.*;  
-
-public class Elshin extends World
-{
-    private GreenfootSound backgroundMusic = new GreenfootSound("Elshin.mp3");
-    Lebensleiste lebensleiste = new Lebensleiste();
     
-    public Elshin()
-    {    
-        super(600, 400, 1);
-        //backgroundMusic.playLoop();
-        prepare();
-    }
-    
-    public Lebensleiste getLebensleiste()
+    public class Elshin extends World
     {
-        return lebensleiste;
-    }
-    
-    private void prepare()
-    {
-    }
+        private GreenfootSound backgroundMusic = new GreenfootSound("Elshin.mp3");
+        Lebensleiste lebensleiste = new Lebensleiste();
+        
+        public Elshin()
+        {    
+            super(600, 400, 1);
+            //backgroundMusic.playLoop();
+            prepare();
+        }
+        
+        public Lebensleiste getLebensleiste()
+        {
+            return lebensleiste;
+        }
+        
+        private void prepare()
+        {
+        Emrael emrael = new Emrael();
+        addObject(emrael, 250, 150);
+        }
 }

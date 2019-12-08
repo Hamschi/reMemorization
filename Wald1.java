@@ -31,6 +31,21 @@ public class Wald1 extends Wald
             addObject(new NachWald2(), (570), 30+(20*i));
         }
         
+        for (int i = 0; i<5; i++)
+        {
+            addObject(new Unsichtbar(), 130+(20*i), 200);
+        }
+        
+        for (int i = 0; i<8; i++)
+        {
+            addObject(new Unsichtbar(), 130+(20*i), 157);
+        }
+        Unsichtbar unsichtbar = new Unsichtbar();
+        addObject(unsichtbar, 130, 180);
+        Unsichtbar unsichtbar2 = new Unsichtbar();
+        addObject(unsichtbar2, 285, 180);
+        Unsichtbar unsichtbar3 = new Unsichtbar();
+        addObject(unsichtbar3, 285, 200);
     }
 
 }

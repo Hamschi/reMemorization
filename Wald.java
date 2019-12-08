@@ -18,7 +18,6 @@ public class Wald extends World
         Emrael emrael = new Emrael();
         addObject(emrael, 433, 239);
         addObject(emrael.getLebensleiste(), 100, 40);
-        //Wald wald = new Wald();
     }
    
 }
