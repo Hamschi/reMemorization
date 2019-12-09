@@ -2,11 +2,14 @@ import greenfoot.*;
 
 public class NachWald1 extends Portale
 {
-
-    public void act() {
-        if (isTouching(Emrael.class))
-            Greenfoot.setWorld(new Wald1());
+    NachWald1() { //optional
+        from = getWorld();
+        to = new Wald1();
     }
-
-
+    
+    NachWald1(World from, World to) {
+        setImage(new GreenfootImage("Fußmatte.png"));
+        this.from = from;
+        this.to = to;
+    }
 }

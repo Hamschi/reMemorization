@@ -3,15 +3,9 @@ import java.util.List;
 
 public class ZurHuette extends Portale
 {
-
-    public void act() 
-    {
-        if (isTouching(Emrael.class))
-        {
-            List<Emrael> emraels = getWorld().getObjects(Emrael.class);
-            Greenfoot.setWorld(new Huette(emraels.get(0)));
-        }        
+    ZurHuette(World from) {
+        this.from = from;
+        List<Emrael> emraels = from.getObjects(Emrael.class);
+        this.to = new Huette(emraels.get(0), from);
     }
-
-
 }
