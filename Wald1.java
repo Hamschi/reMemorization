@@ -13,7 +13,7 @@ public class Wald1 extends Wald
     {
         Hutte hutte = new Hutte();
         addObject(hutte, 210, 140);
-        ZurHuette zurHuette = new ZurHuette();
+        ZurHuette zurHuette = new ZurHuette(this);
         addObject(zurHuette, 246, 179);
         for (int i = 0; i<10; i++)
         {
