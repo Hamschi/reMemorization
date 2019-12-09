@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class InsBanditenteil extends Portale
 {
@@ -11,3 +11,5 @@ public class InsBanditenteil extends Portale
 
 
 }
+
+//582 292 
