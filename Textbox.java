@@ -23,6 +23,7 @@ public class Textbox extends Actor
         setImage(new GreenfootImage(bildDatei));
         GreenfootImage neuerText = new GreenfootImage(s, schriftgroesse, farbe, null);
         getImage().drawImage(neuerText, startX, startY);
+        Greenfoot.delay(20); // damit 1 Tastendruck nicht als mehrere interpretiert werden kann
     }
     
 }
