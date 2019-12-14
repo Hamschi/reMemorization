@@ -5,9 +5,14 @@ public class Wald2 extends Wald
     Portale[] nachWald1Array = new NachWald1[20];
     Portale[] nachWald3Array = new NachWald3[20];
     Portale[] nachWald4Array = new NachWald4[20];
+    Emrael emrael;
+    Wald1 wald1;
     
-    public Wald2()
-    {    
+    public Wald2(Emrael em, Wald1 w1)
+    {   emrael = new Emrael(em);
+        addObject(emrael, em.getXNachPortal(), em.getYNachPortal());
+        addObject(em.getLebensleiste(), 100, 40);
+        wald1 = w1;
         prepare();
     }
     
@@ -31,7 +36,7 @@ public class Wald2 extends Wald
         
         for (int i = 0; i<20; i++)
         {
-            addObject(new NachWald1(), (30), 30+(20*i));
+            addObject(new NachWald1(this, wald1), (30), 30+(20*i));
         }
         for (int i = 0; i<7; i++)
         {

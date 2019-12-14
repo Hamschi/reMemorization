@@ -34,7 +34,7 @@ public class Wald4 extends Wald
         
         for (int i = 0; i<7; i++)
         {
-            addObject(new NachWald2(), 61+(20*i), 40);
+            //addObject(new NachWald2(), 61+(20*i), 40);
         }
         
         for (int i = 0; i<30; i++)

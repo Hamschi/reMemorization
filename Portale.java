@@ -1,4 +1,5 @@
 import greenfoot.*;  
+import java.util.List;
 
 
 public class Portale extends Actor
@@ -19,9 +20,20 @@ public class Portale extends Actor
         if (isTouching(Emrael.class)) {
             if (to != null) {
                 Greenfoot.setWorld(to);
+                waldUebergang();
             } else {
                 System.out.println("to ist null");
             }
+        }
+    }
+    
+    private void waldUebergang() {
+        if (to.getClass().isInstance(Wald.class) && from.getClass().isInstance(Wald.class)) {
+            List<Emrael> emraels = from.getObjects(Emrael.class);
+            Emrael emraelAlt = emraels.get(0);
+            List<Emrael> emraelsTo = to.getObjects(Emrael.class);
+            Emrael emraelNeu = emraelsTo.get(0);
+            emraelNeu.setLocation(emraelAlt.getXNachPortal(), emraelNeu.getYNachPortal());
         }
     }
     
