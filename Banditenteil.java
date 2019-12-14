@@ -4,6 +4,8 @@ public class Banditenteil extends Elshin
 {
     public Banditenteil()
     {
+        Kugel kugel = new Kugel();
+        addObject(kugel, 500, 196);
         for (int i = 0; i<14; i++)
         {
             addObject(new Mauer(), 586, 40+(26*i));
@@ -15,5 +17,9 @@ public class Banditenteil extends Elshin
             addObject(new Mauer(), (14+(26*i)), 389);
         }
         
+        for (int i = 0; i<5; i++)
+        {
+            addObject(new Mauer(), 405, 40+(26*i));   
+        }
     }
 }
