@@ -2,7 +2,9 @@ import greenfoot.*;
 
 public class Wald1 extends Wald
 {
-
+    Emrael emrael;
+    Textbox textbox;
+    
     public Wald1()
     {    
         prepare();
@@ -11,6 +13,10 @@ public class Wald1 extends Wald
     
     private void prepare()
     {
+        emrael = new Emrael();
+        addObject(emrael, 433, 239);
+        addObject(emrael.getLebensleiste(), 100, 40);
+        
         Hutte hutte = new Hutte();
         addObject(hutte, 210, 140);
         ZurHuette zurHuette = new ZurHuette(this);
@@ -26,9 +32,10 @@ public class Wald1 extends Wald
             addObject(new Baum(), (30), 101+(71*i));
         } 
         
+        Wald2 wald2 = new Wald2(emrael, this);
         for (int i = 0; i<20; i++)
         {
-            addObject(new NachWald2(), (570), 30+(20*i));
+            addObject(new NachWald2(this, wald2), (570), 30+(20*i));
         }
         
         for (int i = 0; i<5; i++)
@@ -46,6 +53,20 @@ public class Wald1 extends Wald
         addObject(unsichtbar2, 285, 180);
         Unsichtbar unsichtbar3 = new Unsichtbar();
         addObject(unsichtbar3, 285, 200);
+        
+        starteSkripte();
+    }
+    
+    public void starteSkripte() {
+         switch(emrael.phase) {
+         case Wald1Einfuehrung:
+            skriptWald1Einleitung();
+         }
+    }
+    
+    private void skriptWald1Einleitung() {
+        textbox = new Wald1Einleitung(emrael);
+        addObject(textbox, 300, 350);
     }
 
 }

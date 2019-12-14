@@ -32,7 +32,7 @@ public class Wald3 extends Wald
         
         for (int i = 0; i<30; i++)
         {
-            addObject(new NachWald2(), (30+(20*i)), 450);
+            //addObject(new NachWald2(), (30+(20*i)), 450);
         }
     }
 }

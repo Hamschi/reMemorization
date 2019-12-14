@@ -3,9 +3,14 @@ import greenfoot.*;
 public class ErsterHuettenbesuch extends Textbox
 {
     private int gespraechsteil;
-    public ErsterHuettenbesuch() {
+    private boolean fertig;
+    private Emrael emrael;
+    public ErsterHuettenbesuch(Emrael em) {
         drawText("Emrael", "Hallo, ist hier jemand?");
         gespraechsteil = 1;
+        fertig = false;
+        emrael = em;
+        emrael.setBewegungBlockiert(true);
     }
 
     public void act() 
@@ -95,7 +100,17 @@ public class ErsterHuettenbesuch extends Textbox
             case 21:
                 drawText("Pizaron", "Das, was du aktuell anhast, sieht schon ziemlich \nabgeranzt aus. Folge mir und nehm dein Schwert mit.");
                 gespraechsteil++;
+                break;
+            case 22:
+                loescheTextbox();
+                fertig = true;
+                emrael.setBewegungBlockiert(false);
             }
+        }
+        if(Greenfoot.isKeyDown("enter")) {
+            loescheTextbox();
+            fertig = true;
+            emrael.setBewegungBlockiert(false);
         }
     }    
 }
