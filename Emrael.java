@@ -80,16 +80,19 @@ public class Emrael extends Actor
    }
    
    public int getXNachPortal() {
-       if (getX() < 20 || getX() > 580) {
-           return 600 - getX();
-        }
+       if (getX() < 60)
+           return 540;
+       if  (getX() > 540)
+           return 60;
        return getX();
     }
+    
    public int getYNachPortal() {
-       if (getY() < 20 || getY() < 380) {
-           return 400 - getY();
-        }
-        return getY();
+       if (getY() < 60)
+           return 340;
+       if (getY() > 340)
+           return 60;
+       return getY();
     }
 
     public enum Phase {
