@@ -19,8 +19,8 @@ public class Portale extends Actor
     public void act() {
         if (isTouching(Emrael.class)) {
             if (to != null) {
-                Greenfoot.setWorld(to);
                 waldUebergang();
+                Greenfoot.setWorld(to);
             } else {
                 System.out.println("to ist null");
             }
@@ -28,12 +28,12 @@ public class Portale extends Actor
     }
     
     private void waldUebergang() {
-        if (to.getClass().isInstance(Wald.class) && from.getClass().isInstance(Wald.class)) {
+        if (to instanceof Wald && from instanceof Wald) {
             List<Emrael> emraels = from.getObjects(Emrael.class);
             Emrael emraelAlt = emraels.get(0);
             List<Emrael> emraelsTo = to.getObjects(Emrael.class);
             Emrael emraelNeu = emraelsTo.get(0);
-            emraelNeu.setLocation(emraelAlt.getXNachPortal(), emraelNeu.getYNachPortal());
+            emraelNeu.setLocation(emraelAlt.getXNachPortal(), emraelAlt.getYNachPortal());
         }
     }
     

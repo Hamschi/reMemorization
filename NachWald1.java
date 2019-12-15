@@ -1,4 +1,4 @@
-import greenfoot.*;  
+import greenfoot.*; 
 
 public class NachWald1 extends Portale
 {
@@ -16,5 +16,10 @@ public class NachWald1 extends Portale
     NachWald1(World from, World to) {
         this.from = from;
         this.to = to;
+    }
+    
+    public void act() {
+        ((Wald1)to).setzePortalNachWald2();
+        super.act();
     }
 }

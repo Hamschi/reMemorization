@@ -1,4 +1,5 @@
 import greenfoot.*;  
+import java.util.List; 
 
 public class Wald1 extends Wald
 {
@@ -32,12 +33,6 @@ public class Wald1 extends Wald
             addObject(new Baum(), (30), 101+(71*i));
         } 
         
-        Wald2 wald2 = new Wald2(emrael, this);
-        for (int i = 0; i<20; i++)
-        {
-            addObject(new NachWald2(this, wald2), (570), 30+(20*i));
-        }
-        
         for (int i = 0; i<5; i++)
         {
             addObject(new Unsichtbar(), 130+(20*i), 200);
@@ -62,6 +57,15 @@ public class Wald1 extends Wald
          case Wald1Einfuehrung:
             skriptWald1Einleitung();
          }
+    }
+    
+    public void setzePortalNachWald2() {
+        if (getObjects(NachWald2.class).size() == 0) {
+            Wald2 wald2 = new Wald2(emrael, this);
+            for (int i = 0; i<20; i++) {
+                addObject(new NachWald2(this, wald2), (570), 30+(20*i));
+            }
+        }
     }
     
     private void skriptWald1Einleitung() {

@@ -102,15 +102,18 @@ public class ErsterHuettenbesuch extends Textbox
                 gespraechsteil++;
                 break;
             case 22:
-                loescheTextbox();
-                fertig = true;
-                emrael.setBewegungBlockiert(false);
+                ende();
             }
         }
         if(Greenfoot.isKeyDown("enter")) {
-            loescheTextbox();
-            fertig = true;
-            emrael.setBewegungBlockiert(false);
+            ende();
         }
     }    
+    
+    private void ende() {
+        loescheTextbox();
+        fertig = true;
+        emrael.setBewegungBlockiert(false);
+        emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
+        }
 }
