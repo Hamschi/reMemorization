@@ -21,8 +21,6 @@ public class Taverne extends Haeuser
         addObject(fussmatte, 300, 383);
         Barkeeper barkeeper = new Barkeeper();
         addObject(barkeeper, 289, 16);
-        Emrael emrael = new Emrael();
-        addObject(emrael, 250, 150);
         for (int i = 0; i<3; i++)
         {
             addObject(new Hocker(), 240+(50*i), 104);

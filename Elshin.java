@@ -20,6 +20,7 @@ import greenfoot.*;
         private void prepare()
         {
         Emrael emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
         addObject(emrael, 250, 150);
         }
 }

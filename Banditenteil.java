@@ -1,7 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class Banditenteil extends Elshin
 {
+    
     public Banditenteil()
     {
         Kugel kugel = new Kugel();
@@ -20,6 +21,7 @@ public class Banditenteil extends Elshin
         for (int i = 0; i<5; i++)
         {
             addObject(new Mauer(), 405, 40+(26*i));   
+            addObject(new Mauer(), 405, 274+(26*i));
         }
     }
 }

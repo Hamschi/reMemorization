@@ -1,19 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Botan here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+    
 public class Botan extends Boss
 {
-    /**
-     * Act - do whatever the Botan wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private GreenfootImage haus = new GreenfootImage("botan.png");
+    
+    public Botan()
+    {        
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth() + 50, image.getHeight() + 50);
+        setImage(image);
+    }
+    
     public void act() 
     {
-        // Add your action code here.
+
     }    
 }

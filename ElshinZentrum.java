@@ -11,10 +11,14 @@ public class ElshinZentrum extends Elshin
     {
         Haus haus1 = new Haus();
         addObject(haus1, 127, 103);
+        Bewohner1 bewohner1 = new Bewohner1();
+        addObject(bewohner1, 222, 44);
         InHaus1 inHaus1 = new InHaus1();
         addObject(inHaus1, 128, 141);
         Haus haus2 = new Haus();
         addObject(haus2, 470, 103);
+        InHaus2 inHaus2 = new InHaus2();
+        addObject(inHaus2, 472, 141);
         Tawerner tawerner = new Tawerner();
         addObject(tawerner, 310, 248);
         InDieTaverne inDieTaverne = new InDieTaverne();
@@ -34,7 +38,6 @@ public class ElshinZentrum extends Elshin
         for (int i = 0; i<8; i++)
         {
             addObject(new Unsichtbar(), (322+(15*i)), 310);
-            addObject(new Unsichtbar(), (322+(8*i)), 294);
             addObject(new Unsichtbar(), (218+(23*i)), 271);   
         }
         

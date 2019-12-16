@@ -77,6 +77,9 @@ public class Emrael extends Actor
         if (isTouching(Hindernis.class)) {
             setLocation(lastX, lastY);
         }   
+        if (isTouching(NPC.class)) {
+            setLocation(lastX, lastY);
+        }   
    }
    
    public int getXNachPortal() {
