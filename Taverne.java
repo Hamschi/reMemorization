@@ -21,6 +21,7 @@ public class Taverne extends Haeuser
         addObject(fussmatte, 300, 383);
         Barkeeper barkeeper = new Barkeeper();
         addObject(barkeeper, 289, 16);
+        addObject(new Unsichtbar(), 388, 16); 
         for (int i = 0; i<3; i++)
         {
             addObject(new Hocker(), 240+(50*i), 104);
@@ -37,6 +38,16 @@ public class Taverne extends Haeuser
         for (int i = 0; i<5; i++)
         {
             addObject(new InsZentrumElshin(), (300+(7*i)), 380);
+            addObject(new Unsichtbar(), (48+(25*i)), 116);
+            addObject(new Unsichtbar(), (48+(25*i)), 164);
+            addObject(new Unsichtbar(), (447+(25*i)), 116);
+            addObject(new Unsichtbar(), (447+(25*i)), 164);
+            addObject(new Unsichtbar(), (48+(25*i)), 266);
+            addObject(new Unsichtbar(), (447+(25*i)), 266);
+            addObject(new Unsichtbar(), (48+(25*i)), 314);
+            addObject(new Unsichtbar(), (447+(25*i)), 314);
+            addObject(new Unsichtbar(), (228+(40*i)), 76);
+            addObject(new Unsichtbar(), (228+(40*i)), 44);       
         }
     }
 }

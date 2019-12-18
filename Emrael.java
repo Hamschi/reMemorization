@@ -74,12 +74,19 @@ public class Emrael extends Actor
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s"))
             setLocation(getX(), getY()+3);
                
-        if (isTouching(Hindernis.class)) {
+        if (isTouching(Hindernis.class)) 
+        {
             setLocation(lastX, lastY);
         }   
-        if (isTouching(NPC.class)) {
+        
+        if (isTouching(NPC.class)) 
+        {
             setLocation(lastX, lastY);
         }   
+        if (getY()>384 || getY()<16 || getX()>583 || getX()<17)
+        {
+            setLocation(lastX, lastY);
+        }
    }
    
    public int getXNachPortal() {
