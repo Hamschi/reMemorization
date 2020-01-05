@@ -14,7 +14,7 @@ public class Wald2 extends Wald
     public Wald2(Emrael em, Wald1 w1)
     {   emrael = new Emrael(em);
         addObject(emrael, em.getXNachPortal(), em.getYNachPortal());
-        addObject(em.getLebensleiste(), 100, 40);
+        emrael.addLebensleiste();
         wald1 = w1;
         prepare();
     }
@@ -22,7 +22,7 @@ public class Wald2 extends Wald
     public Wald2() {
         emrael = new Emrael();
         addObject(emrael, 80, 200);
-        addObject(emrael.getLebensleiste(), 100, 40);
+        emrael.addLebensleiste();
         emrael.setBewegungBlockiert(false);
         wald1 = new Wald1();
         prepare();
