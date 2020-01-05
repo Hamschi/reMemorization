@@ -13,11 +13,19 @@ public class Lebensleiste extends Actor
     {
         update();
     }
+    
+    public Lebensleiste(int lebenspunkte) {
+        leben = lebenspunkte;
+    }
+    
+    public int getLeben() {
+        return leben;
+    }
 
     public void act() 
     {
         update();
-    }    
+    }
     
     public void update()
     {

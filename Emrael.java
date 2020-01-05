@@ -25,12 +25,13 @@ public class Emrael extends Actor
         letzterAngriffStart = 0;
     }
     
-    public void prepareWorld() {
-        getWorld().setPaintOrder(Lebensleiste.class, Emrael.class);
-    }
-    
     public void setBild(String bild) {
         setImage(bild);
+    }
+    
+    public void addLebensleiste() {
+        getWorld().addObject(lebensleiste, 100, 40);
+        getWorld().setPaintOrder(Lebensleiste.class);
     }
     
     public Lebensleiste getLebensleiste() {
@@ -38,7 +39,7 @@ public class Emrael extends Actor
     }
     
     public Emrael(Emrael alterEmrael) {
-        lebensleiste = alterEmrael.getLebensleiste();
+        lebensleiste = new Lebensleiste(alterEmrael.getLebensleiste().getLeben());
         phase = alterEmrael.phase;
         letzterAngriffStart = 0;
     }
