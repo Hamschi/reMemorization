@@ -5,9 +5,10 @@ import greenfoot.*;
 public class Lebensleiste extends Actor
 {
     int leben = 100;
+    int ursprungLeben = 100;
     int lebensleisteBreite = 120;
     int lebensleisteHoehe = 15;
-    int pixelProLebenspunkt = (int) lebensleisteBreite/leben;
+    double pixelProLebenspunkt = (double)lebensleisteBreite/(double)ursprungLeben;
     
     public Lebensleiste()
     {
@@ -34,7 +35,7 @@ public class Lebensleiste extends Actor
         myImage.setColor(Color.WHITE);
         myImage.drawRect(0, 0, lebensleisteBreite + 1, lebensleisteHoehe +1);
         myImage.setColor(Color.GREEN);
-        myImage.fillRect(1, 1, leben*pixelProLebenspunkt, lebensleisteHoehe);
+        myImage.fillRect(1, 1, (int)(leben*pixelProLebenspunkt), lebensleisteHoehe);
     }
     
     public void lebenVerlieren()

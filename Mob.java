@@ -90,7 +90,7 @@ public class Mob extends Actor
     void angriffFortsetzen() {
        long jetzt = System.currentTimeMillis();
        // wenn Angriff gestartet wurde, laufe zu Emrael
-       if (imAngriff && (jetzt - letzterAngriffStart >= angriffsdauer)) {
+       if (emrael != null && imAngriff && (jetzt - letzterAngriffStart >= angriffsdauer)) {
            setLocation(getX() + emraelRichtungX, getY() + emraelRichtungY);
            emrael.getLebensleiste().schaden(10);
            imAngriff = false;
