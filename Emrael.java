@@ -1,4 +1,5 @@
 import greenfoot.*; 
+import java.lang.*;
 
 public class Emrael extends Actor
 {
@@ -13,11 +14,15 @@ public class Emrael extends Actor
     private int schnelligkeit;
     private int rüstung;
     private boolean bewegungBlockiert;
+    private long letzterAngriffStart;
+    private int mobRichtungX;
+    private int mobRichtungY;
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
         phase = Phase.Wald1Einfuehrung;
         bewegungBlockiert = true;
+        letzterAngriffStart = 0;
     }
     
     public void setBild(String bild) {
@@ -31,6 +36,7 @@ public class Emrael extends Actor
     public Emrael(Emrael alterEmrael) {
         lebensleiste = alterEmrael.getLebensleiste();
         phase = alterEmrael.phase;
+        letzterAngriffStart = 0;
     }
     
     public void setBewegungBlockiert(boolean b) {
@@ -85,8 +91,31 @@ public class Emrael extends Actor
         if (getY()<16 || getY()>382 || getX()<17 || getX()>583)
         {
             setLocation(lastX, lastY);
-        }  
+        }
+        if (isTouching(Mob.class) && Greenfoot.isKeyDown("1")) {
+            angreifen((Mob)getOneIntersectingObject(Mob.class));
+        }
+        angriffFortsetzen();
         
+   }
+   
+   public void angreifen(Mob mob) {
+       // wenn ein Mob in der Nähe ist und noch kein Angriff gestartet wurde, starte den Angriff
+       if (intersects(mob) && letzterAngriffStart == 0) {
+           letzterAngriffStart  = System.currentTimeMillis();
+           mobRichtungX = mob.getX() - getX();
+           mobRichtungY = mob.getY() - getY();
+           setLocation(getX() - mobRichtungX, getY() - mobRichtungY);
+       }
+   }
+   
+   public void angriffFortsetzen() {
+       long jetzt = System.currentTimeMillis();
+       // wenn Angriff gestartet wurde, lasse Emrael zum Mob laufen
+       if (letzterAngriffStart != 0 && (jetzt - letzterAngriffStart >= 300)) {
+           setLocation(getX() + mobRichtungX, getY() + mobRichtungY);
+           letzterAngriffStart = 0;
+       }
    }
    
    public int getXNachPortal() {
