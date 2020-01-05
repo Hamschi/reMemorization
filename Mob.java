@@ -35,6 +35,10 @@ public class Mob extends Actor
     
     public void schadenNehmen(int schaden) {
         lebensleiste.schaden(schaden);
+        if (lebensleiste.leben <= 0) {
+            getWorld().removeObject(lebensleiste);
+            getWorld().removeObject(this);
+        }
     }
     
     void setAngriffsgeschwindigkeit(int a) {
