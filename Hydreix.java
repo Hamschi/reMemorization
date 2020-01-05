@@ -6,9 +6,9 @@ public class Hydreix extends Boss
     
     public Hydreix()
     {        
-        GreenfootImage image = getImage();
-        image.scale(image.getWidth() + 50, image.getHeight() + 50);
-        setImage(image);
+        GreenfootImage hydreix = getImage();
+        hydreix.scale(hydreix.getWidth() + 50, hydreix.getHeight() + 50);
+        setImage(hydreix);
     }
     
     public void act() 

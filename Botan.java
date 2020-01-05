@@ -6,9 +6,9 @@ public class Botan extends Boss
     
     public Botan()
     {        
-        GreenfootImage image = getImage();
-        image.scale(image.getWidth() + 50, image.getHeight() + 50);
-        setImage(image);
+        GreenfootImage botan = getImage();
+        botan.scale(botan.getWidth() + 50, botan.getHeight() + 50);
+        setImage(botan);
     }
     
     public void act() 

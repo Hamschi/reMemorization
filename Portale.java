@@ -28,7 +28,8 @@ public class Portale extends Actor
     }
     
     private void waldUebergang() {
-        if (to instanceof Wald && from instanceof Wald) {
+        if ((to instanceof Wald1 && from instanceof Wald2) ||
+           (to instanceof Wald2 && from instanceof Wald1)) {
             List<Emrael> emraels = from.getObjects(Emrael.class);
             Emrael emraelAlt = emraels.get(0);
             List<Emrael> emraelsTo = to.getObjects(Emrael.class);

@@ -74,12 +74,19 @@ public class Emrael extends Actor
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s"))
             setLocation(getX(), getY()+3);
                
-        if (isTouching(Hindernis.class)) {
+        if (isTouching(Hindernis.class)) 
+        {
             setLocation(lastX, lastY);
         }   
-        if (isTouching(NPC.class)) {
+        if (isTouching(NPC.class)) 
+        {
             setLocation(lastX, lastY);
         }   
+        if (getY()<16 || getY()>382 || getX()<17 || getX()>583)
+        {
+            setLocation(lastX, lastY);
+        }  
+        
    }
    
    public int getXNachPortal() {
@@ -102,6 +109,10 @@ public class Emrael extends Actor
         Wald1Einfuehrung,
         ErsterHuettenbesuch,
         Wald1ZumZweitenMal,
-        Wald2VorMobs
+        Wald2VorMobs,
+        Wald2Tutorial,
+        Wald2Beeren,
+        WaldBeerenGegessen,
+        WaldBeerenErklaert
     }
 }

@@ -22,7 +22,7 @@ public class ErsterHuettenbesuch extends Textbox
                 gespraechsteil++;
                 break;
             case 2:
-                drawText("Emrael", "Argh?! O.O");
+                drawText("Emrael", "Argh?! O.o");
                 gespraechsteil++;
                 break;
             case 3:
@@ -90,18 +90,14 @@ public class ErsterHuettenbesuch extends Textbox
                 gespraechsteil++;
                 break;
             case 19:
-                drawText("Pizaron", "ich würde vorschlagen, wir testen deine \nFähigkeiten erstmal bei ein paar Tieren");
+                drawText("Pizaron", "ich würde vorschlagen, wir testen deine \nFähigkeiten erstmal bei ein paar Waldlebewesen");
                 gespraechsteil++;
                 break;
             case 20:
-                drawText("Pizaron", "Ich würde vorschlagen, damit du erstmal die \nGrundlagen lernst, gehen wir raus und \nbesorgen uns Fell für eine neue Kleidung.");
+                drawText("Pizaron", "Ich würde vorschlagen, damit du erstmal die \nGrundlagen lernst, gehen wir raus und \nüben den Umgang mit dem Schwert.");
                 gespraechsteil++;
                 break;
             case 21:
-                drawText("Pizaron", "Das, was du aktuell anhast, sieht schon ziemlich \nabgeranzt aus. Folge mir und nehm dein Schwert mit.");
-                gespraechsteil++;
-                break;
-            case 22:
                 ende();
             }
         }
