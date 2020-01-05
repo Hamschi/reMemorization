@@ -19,6 +19,15 @@ public class Wald2 extends Wald
         prepare();
     }
     
+    public Wald2() {
+        emrael = new Emrael();
+        addObject(emrael, 80, 200);
+        addObject(emrael.getLebensleiste(), 100, 40);
+        emrael.setBewegungBlockiert(false);
+        wald1 = new Wald1();
+        prepare();
+    }
+    
     private void prepare()
     {
         for (int i = 0; i<4; i++)
@@ -44,10 +53,10 @@ public class Wald2 extends Wald
             //addObject(new NachWald3(), 240+(20*i), 30);
             addObject(new NachWald4(this, wald4), 240+(20*i), 450);
         }
+        addObject(new Drache(), 350, 100);
+        addObject(new Drache(), 350, 300);
+        addObject(new Drache(), 200, 200);
         
-        Emrael emrael = new Emrael();
-        addObject(emrael, 300, 300);
-        emrael.setBild("Emrael_hl.png");
         if (Wald2TutorialVorbei == false) {
             skriptWald2Tutorial(emrael);
         }

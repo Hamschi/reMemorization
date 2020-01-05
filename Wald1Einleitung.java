@@ -25,11 +25,20 @@ public class Wald1Einleitung extends Textbox
                 gespraechsteil++;
                 break;
             case 3:
-                loescheTextbox();
-                setFertig(true);
-                emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
-                emrael.setBewegungBlockiert(false);
+                ende();
             }
         }
+           
+        if(Greenfoot.isKeyDown("enter")) {
+            ende();
+        }
+    }
+    
+    private void ende() {
+        loescheTextbox();
+        setFertig(true);
+        emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
+        emrael.setBewegungBlockiert(false);
+        gespraechsteil = 4;
     }
 }
