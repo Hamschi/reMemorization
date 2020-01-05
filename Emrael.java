@@ -25,6 +25,10 @@ public class Emrael extends Actor
         letzterAngriffStart = 0;
     }
     
+    public void prepareWorld() {
+        getWorld().setPaintOrder(Lebensleiste.class, Emrael.class);
+    }
+    
     public void setBild(String bild) {
         setImage(bild);
     }
@@ -70,7 +74,7 @@ public class Emrael extends Actor
         setImage();
         int lastX = getX();
         int lastY = getY();
-            
+        // bewegen
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a"))
             setLocation(getX()-3, getY());
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d"))
@@ -79,19 +83,13 @@ public class Emrael extends Actor
             setLocation(getX(), getY()-3);
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s"))
             setLocation(getX(), getY()+3);
-               
-        if (isTouching(Hindernis.class)) 
-        {
-            setLocation(lastX, lastY);
-        }   
-        if (isTouching(NPC.class)) 
-        {
-            setLocation(lastX, lastY);
-        }   
-        if (getY()<16 || getY()>382 || getX()<17 || getX()>583)
+        // Position zuruecksetzen bei einem Hindernis
+        boolean istAmRand = (getY()<16 || getY()>382 || getX()<17 || getX()>583);
+        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand) 
         {
             setLocation(lastX, lastY);
         }
+        // angreifen
         if (isTouching(Mob.class) && Greenfoot.isKeyDown("1")) {
             angreifen((Mob)getOneIntersectingObject(Mob.class));
         }
