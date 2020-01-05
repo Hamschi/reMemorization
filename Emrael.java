@@ -70,6 +70,9 @@ public class Emrael extends Actor
     }
 
     public void act(){
+        if (lebensleiste.getLeben() == 0) {
+            bewegungBlockiert = true;
+        }
         if (bewegungBlockiert) 
             return;
             

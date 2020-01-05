@@ -4,7 +4,7 @@ import greenfoot.*;
 
 public class Lebensleiste extends Actor
 {
-    int leben = 10;
+    int leben = 100;
     int lebensleisteBreite = 120;
     int lebensleisteHoehe = 15;
     int pixelProLebenspunkt = (int) lebensleisteBreite/leben;
@@ -40,5 +40,9 @@ public class Lebensleiste extends Actor
     public void lebenVerlieren()
     {
         leben--;
+    }
+    
+    public void schaden(int s) {
+        leben = leben - s;
     }
 }

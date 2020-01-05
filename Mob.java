@@ -12,6 +12,7 @@ public class Mob extends Actor
     int angriffsdauer = 300;
     int angriffsgeschwindigkeit = 1000;
     int range = 80;
+    int schaden = 10;
     long letzterAngriffStart = 0;
     long letzterAngriffEnde = 0;
     int emraelRichtungX;
@@ -91,6 +92,7 @@ public class Mob extends Actor
        // wenn Angriff gestartet wurde, laufe zu Emrael
        if (imAngriff && (jetzt - letzterAngriffStart >= angriffsdauer)) {
            setLocation(getX() + emraelRichtungX, getY() + emraelRichtungY);
+           emrael.getLebensleiste().schaden(10);
            imAngriff = false;
        }
     }
