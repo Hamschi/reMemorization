@@ -65,6 +65,7 @@ public class Wald1 extends Wald
             for (int i = 0; i<20; i++) {
                 addObject(new NachWald2(this, wald2), (570), 30+(20*i));
             }
+            emrael.addLebensleiste();
         }
     }
     

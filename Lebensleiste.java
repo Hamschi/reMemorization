@@ -4,10 +4,19 @@ import greenfoot.*;
 
 public class Lebensleiste extends Actor
 {
-    int leben = 10;
+    int leben = 100;
+    int ursprungLeben = 100;
     int lebensleisteBreite = 120;
     int lebensleisteHoehe = 15;
-    int pixelProLebenspunkt = (int) lebensleisteBreite/leben;
+    double pixelProLebenspunkt = (double)lebensleisteBreite/(double)ursprungLeben;
+    boolean vonMob = false;
+    
+    public void setVonMob(boolean istMob) {
+        vonMob = istMob;
+    }
+    public boolean istMobLeiste() {
+        return vonMob;
+    }
     
     public Lebensleiste()
     {
@@ -16,6 +25,7 @@ public class Lebensleiste extends Actor
     
     public Lebensleiste(int lebenspunkte) {
         leben = lebenspunkte;
+        ursprungLeben = lebenspunkte;
     }
     
     public int getLeben() {
@@ -34,11 +44,15 @@ public class Lebensleiste extends Actor
         myImage.setColor(Color.WHITE);
         myImage.drawRect(0, 0, lebensleisteBreite + 1, lebensleisteHoehe +1);
         myImage.setColor(Color.GREEN);
-        myImage.fillRect(1, 1, leben*pixelProLebenspunkt, lebensleisteHoehe);
+        myImage.fillRect(1, 1, (int)(leben*pixelProLebenspunkt), lebensleisteHoehe);
     }
     
     public void lebenVerlieren()
     {
         leben--;
+    }
+    
+    public void schaden(int s) {
+        leben = leben - s;
     }
 }

@@ -9,7 +9,7 @@ public class Wald4 extends Wald
     public Wald4(Emrael em, Wald2 w2)
     {   emrael = new Emrael(em);
         addObject(emrael, 100, 100);
-        addObject(em.getLebensleiste(), 100, 40);
+        emrael.addLebensleiste();
         wald2 = w2;
         prepare();
     }
