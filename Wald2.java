@@ -7,6 +7,9 @@ public class Wald2 extends Wald
     Portale[] nachWald4Array = new NachWald4[20];
     Emrael emrael;
     Wald1 wald1;
+    private boolean Wald2TutorialVorbei = false;
+    private boolean Wald2BeerenVorbei = false;
+    Textbox textbox;
     
     public Wald2(Emrael em, Wald1 w1)
     {   emrael = new Emrael(em);
@@ -22,9 +25,6 @@ public class Wald2 extends Wald
         {
             addObject(new Baum(), (390+(61*i)), 488);
             addObject(new Baum(), (390+(61*i)), 30);
-        } 
-        for (int i = 0; i<4; i++)
-        {
             addObject(new Baum(), (30+(61*i)), 488);
             addObject(new Baum(), (30+(61*i)), 30);
         } 
@@ -38,13 +38,30 @@ public class Wald2 extends Wald
         {
             addObject(new NachWald1(this, wald1), (30), 30+(20*i));
         }
+        Wald4 wald4 = new Wald4(emrael, this);
         for (int i = 0; i<7; i++)
         {
-            addObject(new NachWald3(), 240+(20*i), 30);
+            //addObject(new NachWald3(), 240+(20*i), 30);
+            addObject(new NachWald4(this, wald4), 240+(20*i), 450);
         }
-        for (int i = 0; i<7; i++)
-        {
-            addObject(new NachWald4(), 240+(20*i), 450);
+        
+        Emrael emrael = new Emrael();
+        addObject(emrael, 300, 300);
+        emrael.setBild("Emrael_hl.png");
+        if (Wald2TutorialVorbei == false) {
+            skriptWald2Tutorial(emrael);
+        }
+        if (Wald2BeerenVorbei == false) {
+            skriptWald2Beeren(emrael);
         }
     }
+    private void skriptWald2Tutorial(Emrael emrael) {
+        Textbox textbox = new Wald2Tutorial(emrael);
+        addObject(textbox, 300,350);
+    }
+    private void skriptWald2Beeren(Emrael emrael) {
+        Textbox textbox = new Wald2Beeren(emrael);
+        addObject(textbox, 300,350);
+    }
+
 }

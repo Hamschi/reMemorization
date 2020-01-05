@@ -60,7 +60,7 @@ public class ElshinZentrum extends Elshin
       
         for (int i = 0; i<10; i++)
         {
-            addObject(new NachWald4(), (234+(20*i)), 5);
+            //addObject(new NachWald4(), (234+(20*i)), 5);
             addObject(new Mauer(), (586), 40+(26*i));
         }
         

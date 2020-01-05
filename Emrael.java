@@ -78,15 +78,15 @@ public class Emrael extends Actor
         {
             setLocation(lastX, lastY);
         }   
-        
         if (isTouching(NPC.class)) 
         {
             setLocation(lastX, lastY);
         }   
-        if (getY()>384 || getY()<16 || getX()>583 || getX()<17)
+        if (getY()<16 || getY()>382 || getX()<17 || getX()>583)
         {
             setLocation(lastX, lastY);
-        }
+        }  
+        
    }
    
    public int getXNachPortal() {
@@ -109,6 +109,10 @@ public class Emrael extends Actor
         Wald1Einfuehrung,
         ErsterHuettenbesuch,
         Wald1ZumZweitenMal,
-        Wald2VorMobs
+        Wald2VorMobs,
+        Wald2Tutorial,
+        Wald2Beeren,
+        WaldBeerenGegessen,
+        WaldBeerenErklaert
     }
 }

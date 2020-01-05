@@ -19,9 +19,12 @@ public class Taverne extends Haeuser
         addObject(hocker, 425, 30);
         Fussmatte fussmatte = new Fussmatte();
         addObject(fussmatte, 300, 383);
+        Fussmatte fussmatte2 = new Fussmatte();
+        addObject(fussmatte2, 514, 17);
         Barkeeper barkeeper = new Barkeeper();
         addObject(barkeeper, 289, 16);
-        addObject(new Unsichtbar(), 388, 16); 
+        Unsichtbar unsichtbar = new Unsichtbar();
+        addObject(unsichtbar, 389, 17);
         for (int i = 0; i<3; i++)
         {
             addObject(new Hocker(), 240+(50*i), 104);
@@ -38,6 +41,7 @@ public class Taverne extends Haeuser
         for (int i = 0; i<5; i++)
         {
             addObject(new InsZentrumElshin(), (300+(7*i)), 380);
+            addObject(new InsZimmer(), (479+(7*i)), 12);
             addObject(new Unsichtbar(), (48+(25*i)), 116);
             addObject(new Unsichtbar(), (48+(25*i)), 164);
             addObject(new Unsichtbar(), (447+(25*i)), 116);
@@ -46,8 +50,8 @@ public class Taverne extends Haeuser
             addObject(new Unsichtbar(), (447+(25*i)), 266);
             addObject(new Unsichtbar(), (48+(25*i)), 314);
             addObject(new Unsichtbar(), (447+(25*i)), 314);
-            addObject(new Unsichtbar(), (228+(40*i)), 76);
-            addObject(new Unsichtbar(), (228+(40*i)), 44);       
+            addObject(new Unsichtbar(), (229+(40*i)), 41);
+            addObject(new Unsichtbar(), (229+(40*i)), 77);
         }
     }
 }
