@@ -56,6 +56,7 @@ public class Huette extends World
             emrael.addLebensleiste();
             // Portal nach Wald 1 hinzufügen
             NachWald1 nachWald1 = new NachWald1(this, wald1, "Fußmatte.png");
+            nachWald1.setPortalFix(250, 240);
             addObject(nachWald1, 300, 380);
             // Skript und Textbox hinzufügen
             BettHolz bettHolz = new BettHolz();

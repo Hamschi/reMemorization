@@ -4,9 +4,11 @@ public class Banditenteil extends Elshin
 {
     Emrael emrael;
     Textbox textbox;
+    ElshinZentrum elshinZentrum;
     
-    public Banditenteil()
+    public Banditenteil(ElshinZentrum ez)
     {
+        elshinZentrum = ez;
         Kugel kugel = new Kugel();
         addObject(kugel, 500, 196);
         for (int i = 0; i<14; i++)
@@ -29,7 +31,9 @@ public class Banditenteil extends Elshin
         
         for (int i = 0; i<11; i++)
         {
-            addObject(new InsZentrumElshin(), (10), 49+(30*i));
+            Portale p = new Portale(this, ez);
+            p.setPortalFix(530, 320);
+            addObject(p, (10), 49+(30*i));
         } 
     }
     

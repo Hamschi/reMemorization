@@ -3,9 +3,10 @@ import greenfoot.*;
 
 public class Zimmer extends Haeuser
 {
-
-    public Zimmer()
+    Taverne taverne;
+    public Zimmer(Taverne tavern)
     {
+        taverne = tavern;
         Fussmatte fussmatte = new Fussmatte();
         addObject(fussmatte, 300, 383);
         Hocker hocker1 = new Hocker();
@@ -31,7 +32,9 @@ public class Zimmer extends Haeuser
         {
             addObject(new Unsichtbar(), (252+(25*i)), 177);
             addObject(new Unsichtbar(), (252+(25*i)), 225);
-            addObject(new InDieTaverne(), (300+(7*i)), 380);
+            Portale p = new Portale(this, taverne);
+            p.setPortalFix(520, 70);
+            addObject(p, (300+(7*i)), 380);
         }
     }
 }
