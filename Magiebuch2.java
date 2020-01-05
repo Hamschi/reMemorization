@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Magiebuch2 extends Deko
+public class Magiebuch2 extends Hindernis
 {
     private GreenfootImage magiebuch2 = new GreenfootImage("Magiebuch2.PNG");
     

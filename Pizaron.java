@@ -1,19 +1,38 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-/**
- * Write a description of class Pizaron here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Pizaron extends NPC
 {
-    /**
-     * Act - do whatever the Pizaron wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+    private GreenfootImage up = new GreenfootImage("Pizaron_hl.png");
+    private GreenfootImage down = new GreenfootImage("Pizaron_vl.png");
+    private GreenfootImage left = new GreenfootImage("Pizaron_lige.png");
+    private GreenfootImage right = new GreenfootImage("Pizaron_rege.png");
+    //Emrael emrael;
+    // public Phase phase;
+    
+    // public Pizaron()
+    // {
+        // phase = Phase.Wald1Einfuehrung;
+    // }
+    
+    public void setBild(String bild) {
+        setImage(bild);
+    }
+    
+    // public void act() 
+    // {
+        // if (this.phase == Phase.Wald2VorMobs) {
+            // this.setLocation(getX()-88, getY());
+            // this.setLocation(getX(), getY()+242);
+        // }
+    // }    
+    
+    // public enum Phase {
+        // Wald1Einfuehrung,
+        // ErsterHuettenbesuch,
+        // Wald2VorMobs,
+        // Wald2Tutorial,
+        // Wald2Beeren,
+        // WaldBeerenGegessen,
+        // WaldBeerenErklaert
+    // }
 }

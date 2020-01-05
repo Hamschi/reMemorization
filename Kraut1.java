@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Kraut1 extends Deko
+public class Kraut1 extends Hindernis
 {
     private GreenfootImage kraut1 = new GreenfootImage("Kraut1.PNG");
     

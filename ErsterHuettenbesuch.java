@@ -110,6 +110,6 @@ public class ErsterHuettenbesuch extends Textbox
         loescheTextbox();
         fertig = true;
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
+        emrael.phase = Emrael.Phase.Wald2Tutorial;
         }
 }

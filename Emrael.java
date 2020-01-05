@@ -136,7 +136,6 @@ public class Emrael extends Actor
     public enum Phase {
         Wald1Einfuehrung,
         ErsterHuettenbesuch,
-        Wald1ZumZweitenMal,
         Wald2VorMobs,
         Wald2Tutorial,
         Wald2Beeren,
