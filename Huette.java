@@ -1,6 +1,5 @@
 import greenfoot.*;  
 
-
 public class Huette extends World
 {
         private GreenfootSound backgroundMusic = new GreenfootSound("Huette.mp3");
@@ -8,6 +7,7 @@ public class Huette extends World
         private GreenfootImage huetteBoden = new GreenfootImage("HuetteBoden.png");
         private boolean ersterHuettenbesuchVorbei = false;
         Emrael emrael;
+        Pizaron pizaron;
             
         public Huette(Emrael emrael, World wald1)
         {    
@@ -70,13 +70,13 @@ public class Huette extends World
                 addObject(new Grube1(), (17+(30*i)), 11);
             }
             if (emrael.phase == Emrael.Phase.Wald1Einfuehrung) {
-                skriptErsterHuettenbesuch(emrael);
+                skriptErsterHuettenbesuch(emrael, pizaron);
             }
 
         }
         
-        private void skriptErsterHuettenbesuch(Emrael emrael) {
-            Textbox textbox = new ErsterHuettenbesuch(emrael);
+        private void skriptErsterHuettenbesuch(Emrael emrael, Pizaron pizaron) {
+            Textbox textbox = new ErsterHuettenbesuch(emrael, pizaron);
             addObject(textbox, 300,350);
         }
         

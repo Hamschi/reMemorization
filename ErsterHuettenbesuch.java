@@ -5,11 +5,19 @@ public class ErsterHuettenbesuch extends Textbox
     private int gespraechsteil;
     private boolean fertig;
     private Emrael emrael;
-    public ErsterHuettenbesuch(Emrael em) {
+    private Pizaron pizaron;
+    private int laufen;
+    private GreenfootImage up = new GreenfootImage("Pizaron_hl.png");
+    private GreenfootImage down = new GreenfootImage("Pizaron_vl.png");
+    private GreenfootImage left = new GreenfootImage("Pizaron_lige.png");
+    private GreenfootImage right = new GreenfootImage("Pizaron_rege.png");
+    public ErsterHuettenbesuch(Emrael em, Pizaron piz) {
         drawText("Emrael", "Hallo, ist hier jemand?");
         gespraechsteil = 1;
+        laufen = 1;
         fertig = false;
         emrael = em;
+        pizaron = piz;
         emrael.setBewegungBlockiert(true);
     }
 
@@ -106,10 +114,50 @@ public class ErsterHuettenbesuch extends Textbox
         }
     }    
     
-    private void ende() {
+    private void ende() 
+    {
         loescheTextbox();
         fertig = true;
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.Wald2Tutorial;
+        switch (laufen)
+        {
+            case 1: 
+                pizaron.setImage(right);
+                for (int i = 0; i<44; i++)
+                {
+                    pizaron.setLocation(pizaron.getX()+(2), pizaron.getY());
+                    Greenfoot.delay(1);
+                }
+            case 2:
+                pizaron.setImage(down);
+                for (int i = 0; i<103; i++)
+                {
+                    pizaron.setLocation(pizaron.getX(), pizaron.getY()+(2));
+                    Greenfoot.delay(1);
+                }
+            case 3: 
+                pizaron.setImage(left);
+                for (int i = 0; i<44; i++)
+                {
+                    pizaron.setLocation(pizaron.getX()-(2), pizaron.getY());
+                    Greenfoot.delay(1);
+                }
+            case 4:
+                pizaron.setImage(down);
+                for (int i = 0; i<5; i++)
+                {
+                    pizaron.setLocation(pizaron.getX(), pizaron.getY()+(2));
+                    Greenfoot.delay(1);
+                }
+                getWorld().removeObject(pizaron);
+                
         }
+
+    }
+
+
+
+
+
 }

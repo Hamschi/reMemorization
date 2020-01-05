@@ -4,6 +4,7 @@ public class Wald1Einleitung extends Textbox
 {
     int gespraechsteil;
     Emrael emrael;
+    Pizaron pizaron;
     
     public Wald1Einleitung(Emrael e) {
         drawText("Emrael", "Aua... wo bin ich hier? ...\nUnd... was mache ich hier?");
