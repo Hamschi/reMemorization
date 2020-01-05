@@ -2,6 +2,8 @@ import greenfoot.*;
 
 public class Banditenteil extends Elshin
 {
+    Emrael emrael;
+    Textbox textbox;
     
     public Banditenteil()
     {
@@ -23,5 +25,17 @@ public class Banditenteil extends Elshin
             addObject(new Mauer(), 405, 40+(26*i));   
             addObject(new Mauer(), 405, 274+(26*i));
         }
+        prepare();
+        
+        for (int i = 0; i<11; i++)
+        {
+            addObject(new InsZentrumElshin(), (10), 49+(30*i));
+        } 
     }
+    
+    private void prepare()
+    {
+
+    }
+
 }

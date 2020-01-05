@@ -2,7 +2,7 @@ import greenfoot.*;
 
 public class Haeuser extends World
 {
-    private GreenfootSound backgroundMusic = new GreenfootSound("Huette.mp3");
+    private GreenfootSound backgroundMusic = new GreenfootSound("Schmiede.mp3");
     private GreenfootImage holzboden = new GreenfootImage("Holzboden.png");
     
     public Haeuser()

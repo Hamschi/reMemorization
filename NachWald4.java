@@ -3,11 +3,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class NachWald4 extends Portale
 {
 
-
-    public void act() {
-        if (isTouching(Emrael.class))
-            Greenfoot.setWorld(new Wald4());
+    NachWald4(World from, World to) 
+    {
+        this.from = from;
+        this.to = to;
     }
-
 
 }
