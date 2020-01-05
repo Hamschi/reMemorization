@@ -17,6 +17,7 @@ public class Emrael extends Actor
     private long letzterAngriffStart;
     private int mobRichtungX;
     private int mobRichtungY;
+    private int angriffsdauer = 300; // in millisekunden
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
@@ -111,7 +112,7 @@ public class Emrael extends Actor
    public void angriffFortsetzen() {
        long jetzt = System.currentTimeMillis();
        // wenn Angriff gestartet wurde, lasse Emrael zum Mob laufen
-       if (letzterAngriffStart != 0 && (jetzt - letzterAngriffStart >= 300)) {
+       if (letzterAngriffStart != 0 && (jetzt - letzterAngriffStart >= angriffsdauer)) {
            setLocation(getX() + mobRichtungX, getY() + mobRichtungY);
            letzterAngriffStart = 0;
        }
