@@ -34,6 +34,9 @@ public class Mob extends Actor
     }
     
     public void schadenNehmen(int schaden) {
+        if (lebensleiste == null) {
+            return;
+        }
         lebensleiste.schaden(schaden);
         if (lebensleiste.leben <= 0) {
             getWorld().removeObject(lebensleiste);
