@@ -2,8 +2,10 @@ import greenfoot.*;
 
 public class Haus1 extends Haeuser
 {
-    public Haus1()
+    ElshinZentrum elshinzentrum;
+    public Haus1(ElshinZentrum ez)
     {
+        elshinzentrum = ez;
         Fussmatte fussmatte = new Fussmatte();
         addObject(fussmatte, 300, 383);
         Tisch tisch = new Tisch();
@@ -12,7 +14,9 @@ public class Haus1 extends Haeuser
         {
             addObject(new Unsichtbar(), (252+(25*i)), 177);
             addObject(new Unsichtbar(), (252+(25*i)), 225);
-            addObject(new InsZentrumElshin(), (300+(7*i)), 380);
+            Portale p = new Portale(this, ez);
+            p.setPortalFix(130, 190);
+            addObject(p, (300+(7*i)), 380);
         }
         
         for (int i = 0; i<4; i++)

@@ -7,6 +7,10 @@ public class Portale extends Actor
     private GreenfootImage portale = new GreenfootImage("transparent.png");
     World to;
     World from;
+    int xPos;
+    int yPos;
+    boolean fixesPortal = false;
+    
     public Portale()
     {
         prepare();
@@ -16,10 +20,16 @@ public class Portale extends Actor
         this.from = from;
     }
     
+    public void setPortalFix(int x, int y) {
+        xPos = x;
+        yPos = y;
+        fixesPortal = true;
+    }
+    
     public void act() {
         if (isTouching(Emrael.class)) {
             if (to != null) {
-                waldUebergang();
+                uebergang();
                 Greenfoot.setWorld(to);
             } else {
                 System.out.println("to ist null");
@@ -27,9 +37,12 @@ public class Portale extends Actor
         }
     }
     
-    private void waldUebergang() {
-        if ((to instanceof Wald1 && from instanceof Wald2) ||
-           (to instanceof Wald2 && from instanceof Wald1)) {
+    private void uebergang() {
+        if (fixesPortal) {
+            List<Emrael> emraelsTo = to.getObjects(Emrael.class);
+            Emrael emraelNeu = emraelsTo.get(0);
+            emraelNeu.setLocation(xPos, yPos);
+        } else {
             List<Emrael> emraels = from.getObjects(Emrael.class);
             Emrael emraelAlt = emraels.get(0);
             List<Emrael> emraelsTo = to.getObjects(Emrael.class);

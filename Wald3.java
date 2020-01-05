@@ -2,13 +2,21 @@ import greenfoot.*;
 
 public class Wald3 extends Wald
 {
-    Hindernis[] baumArray = new Hindernis[10];
-    Portale[] nachWald2Array = new NachWald2[20];
-    
+    private Emrael emrael;
+    Wald2 wald2;
+
+    public Wald3(Emrael em, Wald2 w2)
+    {   emrael = new Emrael(em);
+        addObject(emrael, 100, 100);
+        emrael.addLebensleiste();
+        wald2 = w2;
+        prepare();
+    }
     
     public Wald3()
     {    
         prepare();
+        wald2 = new Wald2();
     }
     
     private void prepare()
@@ -32,7 +40,9 @@ public class Wald3 extends Wald
         
         for (int i = 0; i<30; i++)
         {
-            //addObject(new NachWald2(), (30+(20*i)), 450);
+            NachWald2 nw2 = new NachWald2(this, wald2);
+            nw2.setPortalFix(300, 80);
+            addObject(nw2, (30+(20*i)), 450);
         }
     }
 }

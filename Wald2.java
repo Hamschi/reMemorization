@@ -2,9 +2,6 @@ import greenfoot.*;
 
 public class Wald2 extends Wald
 {
-    Portale[] nachWald1Array = new NachWald1[20];
-    Portale[] nachWald3Array = new NachWald3[20];
-    Portale[] nachWald4Array = new NachWald4[20];
     Emrael emrael;
     Wald1 wald1;
     private boolean Wald2TutorialVorbei = false;
@@ -48,10 +45,13 @@ public class Wald2 extends Wald
             addObject(new NachWald1(this, wald1), (30), 30+(20*i));
         }
         Wald4 wald4 = new Wald4(emrael, this);
+        Wald3 wald3 = new Wald3(emrael, this);
         for (int i = 0; i<7; i++)
         {
-            //addObject(new NachWald3(), 240+(20*i), 30);
-            addObject(new NachWald4(this, wald4), 240+(20*i), 450);
+            addObject(new Portale(this, wald3), 240+(20*i), 30);// nach oben
+            Portale nw4 = new Portale(this, wald4);
+            nw4.setPortalFix(100,80);
+            addObject(nw4, 240+(20*i), 450); // nach unten
         }
         addObject(new Drache(), 350, 100);
         addObject(new Drache(), 350, 300);
