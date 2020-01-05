@@ -1,4 +1,5 @@
 import greenfoot.*; 
+import java.lang.*;
 
 public class Emrael extends Actor
 {
@@ -13,15 +14,24 @@ public class Emrael extends Actor
     private int schnelligkeit;
     private int rüstung;
     private boolean bewegungBlockiert;
+    private long letzterAngriffStart;
+    private int mobRichtungX;
+    private int mobRichtungY;
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
         phase = Phase.Wald1Einfuehrung;
         bewegungBlockiert = true;
+        letzterAngriffStart = 0;
     }
     
     public void setBild(String bild) {
         setImage(bild);
+    }
+    
+    public void addLebensleiste() {
+        getWorld().addObject(lebensleiste, 100, 40);
+        getWorld().setPaintOrder(Lebensleiste.class);
     }
     
     public Lebensleiste getLebensleiste() {
@@ -29,8 +39,9 @@ public class Emrael extends Actor
     }
     
     public Emrael(Emrael alterEmrael) {
-        lebensleiste = alterEmrael.getLebensleiste();
+        lebensleiste = new Lebensleiste(alterEmrael.getLebensleiste().getLeben());
         phase = alterEmrael.phase;
+        letzterAngriffStart = 0;
     }
     
     public void setBewegungBlockiert(boolean b) {
@@ -64,7 +75,7 @@ public class Emrael extends Actor
         setImage();
         int lastX = getX();
         int lastY = getY();
-            
+        // bewegen
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a"))
             setLocation(getX()-3, getY());
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d"))
@@ -73,20 +84,37 @@ public class Emrael extends Actor
             setLocation(getX(), getY()-3);
         if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s"))
             setLocation(getX(), getY()+3);
-               
-        if (isTouching(Hindernis.class)) 
+        // Position zuruecksetzen bei einem Hindernis
+        boolean istAmRand = (getY()<16 || getY()>382 || getX()<17 || getX()>583);
+        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand) 
         {
             setLocation(lastX, lastY);
-        }   
-        if (isTouching(NPC.class)) 
-        {
-            setLocation(lastX, lastY);
-        }   
-        if (getY()<16 || getY()>382 || getX()<17 || getX()>583)
-        {
-            setLocation(lastX, lastY);
-        }  
+        }
+        // angreifen
+        if (isTouching(Mob.class) && Greenfoot.isKeyDown("1")) {
+            angreifen((Mob)getOneIntersectingObject(Mob.class));
+        }
+        angriffFortsetzen();
         
+   }
+   
+   public void angreifen(Mob mob) {
+       // wenn ein Mob in der Nähe ist und noch kein Angriff gestartet wurde, starte den Angriff
+       if (intersects(mob) && letzterAngriffStart == 0) {
+           letzterAngriffStart  = System.currentTimeMillis();
+           mobRichtungX = mob.getX() - getX();
+           mobRichtungY = mob.getY() - getY();
+           setLocation(getX() - mobRichtungX, getY() - mobRichtungY);
+       }
+   }
+   
+   public void angriffFortsetzen() {
+       long jetzt = System.currentTimeMillis();
+       // wenn Angriff gestartet wurde, lasse Emrael zum Mob laufen
+       if (letzterAngriffStart != 0 && (jetzt - letzterAngriffStart >= 300)) {
+           setLocation(getX() + mobRichtungX, getY() + mobRichtungY);
+           letzterAngriffStart = 0;
+       }
    }
    
    public int getXNachPortal() {

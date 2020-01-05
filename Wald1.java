@@ -16,7 +16,7 @@ public class Wald1 extends Wald
     {
         emrael = new Emrael();
         addObject(emrael, 433, 239);
-        addObject(emrael.getLebensleiste(), 100, 40);
+        emrael.addLebensleiste();
         
         Hutte hutte = new Hutte();
         addObject(hutte, 210, 140);
