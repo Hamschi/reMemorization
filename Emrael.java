@@ -10,7 +10,6 @@ public class Emrael extends Actor
     Lebensleiste lebensleiste;
     public Phase phase;
     private int leben;
-    private int schaden;
     private int schnelligkeit;
     private int rüstung;
     private boolean bewegungBlockiert;
@@ -18,6 +17,8 @@ public class Emrael extends Actor
     private int mobRichtungX;
     private int mobRichtungY;
     private int angriffsdauer = 300; // in millisekunden
+    private Mob target;
+    private int schaden = 30;
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
@@ -109,15 +110,17 @@ public class Emrael extends Actor
            mobRichtungX = mob.getX() - getX();
            mobRichtungY = mob.getY() - getY();
            setLocation(getX() - mobRichtungX, getY() - mobRichtungY);
+           target = mob;
        }
    }
    
    public void angriffFortsetzen() {
        long jetzt = System.currentTimeMillis();
        // wenn Angriff gestartet wurde, lasse Emrael zum Mob laufen
-       if (letzterAngriffStart != 0 && (jetzt - letzterAngriffStart >= angriffsdauer)) {
+       if (target != null && letzterAngriffStart != 0 && (jetzt - letzterAngriffStart >= angriffsdauer)) {
            setLocation(getX() + mobRichtungX, getY() + mobRichtungY);
            letzterAngriffStart = 0;
+           target.schadenNehmen(schaden);
        }
    }
    

@@ -19,6 +19,7 @@ public class Mob extends Actor
     int emraelRichtungY;
     Emrael emrael = null;
     boolean imAngriff = false;
+    Lebensleiste lebensleiste;
     /**
      * Act - do whatever the Mobs wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -29,6 +30,11 @@ public class Mob extends Actor
         zuEmraelLaufen();
         angreifen();
         angriffFortsetzen();
+        maleLebenleiste();
+    }
+    
+    public void schadenNehmen(int schaden) {
+        lebensleiste.schaden(schaden);
     }
     
     void setAngriffsgeschwindigkeit(int a) {
@@ -39,6 +45,26 @@ public class Mob extends Actor
     }
     void setAngriffsdauer(int a) {
         angriffsdauer = 300;
+    }        
+    
+    private void maleLebenleiste() {
+        if (getWorld() == null) {
+            return;
+        }
+        List<Lebensleiste> leisten = getWorld().getObjects(Lebensleiste.class);
+        for (int i = 0; i < leisten.size(); i++) {
+            Lebensleiste leiste = (Lebensleiste)leisten.get(i);
+            if (leiste.istMobLeiste() && leiste.leben > 0) { // wenn es bereits eine mob leiste gibt, zeichne keine neue
+                return;
+            }
+        }
+        if (emrael != null) { // zeichne nur, wenn der Mob Emrael im Target hat
+            if (lebensleiste == null) {
+                lebensleiste = new Lebensleiste(60);
+                lebensleiste.setVonMob(true);
+            }
+            getWorld().addObject(lebensleiste, 500, 40);
+        }
     }
     
     // mobs verfolgen Emrael wenn er in Range ist

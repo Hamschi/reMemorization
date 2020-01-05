@@ -9,6 +9,14 @@ public class Lebensleiste extends Actor
     int lebensleisteBreite = 120;
     int lebensleisteHoehe = 15;
     double pixelProLebenspunkt = (double)lebensleisteBreite/(double)ursprungLeben;
+    boolean vonMob = false;
+    
+    public void setVonMob(boolean istMob) {
+        vonMob = istMob;
+    }
+    public boolean istMobLeiste() {
+        return vonMob;
+    }
     
     public Lebensleiste()
     {
@@ -17,6 +25,7 @@ public class Lebensleiste extends Actor
     
     public Lebensleiste(int lebenspunkte) {
         leben = lebenspunkte;
+        ursprungLeben = lebenspunkte;
     }
     
     public int getLeben() {
