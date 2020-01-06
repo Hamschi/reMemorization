@@ -2,9 +2,10 @@ import greenfoot.*;
 
 public class UnterwasserEingang extends Unterwasser
 {
-    
-    public UnterwasserEingang()
-    {    
+    Wald3 wald3;
+    public UnterwasserEingang(Emrael em, Wald3 wald)
+    {   
+        wald3 = wald;
         prepare();
     }
     
@@ -12,7 +13,8 @@ public class UnterwasserEingang extends Unterwasser
     {
         Hoehle hoehle = new Hoehle();
         addObject(hoehle, 526, 169);
-        
+        Emrael emrael = new Emrael();
+        addObject(emrael, 300, 300);
         for (int i = 0; i<13; i++)
         {
             addObject(new Fels(), (21+(45*i)), 382);
@@ -35,6 +37,13 @@ public class UnterwasserEingang extends Unterwasser
         {
             addObject(new Unsichtbar(), (515), 214+(16*i));
         } 
+        
+        for (int i = 0; i<10; i++)
+        {
+            Portale nachWald3 = new Portale(this, wald3);
+            nachWald3.setPortalFix(100, 320);
+            addObject(nachWald3, (234+(20*i)), 5);
+        }
     }
 }
 

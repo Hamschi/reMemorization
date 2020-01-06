@@ -26,10 +26,10 @@ public class UnterwasserBoss extends Unterwasser
             addObject(new Fels(), (561), 64+(45*i));
         } 
 
-        for (int i = 0; i<11; i++)
-        {
-            addObject(new InsWasser(), (10), 49+(30*i));
-        } 
+        // for (int i = 0; i<11; i++)
+        // {
+            // addObject(new InsWasser(), (10), 49+(30*i));
+        // } 
         
     }
 }

@@ -15,8 +15,12 @@ public class Wald3 extends Wald
     
     public Wald3()
     {    
-        prepare();
         wald2 = new Wald2();
+        emrael = new Emrael();
+        addObject(emrael, 100, 320);
+        emrael.addLebensleiste();
+        emrael.setBewegungBlockiert(false);
+        prepare();
     }
     
     private void prepare()
@@ -43,6 +47,13 @@ public class Wald3 extends Wald
             NachWald2 nw2 = new NachWald2(this, wald2);
             nw2.setPortalFix(300, 80);
             addObject(nw2, (30+(20*i)), 450);
+        }
+        UnterwasserEingang unterwasserEingang = new UnterwasserEingang(emrael, this);
+        for (int i = 0; i<7; i++)
+        {
+            Portale insWasser = new Portale(this, unterwasserEingang);
+            insWasser.setPortalFix(300, 70);
+            addObject(insWasser, (401), 11+(20*i));
         }
     }
 }
