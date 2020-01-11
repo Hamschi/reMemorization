@@ -21,7 +21,7 @@ public class Unterwasser extends World
  
     private void prepare()
     {
-        time = 200;
+        time = 7406;
         //adding objects here
         Emrael emrael = new Emrael();
         emrael.setBewegungBlockiert(false);

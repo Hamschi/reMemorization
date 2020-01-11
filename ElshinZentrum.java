@@ -15,6 +15,7 @@ public class ElshinZentrum extends Elshin
         addObject(haus1, 127, 103);
         Bewohner1 bewohner1 = new Bewohner1();
         addObject(bewohner1, 222, 44);
+        
         Haus1 h1 = new Haus1(this);
         Portale inHaus1 = new Portale(this, h1);
         inHaus1.setPortalFix(300,320);
@@ -31,6 +32,7 @@ public class ElshinZentrum extends Elshin
         Portale inDieTaverne = new Portale(this, taverne);
         inDieTaverne.setPortalFix(300,320);
         addObject(inDieTaverne, 281, 293);
+        
         for (int i = 0; i<9; i++)
         {
             addObject(new Mauer(), (14+(26*i)), 389);
