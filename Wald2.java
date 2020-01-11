@@ -29,15 +29,15 @@ public class Wald2 extends Wald
     {
         for (int i = 0; i<4; i++)
         {
-            addObject(new Baum(), (390+(61*i)), 488);
-            addObject(new Baum(), (390+(61*i)), 30);
-            addObject(new Baum(), (30+(61*i)), 488);
-            addObject(new Baum(), (30+(61*i)), 30);
+            addObject(new Hindernis("Baum.png"), (390+(61*i)), 488);
+            addObject(new Hindernis("Baum.png"), (390+(61*i)), 30);
+            addObject(new Hindernis("Baum.png"), (30+(61*i)), 488);
+            addObject(new Hindernis("Baum.png"), (30+(61*i)), 30);
         } 
         
         for (int i = 0; i<5; i++)
         {
-            addObject(new Baum(), (570), 101+(71*i));
+            addObject(new Hindernis("Baum.png"), (570), 101+(71*i));
         } 
         
         for (int i = 0; i<20; i++)
@@ -53,9 +53,9 @@ public class Wald2 extends Wald
             nw4.setPortalFix(100,80);
             addObject(nw4, 240+(20*i), 450); // nach unten
         }
-        addObject(new Drache(), 350, 100);
-        addObject(new Drache(), 350, 300);
-        addObject(new Drache(), 200, 200);
+        addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 100);
+        addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 300);
+        addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 200, 200);
         
         if (Wald2TutorialVorbei == false) {
             skriptWald2Tutorial(emrael);

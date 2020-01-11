@@ -26,21 +26,21 @@ public class Wald3 extends Wald
     
     private void prepare()
     {
-        Teich teich = new Teich();
+        Deko teich = new Deko("Teich.png");
         addObject(teich, 496, 100);
         for (int i = 0; i<5; i++)
         {
-            addObject(new Baum(), (30+(61*i)), 30);
+            addObject(new Hindernis("Baum.png"), (30+(61*i)), 30);
         } 
         
         for (int i = 0; i<5; i++)
         {
-            addObject(new Baum(), (30), 101+(71*i));
+            addObject(new Hindernis("Baum.png"), (30), 101+(71*i));
         } 
         
         for (int i = 0; i<3; i++)
         {
-            addObject(new Baum(), (570), 243+(71*i));
+            addObject(new Hindernis("Baum.png"), (570), 243+(71*i));
         } 
         
         for (int i = 0; i<30; i++)
@@ -55,7 +55,13 @@ public class Wald3 extends Wald
             Portale insWasser = new Portale(this, unterwasserEingang);
             insWasser.setPortalFix(158, 208);
             addObject(insWasser, (410), 11+(20*i));
-            addObject(insWasser, (410)+(27*i), 132); //Hilfe
+        }
+        
+        for (int i = 0; i<10; i++)
+        {
+            Portale insWasser = new Portale(this, unterwasserEingang);
+            insWasser.setPortalFix(158, 208);
+            addObject(insWasser, 410+(20*i), 130);
         }
     }
 }

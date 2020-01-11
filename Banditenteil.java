@@ -9,23 +9,33 @@ public class Banditenteil extends Elshin
     public Banditenteil(ElshinZentrum ez)
     {
         elshinZentrum = ez;
-        Kugel kugel = new Kugel();
+        Hindernis kugel = new Hindernis("Kugel.png");
         addObject(kugel, 500, 196);
         for (int i = 0; i<14; i++)
-        {
-            addObject(new Mauer(), 586, 40+(26*i));
+        {   
+            Hindernis hindernis = new Hindernis("Mauer.png");
+            hindernis.mauerSkalieren();
+            addObject(hindernis, 586, 40+(26*i));
         } 
         
         for (int i = 0; i<23; i++)
         {
-            addObject(new Mauer(), 14+(26*i), 14);
-            addObject(new Mauer(), (14+(26*i)), 389);
+            Hindernis hindernis = new Hindernis("Mauer.png");
+            hindernis.mauerSkalieren();
+            addObject(hindernis, 14+(26*i), 14);
+            Hindernis hindernis2 = new Hindernis("Mauer.png");
+            hindernis2.mauerSkalieren();
+            addObject(hindernis2, (14+(26*i)), 389);
         }
         
         for (int i = 0; i<5; i++)
         {
-            addObject(new Mauer(), 405, 40+(26*i));   
-            addObject(new Mauer(), 405, 274+(26*i));
+            Hindernis hindernis = new Hindernis("Mauer.png");
+            hindernis.mauerSkalieren();
+            addObject(hindernis, 405, 40+(26*i));  
+            Hindernis hindernis2 = new Hindernis("Mauer.png");
+            hindernis2.mauerSkalieren();
+            addObject(hindernis2, 405, 274+(26*i));
         }
 
         for (int i = 0; i<11; i++)

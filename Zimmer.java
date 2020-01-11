@@ -7,31 +7,31 @@ public class Zimmer extends Haeuser
     public Zimmer(Taverne tavern)
     {
         taverne = tavern;
-        Fussmatte fussmatte = new Fussmatte();
+        Deko fussmatte = new Deko("Fußmatte.png");
         addObject(fussmatte, 300, 383);
-        Hocker hocker1 = new Hocker();
+        Deko hocker1 = new Deko("Hocker.PNG");
         addObject(hocker1, 311, 168);
-        Hocker hocker2 = new Hocker();
+        Deko hocker2 = new Deko("Hocker.PNG");
         addObject(hocker2, 311, 261);
-        Hocker hocker3 = new Hocker();
+        Deko hocker3 = new Deko("Hocker.PNG");
         addObject(hocker3, 223, 216);
-        Hocker hocker4 = new Hocker();
+        Deko hocker4 = new Deko("Hocker.PNG");
         addObject(hocker4, 388, 216);
-        Tisch tisch = new Tisch();
+        Deko tisch = new Deko("Tisch.png");
         addObject(tisch, 306, 214);
 
         for (int i = 0; i<4; i++)
         {
-            addObject(new BettGruen(), 106+(130*i), 57);
+            addObject(new Deko("BettGruen.png"), 106+(130*i), 57);
         }
         for (int i = 0; i<3; i++)
         {
-            addObject(new Kleiderschrank(), 172+(130*i), 39);
+            addObject(new Hindernis("Kleiderschrank.png"), 172+(130*i), 39);
         }
         for (int i = 0; i<5; i++)
         {
-            addObject(new Unsichtbar(), (252+(25*i)), 177);
-            addObject(new Unsichtbar(), (252+(25*i)), 225);
+            addObject(new Hindernis(), (252+(25*i)), 177);
+            addObject(new Hindernis(), (252+(25*i)), 225);
             Portale p = new Portale(this, taverne);
             p.setPortalFix(520, 70);
             addObject(p, (300+(7*i)), 380);

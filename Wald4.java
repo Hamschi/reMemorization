@@ -26,24 +26,24 @@ public class Wald4 extends Wald
     {
         for (int i = 0; i<6; i++)
         {
-            addObject(new Baum(), (30), 30+(71*i));
+            addObject(new Hindernis("Baum.png"), (30), 30+(71*i));
         } 
         
         for (int i = 0; i<6; i++)
         {
-            addObject(new Baum(), (570), 30+(71*i));
+            addObject(new Hindernis("Baum.png"), (570), 30+(71*i));
         } 
         
         for (int i = 0; i<6; i++)
         {
-            addObject(new Baum(), (213+(61*i)), 30);
+            addObject(new Hindernis("Baum.png"), (213+(61*i)), 30);
         } 
  
         
         for (int i = 0; i<7; i++)
         {
-            addObject(new Baum(), (30+(61*i)), 172);
-            addObject(new Baum(), (152+(61*i)), 314);
+            addObject(new Hindernis("Baum.png"), (30+(61*i)), 172);
+            addObject(new Hindernis("Baum.png"), (152+(61*i)), 314);
         }
       
         for (int i = 0; i<7; i++)

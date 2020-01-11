@@ -26,6 +26,7 @@ public class Unterwasser extends World
         Emrael emrael = new Emrael();
         emrael.setBewegungBlockiert(false);
         addObject(emrael, 250, 150);
+        emrael.addLebensleiste();
     }
  
     public void act()

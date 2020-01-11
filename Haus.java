@@ -1,11 +1,11 @@
 import greenfoot.*;  
 
-public class Haus extends Deko
+public class Haus extends Actor
 {
-    private GreenfootImage haus = new GreenfootImage("Haus.png");
+
     public Haus()
     {
-        GreenfootImage image = getImage();
+        GreenfootImage image = new GreenfootImage("Haus.png");
         image.scale(image.getWidth() - 50, image.getHeight() - 50);
         setImage(image);
     }

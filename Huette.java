@@ -24,29 +24,29 @@ public class Huette extends World
         
         private void prepare(Emrael alterEmrael, World wald1)
         {
-            Tisch tisch = new Tisch();
+            Deko tisch = new Deko("Tisch.png");
             addObject(tisch, 306, 214);
             Pizaron pizaron = new Pizaron();
             addObject(pizaron, 300, 135);
-            Magiebuch magiebuch = new Magiebuch();
+            Deko magiebuch = new Deko("Magiebuch.PNG");
             addObject (magiebuch, 280, 199);
-            Trank trank = new Trank();
+            Hindernis trank = new Hindernis("Trank.PNG");
             addObject (trank, 577, 200);
-            Trank2 trank2 = new Trank2();
+            Deko trank2 = new Deko("Trank2.PNG");
             addObject(trank2, 313, 180);
-            Trank3 trank3 = new Trank3();
+            Deko trank3 = new Deko("Trank3.PNG");
             addObject(trank3, 300, 192);
-            Trank4 trank4 = new Trank4();
+            Deko trank4 = new Deko("Trank4.PNG");
             addObject(trank4, 346, 201);
-            Apfel apfel = new Apfel();
+            Deko apfel = new Deko("Apfel.png");
             addObject(apfel, 275, 214);
-            Magiebuch2 magiebuch2 = new Magiebuch2();
+            Deko magiebuch2 = new Deko("Magiebuch2.PNG");
             addObject(magiebuch2, 83, 100);
-            Kraut1 kraut1 = new Kraut1();
+            Deko kraut1 = new Deko("Kraut1.PNG");
             addObject(kraut1, 113, 256);
-            Kraut2 kraut2 = new Kraut2();
+            Deko kraut2 = new Deko("Kraut2.PNG");
             addObject(kraut2, 319, 211);
-            Kamin kamin = new Kamin();
+            Hindernis kamin = new Hindernis("kamin.png");
             addObject(kamin, 300, 57);
             // neuen Emrael erstellen
             Emrael emrael = new Emrael(alterEmrael);
@@ -59,16 +59,16 @@ public class Huette extends World
             nachWald1.setPortalFix(250, 240);
             addObject(nachWald1, 300, 380);
             // Skript und Textbox hinzufügen
-            BettHolz bettHolz = new BettHolz();
+            Deko bettHolz = new Deko("BettHolz.PNG");
             addObject (bettHolz, 571, 55);
             for (int i = 0; i<5; i++)
             {
-                addObject(new Unsichtbar(), (252+(25*i)), 177);
-                addObject(new Unsichtbar(), (252+(25*i)), 225);
+                addObject(new Hindernis(), (252+(25*i)), 177);
+                addObject(new Hindernis(), (252+(25*i)), 225);
             }
             for (int i = 0; i<20; i++)
             {
-                addObject(new Grube1(), (17+(30*i)), 11);
+                addObject(new Hindernis("Grube1.PNG"), (17+(30*i)), 11);
             }
             if (emrael.phase == Emrael.Phase.Wald1Einfuehrung) {
                 skriptErsterHuettenbesuch(emrael, pizaron);

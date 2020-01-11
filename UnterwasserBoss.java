@@ -8,17 +8,21 @@ public class UnterwasserBoss extends Unterwasser
     public UnterwasserBoss(UnterwasserEingang uwe)
     {   
         unterwasserEingang = uwe;
+        // emrael = new Emrael();
+        // addObject(emrael, 100, 100);
+        // emrael.addLebensleiste();
+        // emrael.setBewegungBlockiert(false);
         Hydreix hydreix = new Hydreix();
         addObject(hydreix, 490, 178);
         for (int i = 0; i<13; i++)
         {
-            addObject(new Fels(), (21+(45*i)), 382);
-            addObject(new Fels(), (21+(45*i)), 19);
+            addObject(new Hindernis("Fels.png"), (21+(45*i)), 382);
+            addObject(new Hindernis("Fels.png"), (21+(45*i)), 19);
         } 
         
         for (int i = 0; i<7; i++)
         {
-            addObject(new Fels(), (561), 64+(45*i));
+            addObject(new Hindernis("Fels.png"), (561), 64+(45*i));
         } 
         
         for (int i = 0; i<20; i++)

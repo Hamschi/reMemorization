@@ -14,6 +14,15 @@ public class Mob extends Actor
     Emrael emrael = null;
     boolean imAngriff = false;
     Lebensleiste lebensleiste;
+    
+    public Mob(int ad, int ag, int ra, int scha, String pic)
+    {
+        setImage(new GreenfootImage(pic));
+        angriffsdauer = ad;
+        angriffsgeschwindigkeit = ag;
+        range = ra;
+        schaden = scha;
+    }
 
     public void act() 
     {
