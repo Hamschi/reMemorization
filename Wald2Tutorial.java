@@ -21,7 +21,7 @@ public class Wald2Tutorial extends Textbox
                 gespraechsteil++;
                 break;
             case 2:
-                drawText("Emrael", "Oh okay");
+                drawText("Emrael", "Oh okay.");
                 gespraechsteil++;
                 break;
             case 3:
@@ -29,10 +29,11 @@ public class Wald2Tutorial extends Textbox
                 gespraechsteil++;
                 break;
             case 4:
-                loescheTextbox();
-                setFertig(true);
-                emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
-                emrael.setBewegungBlockiert(false);
+                drawText("Pizaron", "Um einen normalen Angriff auszuführen, \nmusst du „1“ drücken. Das \nfügt deinem Gegner Schaden zu. Versuche \nes mal");
+                gespraechsteil++;
+                break;
+            case 5:
+                ende();
             }
         }
         if(Greenfoot.isKeyDown("enter")) {
@@ -44,6 +45,6 @@ public class Wald2Tutorial extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.Wald2Tutorial;
+        emrael.phase = Emrael.Phase.Wald2Beeren;
         }
 }

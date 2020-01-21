@@ -1,18 +1,22 @@
  import greenfoot.*;  
+ import java.util.List;
 
 public class Wald2 extends Wald
 {
     Emrael emrael;
     Wald1 wald1;
+    private int handlung;
     private boolean Wald2TutorialVorbei = false;
     private boolean Wald2BeerenVorbei = false;
     Textbox textbox;
+    Lebensleiste lebensleiste; 
     
     public Wald2(Emrael em, Wald1 w1)
     {   emrael = new Emrael(em);
         addObject(emrael, em.getXNachPortal(), em.getYNachPortal());
         emrael.addLebensleiste();
         wald1 = w1;
+        handlung = 1;
         prepare();
     }
     
@@ -56,19 +60,39 @@ public class Wald2 extends Wald
         addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 100);
         addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 300);
         addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 200, 200);
+        // Mob drache1 = new Mob(300, 1000, 80, 10, "Drache.png");
+        // addObject(drache1, 350, 100);
+        // Mob drache2 = new Mob(300, 1000, 80, 10, "Drache.png");
+        // addObject(drache2, 350, 300);
+        // Mob drache3 = new Mob(300, 1000, 80, 10, "Drache.png");
+        // addObject(drache3, 200, 200);
         
-        if (Wald2TutorialVorbei == false) {
-            skriptWald2Tutorial(emrael);
-        }
-        if (Wald2BeerenVorbei == false) {
-            skriptWald2Beeren(emrael);
-        }
+        addObject(new Hindernis("Busch.png"), 86, 88);
+        addObject(new Hindernis("Busch.png"), 148, 88);
+        
+        // if(Wald2TutorialVorbei==false)
+        // {
+            // skriptWald2Tutorial(emrael);
+            // Wald2TutorialVorbei=true;
+        // }
+        // if((Wald2BeerenVorbei == false) && (Wald2TutorialVorbei==true))
+        // {
+            // skriptWald2Beeren(emrael);
+            // Wald2BeerenVorbei=true;
+        // }
+        
     }
-    private void skriptWald2Tutorial(Emrael emrael) {
+    
+    public int getAnzahlMobs() {
+        int anzahlMobs = getObjects(Mob.class).size();
+        return anzahlMobs;
+    }
+    
+    public void skriptWald2Tutorial(Emrael emrael) {
         Textbox textbox = new Wald2Tutorial(emrael);
         addObject(textbox, 300,350);
     }
-    private void skriptWald2Beeren(Emrael emrael) {
+    public void skriptWald2Beeren(Emrael emrael) {
         Textbox textbox = new Wald2Beeren(emrael);
         addObject(textbox, 300,350);
     }

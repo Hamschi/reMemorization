@@ -38,15 +38,15 @@ public class Portale extends Actor
     }
     
     private void uebergang() {
+        List<Emrael> emraels = from.getObjects(Emrael.class);
+        Emrael emraelAlt = emraels.get(0);
+        List<Emrael> emraelsTo = to.getObjects(Emrael.class);
+        Emrael emraelNeu = emraelsTo.get(0);
+        emraelNeu.phase = emraelAlt.phase;
         if (fixesPortal) {
-            List<Emrael> emraelsTo = to.getObjects(Emrael.class);
-            Emrael emraelNeu = emraelsTo.get(0);
             emraelNeu.setLocation(xPos, yPos);
+            
         } else {
-            List<Emrael> emraels = from.getObjects(Emrael.class);
-            Emrael emraelAlt = emraels.get(0);
-            List<Emrael> emraelsTo = to.getObjects(Emrael.class);
-            Emrael emraelNeu = emraelsTo.get(0);
             emraelNeu.setLocation(emraelAlt.getXNachPortal(), emraelAlt.getYNachPortal());
         }
     }

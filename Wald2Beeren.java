@@ -17,7 +17,7 @@ public class Wald2Beeren extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
             case 1:
-                drawText("Pizaron", "Du müsstest dich jetzt bisschen sicherer \nmit dem Umgang mit deiner Waffe.");
+                drawText("Pizaron", "Du müsstest dich jetzt bisschen sicherer \nmit dem Umgang mit deiner Waffe fühlen.");
                 gespraechsteil++;
                 break;
             case 2:
@@ -62,6 +62,6 @@ public class Wald2Beeren extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.Wald2Beeren;
+        emrael.phase = Emrael.Phase.Wald2BeerenGegessen;
         }
 }

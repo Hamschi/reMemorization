@@ -19,6 +19,7 @@ public class Emrael extends Actor
     private int angriffsdauer = 300; // in millisekunden
     private Mob target;
     private int schaden = 30;
+    private int anzahlMobs;
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
@@ -91,7 +92,7 @@ public class Emrael extends Actor
             setLocation(getX(), getY()+3);
         // Position zuruecksetzen bei einem Hindernis
         boolean istAmRand = (getY()<16 || getY()>382 || getX()<17 || getX()>583);
-        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand) 
+        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class)) 
         {
             setLocation(lastX, lastY);
         }
@@ -101,6 +102,12 @@ public class Emrael extends Actor
         }
         angriffFortsetzen();
         
+        if(getWorld() instanceof Wald2)
+        {
+            Wald2 wald2 = (Wald2) getWorld();
+            wald2Skript(wald2);
+        }
+
    }
    
    public void angreifen(Mob mob) {
@@ -139,14 +146,32 @@ public class Emrael extends Actor
            return 60;
        return getY();
     }
-
+    
+    public void wald2Skript(Wald2 wald2) 
+    {
+        switch(phase)
+        {
+            case Wald2Tutorial:
+                wald2.skriptWald2Tutorial(this);
+                break;
+            case Wald2Beeren:
+                anzahlMobs = wald2.getAnzahlMobs();
+                if(anzahlMobs<3)
+                {
+                    wald2.skriptWald2Beeren(this);
+                }
+                break;
+            case Wald2BeerenGegessen:
+        }
+    }
+    
     public enum Phase {
         Wald1Einfuehrung,
         ErsterHuettenbesuch,
         Wald2VorMobs,
         Wald2Tutorial,
         Wald2Beeren,
-        WaldBeerenGegessen,
+        Wald2BeerenGegessen,
         WaldBeerenErklaert
     }
 }

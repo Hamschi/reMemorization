@@ -150,14 +150,8 @@ public class ErsterHuettenbesuch extends Textbox
                     pizaron.setLocation(pizaron.getX(), pizaron.getY()+(2));
                     Greenfoot.delay(1);
                 }
-                getWorld().removeObject(pizaron);
-                
+                getWorld().removeObject(pizaron);  
         }
 
     }
-
-
-
-
-
 }

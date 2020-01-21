@@ -3,6 +3,7 @@ import greenfoot.*;
 public class ElshinZentrum extends Elshin
 {
     Wald4 wald4;
+    
     public ElshinZentrum(Emrael em, Wald4 wald)
     {
         wald4 = wald;
@@ -13,8 +14,8 @@ public class ElshinZentrum extends Elshin
     {
         Haus haus1 = new Haus();
         addObject(haus1, 127, 103);
-        Bewohner1 bewohner1 = new Bewohner1();
-        addObject(bewohner1, 222, 44);
+        Bewohner bewohner = new Bewohner("ImpBew_vl.png");
+        addObject(bewohner,222, 44);
         
         Haus1 h1 = new Haus1(this);
         Portale inHaus1 = new Portale(this, h1);
@@ -74,7 +75,9 @@ public class ElshinZentrum extends Elshin
         
         for (int i = 0; i<15; i++)
         {
-            addObject(new Hindernis(), (14), 40+(26*i));
+            Hindernis hindernis = new Hindernis("Mauer.png");
+            hindernis.mauerSkalieren();
+            addObject(hindernis, (14), 40+(26*i));
         } 
       
         for (int i = 0; i<10; i++)
