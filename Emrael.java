@@ -147,6 +147,7 @@ public class Emrael extends Actor
        return getY();
     }
     
+    
     public void wald2Skript(Wald2 wald2) 
     {
         switch(phase)
@@ -158,7 +159,9 @@ public class Emrael extends Actor
                 anzahlMobs = wald2.getAnzahlMobs();
                 if(anzahlMobs<3)
                 {
+                    System.out.println("hal");
                     wald2.skriptWald2Beeren(this);
+                    phase = Phase.Irgendwie;
                 }
                 break;
             case Wald2BeerenGegessen:
@@ -171,6 +174,7 @@ public class Emrael extends Actor
         Wald2VorMobs,
         Wald2Tutorial,
         Wald2Beeren,
+        Irgendwie,
         Wald2BeerenGegessen,
         WaldBeerenErklaert
     }

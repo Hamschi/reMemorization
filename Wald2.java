@@ -26,6 +26,7 @@ public class Wald2 extends Wald
         emrael.addLebensleiste();
         emrael.setBewegungBlockiert(false);
         wald1 = new Wald1();
+        emrael.phase = Emrael.Phase.Wald2Tutorial;
         prepare();
     }
     

@@ -46,5 +46,6 @@ public class Wald2Tutorial extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.Wald2Beeren;
+        gespraechsteil = 6;
         }
 }

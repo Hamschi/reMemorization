@@ -47,5 +47,6 @@ import greenfoot.*;
             setFertig(true);
             emrael.setBewegungBlockiert(false);
             emrael.phase = Emrael.Phase.Wald2Beeren;
+            System.out.println("Wald erklärt");
         }
     }

@@ -10,6 +10,7 @@ public class Wald2Beeren extends Textbox
         setFertig(false);
         emrael = em;
         emrael.setBewegungBlockiert(true);
+        System.out.println("Nenn");
     }
 
     public void act() 
@@ -45,11 +46,6 @@ public class Wald2Beeren extends Textbox
                 gespraechsteil++;
                 break;
             case 8:
-                loescheTextbox();
-                setFertig(true);
-                emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
-                emrael.setBewegungBlockiert(false);
-            case 9:
                 ende();
             }
         }
