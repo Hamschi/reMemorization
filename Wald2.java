@@ -61,32 +61,23 @@ public class Wald2 extends Wald
         addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 100);
         addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 300);
         addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 200, 200);
-        // Mob drache1 = new Mob(300, 1000, 80, 10, "Drache.png");
-        // addObject(drache1, 350, 100);
-        // Mob drache2 = new Mob(300, 1000, 80, 10, "Drache.png");
-        // addObject(drache2, 350, 300);
-        // Mob drache3 = new Mob(300, 1000, 80, 10, "Drache.png");
-        // addObject(drache3, 200, 200);
-        
-        addObject(new Hindernis("Busch.png"), 86, 88);
-        addObject(new Hindernis("Busch.png"), 148, 88);
-        
-        // if(Wald2TutorialVorbei==false)
-        // {
-            // skriptWald2Tutorial(emrael);
-            // Wald2TutorialVorbei=true;
-        // }
-        // if((Wald2BeerenVorbei == false) && (Wald2TutorialVorbei==true))
-        // {
-            // skriptWald2Beeren(emrael);
-            // Wald2BeerenVorbei=true;
-        // }
-        
+
+        Busch beeren1 = new Busch();
+        addObject(beeren1, 86, 88);
+        Busch beeren2 = new Busch();
+        addObject(beeren2, 148, 88);
     }
     
     public int getAnzahlMobs() {
         int anzahlMobs = getObjects(Mob.class).size();
         return anzahlMobs;
+    }
+    
+    public void pizaronHinzufuegen()
+    {
+        Pizaron piz = new Pizaron();
+        this.addObject(piz, 95, 313);
+        piz.setImage("Pizaron_vl.png");
     }
     
     public void skriptWald2Tutorial(Emrael emrael) {
@@ -97,5 +88,8 @@ public class Wald2 extends Wald
         Textbox textbox = new Wald2Beeren(emrael);
         addObject(textbox, 300,350);
     }
-
+    public void skriptWald2BeerenGegessen(Emrael emrael) {
+        Textbox textbox = new Wald2BeerenGegessen(emrael);
+        addObject(textbox, 300,350);
+    }
 }

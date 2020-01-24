@@ -1,10 +1,10 @@
 import greenfoot.*;  
 
-    public class WaldBeerenGegessen extends Textbox
+    public class Wald2BeerenGegessen extends Textbox
 {
         private int gespraechsteil;
         private Emrael emrael;
-        public WaldBeerenGegessen(Emrael em) {
+        public Wald2BeerenGegessen(Emrael em) {
             drawText("Emrael", "Oh, ich fühle mich besser.");
             gespraechsteil = 1;
             setFertig(false);
@@ -21,6 +21,11 @@ import greenfoot.*;
                     gespraechsteil++;
                     break;
                 case 2:
+                    loescheTextbox();
+                    setFertig(true);
+                    emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
+                    emrael.setBewegungBlockiert(false);
+                case 3:
                     ende();
                     }
                 }
@@ -33,6 +38,6 @@ import greenfoot.*;
             loescheTextbox();
             setFertig(true);
             emrael.setBewegungBlockiert(false);
-            emrael.phase = Emrael.Phase.Wald2Beeren;
+            emrael.phase = Emrael.Phase.Wald2BeerenErklaert;
         }
     }

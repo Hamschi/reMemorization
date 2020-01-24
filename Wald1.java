@@ -5,6 +5,7 @@ public class Wald1 extends Wald
 {
     Emrael emrael;
     Textbox textbox;
+    private int laufen = 1;
     
     public Wald1()
     {    
@@ -70,9 +71,39 @@ public class Wald1 extends Wald
         }
     }
     
+    public void pizaronLaeuft()
+    {
+        Pizaron piz = new Pizaron();
+        this.addObject(piz, 392, 313);
+        piz.setImage("Pizaron_vl.png");
+        switch(laufen)
+        {
+            case 1:
+                skriptVorWald2Tutorial(emrael);
+            case 2:
+                piz.setImage("Pizaron_rege.png");
+                for (int i = 0; i<94; i++)
+                {
+                    piz.setLocation(piz.getX()+(2), piz.getY());
+                    Greenfoot.delay(1);
+                }
+                removeObject(piz);
+        }
+
+    }
+    
+    public int getAnzahlEmrael() {
+        int emrael = getObjects(Emrael.class).size();
+        return emrael;
+    }
+    
+    
     private void skriptWald1Einleitung() {
         textbox = new Wald1Einleitung(emrael);
         addObject(textbox, 300, 350);
     }
-
+    public void skriptVorWald2Tutorial(Emrael emrael) {
+        textbox = new VorWald2Tutorial(emrael);
+        addObject(textbox, 300, 350);
+    }
 }

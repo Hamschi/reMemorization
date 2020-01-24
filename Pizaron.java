@@ -7,6 +7,7 @@ public class Pizaron extends Actor
     private GreenfootImage left = new GreenfootImage("Pizaron_lige.png");
     private GreenfootImage right = new GreenfootImage("Pizaron_rege.png");
     Emrael emrael;
+    Wald1 wald1;
     
     public Pizaron()
     {
@@ -18,6 +19,7 @@ public class Pizaron extends Actor
     
     public void act() 
     {
+
     }
     
 
