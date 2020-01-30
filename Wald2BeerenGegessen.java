@@ -21,11 +21,6 @@ import greenfoot.*;
                     gespraechsteil++;
                     break;
                 case 2:
-                    loescheTextbox();
-                    setFertig(true);
-                    emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
-                    emrael.setBewegungBlockiert(false);
-                case 3:
                     ende();
                     }
                 }

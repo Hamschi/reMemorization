@@ -29,7 +29,6 @@ public class Wald1Einleitung extends Textbox
                 ende();
             }
         }
-           
         if(Greenfoot.isKeyDown("enter")) {
             ende();
         }

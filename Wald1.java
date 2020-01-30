@@ -7,6 +7,7 @@ public class Wald1 extends Wald
     Textbox textbox;
     private int laufen = 1;
     
+    
     public Wald1()
     {    
         prepare();
@@ -91,14 +92,12 @@ public class Wald1 extends Wald
         }
 
     }
-    
+
     public int getAnzahlEmrael() {
         int emrael = getObjects(Emrael.class).size();
         return emrael;
     }
-    
-    
-    private void skriptWald1Einleitung() {
+    public void skriptWald1Einleitung() {
         textbox = new Wald1Einleitung(emrael);
         addObject(textbox, 300, 350);
     }

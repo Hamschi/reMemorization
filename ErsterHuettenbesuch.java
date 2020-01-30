@@ -154,8 +154,6 @@ import greenfoot.*;
                         Greenfoot.delay(1);
                     }
                     getWorld().removeObject(pizaron);
-                case 5:
-                    //wald1.pizaronHinzufuegen();
             }
 
     }

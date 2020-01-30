@@ -47,11 +47,6 @@ public class Lebensleiste extends Actor
         myImage.fillRect(1, 1, (int)(leben*pixelProLebenspunkt), lebensleisteHoehe);
     }
     
-    public void lebenVerlieren()
-    {
-        leben--;
-    }
-    
     public void schaden(int s) {
         leben = leben - s;
     }

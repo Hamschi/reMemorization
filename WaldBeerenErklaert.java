@@ -28,23 +28,21 @@ import greenfoot.*;
                     drawText("Pizaron", "Ich gehe wieder in die \nHütte. Besiege am besten \nnochmal ein-zwei Viehcher, \nbis du mir dann folgst.");
                     gespraechsteil++;
                     break;
+                // case 4:
+                    
                 case 4:
-                    loescheTextbox();
-                    setFertig(true);
-                    emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
-                    emrael.setBewegungBlockiert(false);
-                case 5:
                     ende();
                     }
                 }
             if(Greenfoot.isKeyDown("enter")) {
                 ende();
             }
-            }      
+        }      
         private void ende() 
         {
             loescheTextbox();
             setFertig(true);
             emrael.setBewegungBlockiert(false);
+            emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
         }
     }
