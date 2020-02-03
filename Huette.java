@@ -8,12 +8,14 @@ public class Huette extends World
         private boolean ersterHuettenbesuchVorbei = false;
         Emrael emrael;
         Pizaron pizaron;
-            
+        Textbox textbox;
+
         public Huette(Emrael emrael, World wald1)
         {    
             super(600, 400, 1);
             setBackground(huetteBoden);
             //backgroundMusic.playLoop();
+            // emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
             prepare(emrael, wald1);
         }
         
@@ -28,7 +30,7 @@ public class Huette extends World
             addObject(tisch, 306, 214);
             Pizaron pizaron = new Pizaron();
             addObject(pizaron, 300, 135);
-            Deko magiebuch = new Deko("Magiebuch.PNG");
+            Hindernis magiebuch = new Hindernis("Magiebuch.PNG");
             addObject (magiebuch, 280, 199);
             Hindernis trank = new Hindernis("Trank.PNG");
             addObject (trank, 577, 200);
@@ -42,7 +44,7 @@ public class Huette extends World
             addObject(apfel, 275, 214);
             Deko magiebuch2 = new Deko("Magiebuch2.PNG");
             addObject(magiebuch2, 83, 100);
-            Deko kraut1 = new Deko("Kraut1.PNG");
+            Hindernis kraut1 = new Hindernis("Kraut1.PNG");
             addObject(kraut1, 113, 256);
             Deko kraut2 = new Deko("Kraut2.PNG");
             addObject(kraut2, 319, 211);
@@ -76,9 +78,19 @@ public class Huette extends World
 
         }
         
-        private void skriptErsterHuettenbesuch(Emrael emrael, Pizaron pizaron) {
+        public void bildEinblenden()
+        {
+            Deko kraut = new Deko("HerbBild.PNG");
+            addObject(kraut, 319, 211);
+        }
+        private void skriptErsterHuettenbesuch(Emrael emrael, Pizaron pizaron) 
+        {
             Textbox textbox = new ErsterHuettenbesuch(emrael, pizaron);
             addObject(textbox, 300,350);
         }
-        
+        public void skriptZweiterHuettenbesuch(Emrael emrael) 
+        {
+            Textbox textbox = new ZweiterHuettenbesuch(emrael);
+            addObject(textbox, 300,350);
+        }
 }

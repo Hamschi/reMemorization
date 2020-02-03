@@ -1,5 +1,5 @@
- import greenfoot.*;  
- import java.util.List;
+import greenfoot.*;  
+import java.util.List;
 
 public class Wald2 extends Wald
 {
@@ -32,6 +32,7 @@ public class Wald2 extends Wald
     
     private void prepare()
     {
+        pizaronHinzufuegen();
         for (int i = 0; i<4; i++)
         {
             addObject(new Hindernis("Baum.png"), (390+(61*i)), 488);
@@ -80,6 +81,34 @@ public class Wald2 extends Wald
         piz.setImage("Pizaron_vl.png");
     }
     
+    public void wald2Skript() 
+    {
+        switch(emrael.phase)
+        {
+            case Wald2Tutorial:
+                skriptWald2Tutorial(emrael);
+                break;
+            case Wald2Beeren:
+                int anzahlMobs = getAnzahlMobs();
+                if(anzahlMobs<3)
+                {
+                    skriptWald2Beeren(emrael);
+                }
+                break;
+            case Wald2BeerenGegessen:
+                if(emrael.istInNaeheVonBusch() && Greenfoot.isKeyDown("space"))
+                {
+                    Greenfoot.delay(100);
+                    skriptWald2BeerenGegessen(emrael);
+                }
+                break;
+            case Wald2BeerenErklaert:
+                Greenfoot.delay(200);
+                skriptWald2BeerenErklaert(emrael);
+                break;
+        }
+    }
+    
     public void skriptWald2Tutorial(Emrael emrael) {
         Textbox textbox = new Wald2Tutorial(emrael);
         addObject(textbox, 300,350);
@@ -90,6 +119,10 @@ public class Wald2 extends Wald
     }
     public void skriptWald2BeerenGegessen(Emrael emrael) {
         Textbox textbox = new Wald2BeerenGegessen(emrael);
+        addObject(textbox, 300,350);
+    }
+    public void skriptWald2BeerenErklaert(Emrael emrael) {
+        Textbox textbox = new Wald2BeerenErklaert(emrael);
         addObject(textbox, 300,350);
     }
 }

@@ -43,9 +43,12 @@ public class Wald3 extends Wald
             addObject(new Hindernis("Baum.png"), (570), 243+(71*i));
         } 
         
-        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 270, 249);
-        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 138, 107);
+        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 159, 248);
+        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 313, 163);
         addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 477, 286);
+        
+        Hindernis herb = new Hindernis("Herb.PNG");
+        addObject(herb , 86, 88);
         
         for (int i = 0; i<30; i++)
         {
