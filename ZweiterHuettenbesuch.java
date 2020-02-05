@@ -45,7 +45,11 @@ public class ZweiterHuettenbesuch extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
+<<<<<<< HEAD
         emrael.phase = Emrael.Phase.BotanTreffen;
+=======
+        emrael.phase = Emrael.Phase.Zwischenphase;
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
         gespraechsteil = 5;
     }
 }

@@ -120,6 +120,7 @@ dependency124.type=UsesDependency
 dependency125.from=Mob
 dependency125.to=Lebensleiste
 dependency125.type=UsesDependency
+<<<<<<< HEAD
 dependency126.from=EmraelAusgeruht
 dependency126.to=Emrael
 dependency126.type=UsesDependency
@@ -131,10 +132,24 @@ dependency128.to=Emrael
 dependency128.type=UsesDependency
 dependency129.from=WirtTreffen
 dependency129.to=Deko
+=======
+dependency126.from=Wald2BeerenErklaert
+dependency126.to=Emrael
+dependency126.type=UsesDependency
+dependency127.from=ZweiterHuettenbesuch
+dependency127.to=Emrael
+dependency127.type=UsesDependency
+dependency128.from=ZweiterHuettenbesuch
+dependency128.to=Deko
+dependency128.type=UsesDependency
+dependency129.from=ZweiterHuettenbesuch
+dependency129.to=Huette
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 dependency129.type=UsesDependency
 dependency13.from=Haus1
 dependency13.to=Deko
 dependency13.type=UsesDependency
+<<<<<<< HEAD
 dependency130.from=Wald2BeerenErklaert
 dependency130.to=Emrael
 dependency130.type=UsesDependency
@@ -163,11 +178,42 @@ dependency138.from=HydreixBesiegt
 dependency138.to=Deko
 dependency138.type=UsesDependency
 dependency139.from=VierterHuettenbesuch
+=======
+dependency130.from=Wald2Tutorial
+dependency130.to=Emrael
+dependency130.type=UsesDependency
+dependency131.from=Wald2Beeren
+dependency131.to=Emrael
+dependency131.type=UsesDependency
+dependency132.from=Wald2BeerenGegessen
+dependency132.to=Emrael
+dependency132.type=UsesDependency
+dependency133.from=Wald1Einleitung
+dependency133.to=Emrael
+dependency133.type=UsesDependency
+dependency134.from=Wald1Einleitung
+dependency134.to=Pizaron
+dependency134.type=UsesDependency
+dependency135.from=VorWald2Tutorial
+dependency135.to=Emrael
+dependency135.type=UsesDependency
+dependency136.from=ErsterHuettenbesuch
+dependency136.to=Emrael
+dependency136.type=UsesDependency
+dependency137.from=ErsterHuettenbesuch
+dependency137.to=Pizaron
+dependency137.type=UsesDependency
+dependency138.from=ErsterHuettenbesuch
+dependency138.to=Wald1
+dependency138.type=UsesDependency
+dependency139.from=WaldBeerenErklaert
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 dependency139.to=Emrael
 dependency139.type=UsesDependency
 dependency14.from=Haus1
 dependency14.to=Hindernis
 dependency14.type=UsesDependency
+<<<<<<< HEAD
 dependency140.from=VierterHuettenbesuch
 dependency140.to=Deko
 dependency140.type=UsesDependency
@@ -198,6 +244,17 @@ dependency148.type=UsesDependency
 dependency149.from=Wald1Einleitung
 dependency149.to=Emrael
 dependency149.type=UsesDependency
+=======
+dependency140.from=WaldBeerenGegessen
+dependency140.to=Emrael
+dependency140.type=UsesDependency
+dependency141.from=Bandit
+dependency141.to=Emrael
+dependency141.type=UsesDependency
+dependency142.from=Bandit
+dependency142.to=Lebensleiste
+dependency142.type=UsesDependency
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 dependency15.from=Haus1
 dependency15.to=Portale
 dependency15.type=UsesDependency
@@ -515,8 +572,13 @@ editor.fx.0.width=1616
 editor.fx.0.x=-8
 editor.fx.0.y=-8
 height=876
+<<<<<<< HEAD
 package.numDependencies=160
 package.numTargets=64
+=======
+package.numDependencies=142
+package.numTargets=55
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -539,20 +601,29 @@ target1.width=90
 target1.x=0
 target1.y=0
 target10.height=50
+<<<<<<< HEAD
 target10.name=Busch
+=======
+target10.name=Beeren
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=80
 target10.x=0
 target10.y=0
 target11.height=50
+<<<<<<< HEAD
 target11.name=Schmiede
+=======
+target11.name=Emrael
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Beeren
 target12.showInterface=false
 target12.type=ClassTarget
@@ -582,27 +653,70 @@ target15.x=0
 target15.y=0
 target16.height=50
 target16.name=NachWald1
+=======
+target12.name=Wald2Tutorial
+target12.showInterface=false
+target12.type=ClassTarget
+target12.width=110
+target12.x=0
+target12.y=0
+target13.height=50
+target13.name=NachWald1
+target13.showInterface=false
+target13.type=ClassTarget
+target13.width=140
+target13.x=0
+target13.y=0
+target14.height=50
+target14.name=UnterwasserEingang
+target14.showInterface=false
+target14.type=ClassTarget
+target14.width=130
+target14.x=0
+target14.y=0
+target15.height=50
+target15.name=Banditenteil
+target15.showInterface=false
+target15.type=ClassTarget
+target15.width=90
+target15.x=0
+target15.y=0
+target16.height=50
+target16.name=ZurHuette
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=140
 target16.x=0
 target16.y=0
 target17.height=50
+<<<<<<< HEAD
 target17.name=UnterwasserEingang
+=======
+target17.name=Haeuser
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=130
 target17.x=0
 target17.y=0
 target18.height=50
+<<<<<<< HEAD
 target18.name=Banditenteil
+=======
+target18.name=NachWald2
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=90
 target18.x=0
 target18.y=0
 target19.height=50
+<<<<<<< HEAD
 target19.name=ZurHuette
+=======
+target19.name=Haus1
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=140
@@ -616,6 +730,7 @@ target2.width=110
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< HEAD
 target20.name=HydreixBesiegt
 target20.showInterface=false
 target20.type=ClassTarget
@@ -624,40 +739,67 @@ target20.x=0
 target20.y=0
 target21.height=50
 target21.name=VierterHuettenbesuch
+=======
+target20.name=Wald2Beeren
+target20.showInterface=false
+target20.type=ClassTarget
+target20.width=90
+target20.x=0
+target20.y=0
+target21.height=50
+target21.name=Haus2
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=140
 target21.x=0
 target21.y=0
 target22.height=50
+<<<<<<< HEAD
 target22.name=Haeuser
+=======
+target22.name=NPC
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=80
 target22.x=0
 target22.y=0
 target23.height=50
+<<<<<<< HEAD
 target23.name=NachWald2
+=======
+target23.name=Botan
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=90
 target23.x=0
 target23.y=0
 target24.height=50
+<<<<<<< HEAD
 target24.name=Haus1
+=======
+target24.name=Wald2BeerenGegessen
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target24.showInterface=false
 target24.type=ClassTarget
-target24.width=80
+target24.width=150
 target24.x=0
 target24.y=0
 target25.height=50
+<<<<<<< HEAD
 target25.name=Wald2Beeren
+=======
+target25.name=Bradley
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=90
 target25.x=0
 target25.y=0
 target26.height=50
+<<<<<<< HEAD
 target26.name=AnkunftElshin
 target26.showInterface=false
 target26.type=ClassTarget
@@ -666,12 +808,23 @@ target26.x=0
 target26.y=0
 target27.height=50
 target27.name=Haus2
+=======
+target26.name=Mauer
+target26.showInterface=false
+target26.type=ClassTarget
+target26.width=80
+target26.x=0
+target26.y=0
+target27.height=50
+target27.name=Wald
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=80
 target27.x=0
 target27.y=0
 target28.height=50
+<<<<<<< HEAD
 target28.name=NPC
 target28.showInterface=false
 target28.type=ClassTarget
@@ -680,6 +833,16 @@ target28.x=0
 target28.y=0
 target29.height=50
 target29.name=Botan
+=======
+target28.name=Wald1Einleitung
+target28.showInterface=false
+target28.type=ClassTarget
+target28.width=110
+target28.x=0
+target28.y=0
+target29.height=50
+target29.name=ElshinZentrum
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target29.showInterface=false
 target29.type=ClassTarget
 target29.width=80
@@ -693,13 +856,18 @@ target3.width=80
 target3.x=0
 target3.y=0
 target30.height=50
+<<<<<<< HEAD
 target30.name=BotanBesiegt
+=======
+target30.name=Startbildschirm
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target30.showInterface=false
 target30.type=ClassTarget
 target30.width=100
 target30.x=0
 target30.y=0
 target31.height=50
+<<<<<<< HEAD
 target31.name=Wald2BeerenGegessen
 target31.showInterface=false
 target31.type=ClassTarget
@@ -708,40 +876,67 @@ target31.x=0
 target31.y=0
 target32.height=50
 target32.name=Bradley
+=======
+target31.name=VorWald2Tutorial
+target31.showInterface=false
+target31.type=ClassTarget
+target31.width=120
+target31.x=0
+target31.y=0
+target32.height=50
+target32.name=Haus
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target32.showInterface=false
 target32.type=ClassTarget
 target32.width=80
 target32.x=0
 target32.y=0
 target33.height=50
+<<<<<<< HEAD
 target33.name=Mauer
+=======
+target33.name=Pizaron
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target33.showInterface=false
 target33.type=ClassTarget
 target33.width=80
 target33.x=0
 target33.y=0
 target34.height=50
+<<<<<<< HEAD
 target34.name=DritterHuettenbesuch
+=======
+target34.name=Gedanken
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target34.showInterface=false
 target34.type=ClassTarget
 target34.width=140
 target34.x=0
 target34.y=0
 target35.height=50
+<<<<<<< HEAD
 target35.name=Wald
+=======
+target35.name=ErsterHuettenbesuch
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target35.showInterface=false
 target35.type=ClassTarget
 target35.width=80
 target35.x=0
 target35.y=0
 target36.height=50
+<<<<<<< HEAD
 target36.name=Wald1Einleitung
+=======
+target36.name=Mob
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target36.showInterface=false
 target36.type=ClassTarget
 target36.width=110
 target36.x=0
 target36.y=0
 target37.height=50
+<<<<<<< HEAD
 target37.name=ElshinZentrum
 target37.showInterface=false
 target37.type=ClassTarget
@@ -757,6 +952,23 @@ target38.x=0
 target38.y=0
 target39.height=50
 target39.name=VorWald2Tutorial
+=======
+target37.name=WaldBeerenErklaert
+target37.showInterface=false
+target37.type=ClassTarget
+target37.width=130
+target37.x=0
+target37.y=0
+target38.height=50
+target38.name=Deko
+target38.showInterface=false
+target38.type=ClassTarget
+target38.width=80
+target38.x=0
+target38.y=0
+target39.height=50
+target39.name=Hindernis
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target39.showInterface=false
 target39.type=ClassTarget
 target39.width=120
@@ -770,73 +982,113 @@ target4.width=80
 target4.x=0
 target4.y=0
 target40.height=50
+<<<<<<< HEAD
 target40.name=Haus
+=======
+target40.name=Unterwasser
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target40.showInterface=false
 target40.type=ClassTarget
-target40.width=80
+target40.width=140
 target40.x=0
 target40.y=0
 target41.height=50
+<<<<<<< HEAD
 target41.name=Pizaron
+=======
+target41.name=Wald4
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target41.showInterface=false
 target41.type=ClassTarget
 target41.width=80
 target41.x=0
 target41.y=0
 target42.height=50
+<<<<<<< HEAD
 target42.name=Gedanken
+=======
+target42.name=Wald3
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target42.showInterface=false
 target42.type=ClassTarget
 target42.width=80
 target42.x=0
 target42.y=0
 target43.height=50
+<<<<<<< HEAD
 target43.name=ErsterHuettenbesuch
+=======
+target43.name=Elshin
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target43.showInterface=false
 target43.type=ClassTarget
 target43.width=130
 target43.x=0
 target43.y=0
 target44.height=50
+<<<<<<< HEAD
 target44.name=Mob
+=======
+target44.name=Wald2
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target44.showInterface=false
 target44.type=ClassTarget
 target44.width=80
 target44.x=0
 target44.y=0
 target45.height=50
+<<<<<<< HEAD
 target45.name=BotanTreffen
+=======
+target45.name=Textbox
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target45.showInterface=false
 target45.type=ClassTarget
 target45.width=90
 target45.x=0
 target45.y=0
 target46.height=50
+<<<<<<< HEAD
 target46.name=WaldBeerenErklaert
+=======
+target46.name=Bandit
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target46.showInterface=false
 target46.type=ClassTarget
 target46.width=130
 target46.x=0
 target46.y=0
 target47.height=50
+<<<<<<< HEAD
 target47.name=Deko
+=======
+target47.name=Barbar
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target47.showInterface=false
 target47.type=ClassTarget
 target47.width=80
 target47.x=0
 target47.y=0
 target48.height=50
+<<<<<<< HEAD
 target48.name=Hindernis
+=======
+target48.name=Bewohner
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target48.showInterface=false
 target48.type=ClassTarget
 target48.width=80
 target48.x=0
 target48.y=0
 target49.height=50
+<<<<<<< HEAD
 target49.name=Unterwasser
+=======
+target49.name=TitelBuchstaben
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target49.showInterface=false
 target49.type=ClassTarget
-target49.width=140
+target49.width=110
 target49.x=0
 target49.y=0
 target5.height=50
@@ -847,41 +1099,62 @@ target5.width=80
 target5.x=0
 target5.y=0
 target50.height=50
+<<<<<<< HEAD
 target50.name=Wald4
+=======
+target50.name=Huette
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target50.showInterface=false
 target50.type=ClassTarget
 target50.width=80
 target50.x=0
 target50.y=0
 target51.height=50
+<<<<<<< HEAD
 target51.name=Wald3
+=======
+target51.name=WaldBeerenGegessen
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target51.showInterface=false
 target51.type=ClassTarget
-target51.width=80
+target51.width=140
 target51.x=0
 target51.y=0
 target52.height=50
+<<<<<<< HEAD
 target52.name=Elshin
+=======
+target52.name=UnterwasserBoss
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target52.showInterface=false
 target52.type=ClassTarget
-target52.width=80
+target52.width=110
 target52.x=0
 target52.y=0
 target53.height=50
+<<<<<<< HEAD
 target53.name=Wald2
+=======
+target53.name=Barkeeper
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target53.showInterface=false
 target53.type=ClassTarget
 target53.width=80
 target53.x=0
 target53.y=0
 target54.height=50
+<<<<<<< HEAD
 target54.name=Textbox
+=======
+target54.name=Wald1
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target54.showInterface=false
 target54.type=ClassTarget
 target54.width=80
 target54.x=0
 target54.y=0
 target55.height=50
+<<<<<<< HEAD
 target55.name=Bandit
 target55.showInterface=false
 target55.type=ClassTarget
@@ -918,9 +1191,19 @@ target59.x=0
 target59.y=0
 target6.height=50
 target6.name=Taverne
+=======
+target55.name=Lebensleiste
+target55.showInterface=false
+target55.type=ClassTarget
+target55.width=90
+target55.x=0
+target55.y=0
+target6.height=50
+target6.name=Wald2BeerenErklaert
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target6.showInterface=false
 target6.type=ClassTarget
-target6.width=80
+target6.width=130
 target6.x=0
 target6.y=0
 target60.height=50
@@ -959,21 +1242,33 @@ target64.width=90
 target64.x=0
 target64.y=0
 target7.height=50
+<<<<<<< HEAD
 target7.name=Zimmer
+=======
+target7.name=ZweiterHuettenbesuch
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target7.showInterface=false
 target7.type=ClassTarget
-target7.width=80
+target7.width=140
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD
 target8.name=Wald2BeerenErklaert
+=======
+target8.name=Busch
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=130
 target8.x=0
 target8.y=0
 target9.height=50
+<<<<<<< HEAD
 target9.name=ZweiterHuettenbesuch
+=======
+target9.name=Schmiede
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=140
@@ -981,6 +1276,6 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1616
-world.lastInstantiated=Wald1
+world.lastInstantiated=Wald2
 xPosition=0
 yPosition=0

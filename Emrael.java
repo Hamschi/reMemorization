@@ -200,6 +200,7 @@ public class Emrael extends Actor
         Wald2BeerenGegessen,
         Wald2BeerenErklaert,
         ZweiterHuettenbesuch,
+<<<<<<< HEAD
         BotanTreffen,
         BotanBesiegt,
         DritterHuettenbesuch,
@@ -218,6 +219,8 @@ public class Emrael extends Actor
         BarbarKonflikt,
         BarbarBesiegt,
         ElshinEnde,
+=======
+>>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
         Zwischenphase
     }
 }
