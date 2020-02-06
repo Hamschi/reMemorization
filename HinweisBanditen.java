@@ -1,13 +1,13 @@
 import greenfoot.*;  
 
-public class EmraelAusgeruht extends Textbox
+public class HinweisBanditen extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
     private Deko kraut;
     
-    public EmraelAusgeruht(Emrael em) {
-        drawText("Emrael", "Gut, dann gehe ich mal zu Pizaron \nund höre mir an, was ich tun soll.");
+    public HinweisBanditen(Emrael em) {
+        drawText("Hinweis", "Die Banditen sind stark. \nSie dürfen dich nicht sehen. \nBesorge die Kugel mit -space-.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
@@ -31,7 +31,7 @@ public class EmraelAusgeruht extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.FuenfterHuettenbesuch;
+        emrael.phase = Emrael.Phase.BradleyKonflikt;
         gespraechsteil = 2;
     }
 }

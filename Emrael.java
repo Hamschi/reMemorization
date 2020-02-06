@@ -200,7 +200,6 @@ public class Emrael extends Actor
         Wald2BeerenGegessen,
         Wald2BeerenErklaert,
         ZweiterHuettenbesuch,
-<<<<<<< HEAD
         BotanTreffen,
         BotanBesiegt,
         DritterHuettenbesuch,
@@ -214,13 +213,12 @@ public class Emrael extends Actor
         HinweisBanditen,
         BradleyKonflikt,
         BradleyBesiegt,
+        //CelestiaAnsprechen,
         Gedankending,
-        PlaeneMitYadrin,
+        KriegserklaerungBarbar,
         BarbarKonflikt,
         BarbarBesiegt,
         ElshinEnde,
-=======
->>>>>>> edf92b24abf637970fbadbfb964589784a1c01be
         Zwischenphase
     }
 }

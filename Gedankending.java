@@ -1,13 +1,13 @@
 import greenfoot.*;  
 
-public class WirtTreffen extends Textbox
+public class Gedankending extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
     private Deko kraut;
     
-    public WirtTreffen(Emrael em) {
-        drawText("Wirt", "Guten Abend. Ein Zimmer \nfür eine Nacht bitte, werter \nHerr.");
+    public Gedankending(Emrael em) {
+        drawText("Celestia", "Hallo Emrael, ich bin \nCelestia, die Kugel des magischen Scheins.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
@@ -19,51 +19,51 @@ public class WirtTreffen extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
                 case 1:
-                    drawText("Wirt", "Oh, was führt denn Emrael, den \nBarmherzigen zu so einem einfachen \nWirtshaus wie meines?");
+                    drawText("Emrael", "Woher kennst du meinen Namen?");
                     gespraechsteil++;
                     break;
                 case 2:
-                    drawText("Emrael", "Um es kurz zu fassen: \nIch habe mein Gedächtnis \nverloren.");
+                    drawText("Celestia", "Warum sollte ich ihn nicht \nkennen? Du bist ein Mitglied \ndes Orden des Lichts.");
                     gespraechsteil++;
                     break;
                 case 3:
-                    drawText("Emrael", "Nun ist mir aufgefallen, \ndass es dieser Stadt nicht sehr \ngut geht und dem Grund gehe ich auf \ndie Spur.");
+                    drawText("Emrael", "Aber was ist mit Pizaron? \nEr meinte, du gehörest ihn...");
                     gespraechsteil++;
                     break;
                 case 4:
-                    drawText("Wirt", "Nun, alles begann nach Ihrem \nplötzlichen Verschwinden. Unseren \nZustand haben Sie ja gesehen.");
+                    drawText("Celestia", "Weißt du eigentlich, warum \ndie Banditen mich gekidnappt haben?.");
                     gespraechsteil++;
                     break;
                 case 5:
-                    drawText("Emrael", "Aber wie kommt denn sowas \nzustande? Solche Katastrophen brauchen \ndoch mehrere Jahre.");
+                    drawText("Celestia", "Ich bin in der Lage, demjenigen \nsein vollsten Potential zu \nerwecken, der mich darum bittet.");
                     gespraechsteil++;
                     break;
                 case 6:
-                    drawText("Wirt", "Das muss ein mächtiger Zauber sein, \naber dies würde viel zu viel magische \nEnergie kosten.");
+                    drawText("Celestia", "Bedingung, mit mir überhaupt \nKontakt aufnehmen zu können ist, dass man ein \nreines Herz haben muss.");
                     gespraechsteil++;
                     break;
                 case 7:
-                    drawText("Wirt", "Viele glauben auch, es sei \ndas Werk des Teufels.");
+                    drawText("Emrael", "Und was ist mit mir? Ich \nhabe so viele Lebewesen getötet...");
                     gespraechsteil++;
                     break;
                 case 8:
-                    drawText("Wirt", "Das halte ich aber für sehr hirnspinstig. \nWer glaubt schon an den Teufel?");
+                    drawText("Celestia", "Nun, das bist nicht du \ngewesen. Du hattest keine \nandere Wahl gehabt.");
                     gespraechsteil++;
                     break;
                 case 9:
-                    drawText("Emrael", "Sehr hilfreiche Informationen, ich \ndanke Ihnen.");
+                    drawText("Celestia", "Ganz tief in deinem Herzen \nsehe ich doch, dass du das \nauch nicht wolltest.");
                     gespraechsteil++;
                     break;
                 case 10:
-                    drawText("Wirt", "Bleiben Sie doch eine Nacht. Dann \nkönnen Sie sich noch mit anderen \nGästen unterhalten");
+                    drawText("Celestia", "Du bist ein guter Mensch \nEmrael. Ich erwercke nun das \nvollste Potential, das in dir schlummert.");
                     gespraechsteil++;
                     break;
                 case 11:
-                    drawText("Emrael", "Oh, das wäre sehr lieb. \nIch weiß ihr Angebot sehr \nzu schätzen.");
+                    drawText("Emrael", "Aber ich habe doch noch \nso viele Fragen...");
                     gespraechsteil++;
                     break;
                 case 12:
-                    drawText("Wirt", "Das ist mir eine \nEhre. Ruhen Sie sich im Bett \nmit -space- aus.");
+                    drawText("Celestia", "Auf deine Fragen kannst \nnur du eine Antwort finden \nlieber Emrael.");
                     gespraechsteil++;
                     break;
                 case 13:
@@ -79,7 +79,7 @@ public class WirtTreffen extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.EmraelAusgeruht;
+        emrael.phase = Emrael.Phase.KriegserklaerungBarbar;
         gespraechsteil = 14;
     }
 }
