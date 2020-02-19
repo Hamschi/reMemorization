@@ -12,22 +12,8 @@ public class Busch extends Actor
     
     public void act() 
     {
-        EmraelInReichweite(emraelReichweite);
     }
     
-    public void EmraelInReichweite(boolean ham)
-    {
-        int emraelBeruehrt= getObjectsInRange(55, Emrael.class).size();
-        if(emraelBeruehrt >0)
-        {
-            emraelReichweite = true;
-        }
-        else
-        {
-            emraelReichweite = false;
-        }
-        ham = emraelReichweite;
-    }
     
     private void setImageBeerenGegessen()
     {

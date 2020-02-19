@@ -5,18 +5,21 @@ public class Wald2 extends Wald
 {
     Emrael emrael;
     Wald1 wald1;
-    private int handlung;
+    Pizaron pizaron;
+    private int laufen = 1;
+    private int erklaertSchritte;
     private boolean Wald2TutorialVorbei = false;
     private boolean Wald2BeerenVorbei = false;
     Textbox textbox;
     Lebensleiste lebensleiste; 
+    private boolean tVorhanden;
     
     public Wald2(Emrael em, Wald1 w1)
     {   emrael = new Emrael(em);
         addObject(emrael, em.getXNachPortal(), em.getYNachPortal());
         emrael.addLebensleiste();
         wald1 = w1;
-        handlung = 1;
+        erklaertSchritte = 1;
         prepare();
     }
     
@@ -32,7 +35,6 @@ public class Wald2 extends Wald
     
     private void prepare()
     {
-        pizaronHinzufuegen();
         for (int i = 0; i<4; i++)
         {
             addObject(new Hindernis("Baum.png"), (390+(61*i)), 488);
@@ -67,18 +69,13 @@ public class Wald2 extends Wald
         addObject(beeren1, 86, 88);
         Busch beeren2 = new Busch();
         addObject(beeren2, 148, 88);
+        Pizaron pizaron = new Pizaron();
+        addObject(pizaron,95, 313);
     }
     
     public int getAnzahlMobs() {
         int anzahlMobs = getObjects(Mob.class).size();
         return anzahlMobs;
-    }
-    
-    public void pizaronHinzufuegen()
-    {
-        Pizaron piz = new Pizaron();
-        this.addObject(piz, 95, 313);
-        piz.setImage("Pizaron_vl.png");
     }
     
     public void wald2Skript() 
@@ -103,12 +100,47 @@ public class Wald2 extends Wald
                 }
                 break;
             case Wald2BeerenErklaert:
-                Greenfoot.delay(200);
-                skriptWald2BeerenErklaert(emrael);
-                break;
+                switch(laufen)
+                {
+                    case 1:
+                        Greenfoot.delay(200);
+                        laufen++;
+                    case 2:
+                            skriptWald2BeerenErklaert(emrael);
+                            laufen++;
+                            break;
+                    case 3:
+                        emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
+
+                }
+                    break;
+            case ZweiterHuettenbesuch:
+                if(tVorhanden == false)
+                {
+                    pizaron.setImage("Pizaron_lige.png");
+                    for (int i = 0; i<24; i++)
+                    {
+                        pizaron.setLocation(pizaron.getX()+(2), pizaron.getY());
+                        Greenfoot.delay(1);
+                    }
+                    removeObject(pizaron);
+                }
         }
     }
     
+    public void setTextVorhanden()
+    {
+        int textWa2BeErk = this.getObjects(Wald2BeerenErklaert.class).size();
+        if(textWa2BeErk == 0)
+        {
+            tVorhanden = false;
+        }
+        else
+        {
+            tVorhanden = true;
+        }
+    }
+
     public void skriptWald2Tutorial(Emrael emrael) {
         Textbox textbox = new Wald2Tutorial(emrael);
         addObject(textbox, 300,350);
@@ -122,7 +154,7 @@ public class Wald2 extends Wald
         addObject(textbox, 300,350);
     }
     public void skriptWald2BeerenErklaert(Emrael emrael) {
-        Textbox textbox = new Wald2BeerenErklaert(emrael);
-        addObject(textbox, 300,350);
+            Textbox textbox = new Wald2BeerenErklaert(emrael,pizaron);
+            addObject(textbox, 300,350);
     }
 }

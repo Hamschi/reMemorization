@@ -9,6 +9,7 @@ public class Huette extends World
         Emrael emrael;
         Pizaron pizaron;
         Textbox textbox;
+        private int gespraechAbspielen = 1;
 
         public Huette(Emrael emrael, World wald1)
         {    
@@ -77,7 +78,22 @@ public class Huette extends World
             }
 
         }
-        
+        public void huetteSkript()
+        {
+            switch(emrael.phase)
+            {
+                    case ZweiterHuettenbesuch:
+                        switch(gespraechAbspielen)
+                        {
+                            
+                        }
+            }
+        }
+        public void pizaronHinzufuegen()
+        {
+            Pizaron pizaron = new Pizaron();
+            addObject(pizaron, 300, 135);
+        }
         public void bildEinblenden()
         {
             Deko kraut = new Deko("HerbBild.PNG");

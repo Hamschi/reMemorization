@@ -14,6 +14,7 @@ public class Emrael extends Actor
     private int schnelligkeit;
     private int rüstung;
     private boolean bewegungBlockiert;
+    public boolean willHeilen;
     private long letzterAngriffStart;
     private int mobRichtungX;
     private int mobRichtungY;
@@ -124,6 +125,8 @@ public class Emrael extends Actor
             Huette huette = (Huette) getWorld();
             huetteSkript(huette);
         }
+        setEmraelWillHeilen();
+        System.out.println(phase);
     }
     
     public void angreifen(Mob mob) {
@@ -147,6 +150,18 @@ public class Emrael extends Actor
        }
     }
     
+    public void setEmraelWillHeilen()
+    {
+        int emraelNaeheBusch= getObjectsInRange(55, Busch.class).size();
+        if((emraelNaeheBusch>0) && (Greenfoot.isKeyDown("space")))
+        {
+            willHeilen = true;
+        }
+        else
+        {
+            willHeilen = false;
+        }
+    }
     public int getXNachPortal() {
        if (getX() < 60)
            return 540;

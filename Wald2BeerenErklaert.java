@@ -4,11 +4,16 @@ public class Wald2BeerenErklaert extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    public Wald2BeerenErklaert(Emrael em) {
+    Pizaron pizaron;
+    Wald2 wald2;
+    Huette huette;
+    private GreenfootImage left = new GreenfootImage("Pizaron_lige.png");
+    public Wald2BeerenErklaert(Emrael em, Pizaron piz) {
         drawText("Emrael", "Was ist das denn? Die sind \nja innerhalb weniger Sekunden wieder \nnachgewachsen.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
+        pizaron = piz;
         emrael.setBewegungBlockiert(true);
     }
     
@@ -42,6 +47,9 @@ public class Wald2BeerenErklaert extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
+        // pizaron.setImage(left);
         gespraechsteil = 5;
+        wald2.setTextVorhanden();
     }
+
 }

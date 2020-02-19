@@ -17,7 +17,7 @@ import greenfoot.*;
             if(Greenfoot.isKeyDown("space")) {
                 switch (gespraechsteil) {
                 case 1:
-                    drawText("Pizaron", "Richtig. Du hast eben im Kampf Schaden \nerlitten. Die Sollte dich jetzt ein \nwenig geheilt haben.");
+                    drawText("Pizaron", "Richtig. Du hast eben im Kampf Schaden \nerlitten. Die sollte dich jetzt ein \nwenig geheilt haben.");
                     gespraechsteil++;
                     break;
                 case 2:
