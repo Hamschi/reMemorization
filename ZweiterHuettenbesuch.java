@@ -8,7 +8,7 @@ public class ZweiterHuettenbesuch extends Textbox
     Huette huette;
     public ZweiterHuettenbesuch(Emrael em, Huette h) {
         huette = h;
-        drawText("Emrael", "Schön, du bist wieder da. Da du dich an \ndas kämpfen ja so langsam gewöhnt \nhast, machen wir \nweiter.");
+        drawText("Emrael", "Schön, du bist wieder da. Da du dich an \ndas Kämpfen ja so langsam gewöhnt \nhast, machen wir \nweiter.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;

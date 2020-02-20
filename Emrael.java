@@ -196,9 +196,9 @@ public class Emrael extends Actor
             // case ErsterHuettenbesuch:
                 // skriptErsterHuettenbesuch(emrael, pizaron);
                 // break;
-            // case ZweiterHuettenbesuch:
-                // huette.skriptZweiterHuettenbesuch(this);
-                // break;
+            case ZweiterHuettenbesuch:
+                huette.skriptZweiterHuettenbesuch(this);
+                break;
         }
     }
     public enum Phase 

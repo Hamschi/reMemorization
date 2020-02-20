@@ -83,9 +83,9 @@ public class Huette extends World
         {
             switch(emrael.phase)
             {
-                    case ZweiterHuettenbesuch:
-                        skriptZweiterHuettenbesuch(emrael);
-                        break; 
+                    // case ZweiterHuettenbesuch:
+                        // skriptZweiterHuettenbesuch(emrael);
+                        // break; 
             }
         }
         public void pizaronHinzufuegen()
