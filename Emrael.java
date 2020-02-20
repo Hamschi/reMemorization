@@ -126,7 +126,7 @@ public class Emrael extends Actor
             huetteSkript(huette);
         }
         
-        //System.out.println(phase);
+        System.out.println(phase);
     }
     
     public void angreifen(Mob mob) {
@@ -189,7 +189,7 @@ public class Emrael extends Actor
         }
     }   
     
-        public void huetteSkript(Huette huette) 
+    public void huetteSkript(Huette huette) 
     {
         switch(phase)
         {
@@ -197,8 +197,8 @@ public class Emrael extends Actor
                 // skriptErsterHuettenbesuch(emrael, pizaron);
                 // break;
             case ZweiterHuettenbesuch:
-                huette.skriptZweiterHuettenbesuch(this);
-                break;
+                    huette.skriptZweiterHuettenbesuch(this);
+                    break;
         }
     }
     public enum Phase 

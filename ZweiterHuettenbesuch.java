@@ -27,7 +27,7 @@ public class ZweiterHuettenbesuch extends Textbox
                 break;
             case 2:
                 huette.bildAusblenden();
-                drawText("Pizaron", "Könntest du mir das Zeug \nim Wald besorgen?.");
+                drawText("Pizaron", "Könntest du mir das Zeug \nim Wald besorgen?");
                 gespraechsteil++;
                 break;
             case 3:
