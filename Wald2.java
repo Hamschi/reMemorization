@@ -69,7 +69,7 @@ public class Wald2 extends Wald
         addObject(beeren1, 86, 88);
         Busch beeren2 = new Busch();
         addObject(beeren2, 148, 88);
-        Pizaron pizaron = new Pizaron();
+        pizaron = new Pizaron();
         addObject(pizaron,95, 313);
     }
     
@@ -100,46 +100,25 @@ public class Wald2 extends Wald
                 }
                 break;
             case Wald2BeerenErklaert:
-                switch(laufen)
-                {
-                    case 1:
-                        Greenfoot.delay(200);
-                        laufen++;
-                    case 2:
-                            skriptWald2BeerenErklaert(emrael);
-                            laufen++;
-                            break;
-                    case 3:
-                        emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
-
-                }
+                    skriptWald2BeerenErklaert(emrael);
                     break;
-            case ZweiterHuettenbesuch:
-                if(tVorhanden == false)
-                {
-                    pizaron.setImage("Pizaron_lige.png");
-                    for (int i = 0; i<24; i++)
-                    {
-                        pizaron.setLocation(pizaron.getX()+(2), pizaron.getY());
-                        Greenfoot.delay(1);
-                    }
-                    removeObject(pizaron);
-                }
+            case PizaronSollWeg:
+                pizaronLaeuft();
         }
     }
     
-    public void setTextVorhanden()
+    public void pizaronLaeuft()
     {
-        int textWa2BeErk = this.getObjects(Wald2BeerenErklaert.class).size();
-        if(textWa2BeErk == 0)
-        {
-            tVorhanden = false;
-        }
-        else
-        {
-            tVorhanden = true;
-        }
+                    pizaron.setImage("Pizaron_lige.png");
+                    for (int i = 0; i<24; i++)
+                    {
+                        pizaron.setLocation(pizaron.getX()-(2), pizaron.getY());
+                        Greenfoot.delay(1);
+                    }
+                    removeObject(pizaron);
+                    emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
     }
+
 
     public void skriptWald2Tutorial(Emrael emrael) {
         Textbox textbox = new Wald2Tutorial(emrael);

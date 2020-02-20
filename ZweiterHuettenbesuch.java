@@ -6,12 +6,14 @@ public class ZweiterHuettenbesuch extends Textbox
     private Emrael emrael;
     private Deko kraut;
     Huette huette;
-    public ZweiterHuettenbesuch(Emrael em) {
+    public ZweiterHuettenbesuch(Emrael em, Huette h) {
+        huette = h;
         drawText("Emrael", "Schön, du bist wieder da. Da du dich an \ndas kämpfen ja so langsam gewöhnt \nhast, machen wir \nweiter.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
         emrael.setBewegungBlockiert(true);
+        huette.pizaronHinzufuegen();
     }
     
     public void act() 
@@ -24,7 +26,7 @@ public class ZweiterHuettenbesuch extends Textbox
                 gespraechsteil++;
                 break;
             case 2:
-                getWorld().removeObject(kraut);
+                huette.bildAusblenden();
                 drawText("Pizaron", "Könntest du mir das Zeug \nim Wald besorgen?.");
                 gespraechsteil++;
                 break;

@@ -33,6 +33,7 @@ import greenfoot.*;
             loescheTextbox();
             setFertig(true);
             emrael.setBewegungBlockiert(false);
+            gespraechsteil =3;
             emrael.phase = Emrael.Phase.Wald2BeerenErklaert;
         }
     }

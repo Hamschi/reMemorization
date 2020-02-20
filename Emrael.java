@@ -107,7 +107,7 @@ public class Emrael extends Actor
             angreifen((Mob)getOneIntersectingObject(Mob.class));
         }
         angriffFortsetzen();
-        
+        emraelWillHeilen();
         if(getWorld() instanceof Wald2)
         {
             Wald2 wald2 = (Wald2) getWorld();
@@ -125,8 +125,8 @@ public class Emrael extends Actor
             Huette huette = (Huette) getWorld();
             huetteSkript(huette);
         }
-        setEmraelWillHeilen();
-        System.out.println(phase);
+        
+        //System.out.println(phase);
     }
     
     public void angreifen(Mob mob) {
@@ -150,16 +150,12 @@ public class Emrael extends Actor
        }
     }
     
-    public void setEmraelWillHeilen()
+    private void emraelWillHeilen()
     {
-        int emraelNaeheBusch= getObjectsInRange(55, Busch.class).size();
+        int emraelNaeheBusch= getObjectsInRange(80, Busch.class).size();
         if((emraelNaeheBusch>0) && (Greenfoot.isKeyDown("space")))
         {
-            willHeilen = true;
-        }
-        else
-        {
-            willHeilen = false;
+            lebensleiste.heilung();
         }
     }
     public int getXNachPortal() {
@@ -200,9 +196,9 @@ public class Emrael extends Actor
             // case ErsterHuettenbesuch:
                 // skriptErsterHuettenbesuch(emrael, pizaron);
                 // break;
-            case ZweiterHuettenbesuch:
-                huette.skriptZweiterHuettenbesuch(this);
-                break;
+            // case ZweiterHuettenbesuch:
+                // huette.skriptZweiterHuettenbesuch(this);
+                // break;
         }
     }
     public enum Phase 
@@ -214,6 +210,7 @@ public class Emrael extends Actor
         Wald2Beeren,
         Wald2BeerenGegessen,
         Wald2BeerenErklaert,
+        PizaronSollWeg,
         ZweiterHuettenbesuch,
         BotanTreffen,
         BotanBesiegt,

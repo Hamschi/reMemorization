@@ -51,9 +51,7 @@ public class Lebensleiste extends Actor
         leben = leben - s;
     }
     public void heilung() {
-        if(emrael.willHeilen == true)
-        {
+
             leben = leben +50;
-        }
     }
 }

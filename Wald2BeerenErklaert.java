@@ -46,10 +46,8 @@ public class Wald2BeerenErklaert extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
-        // pizaron.setImage(left);
+        emrael.phase = Emrael.Phase.PizaronSollWeg;
         gespraechsteil = 5;
-        wald2.setTextVorhanden();
     }
 
 }

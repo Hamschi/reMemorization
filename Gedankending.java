@@ -4,7 +4,6 @@ public class Gedankending extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
     
     public Gedankending(Emrael em) {
         drawText("Celestia", "Hallo Emrael, ich bin \nCelestia, die Kugel des magischen Scheins.");

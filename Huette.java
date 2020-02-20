@@ -8,6 +8,7 @@ public class Huette extends World
         private boolean ersterHuettenbesuchVorbei = false;
         Emrael emrael;
         Pizaron pizaron;
+        Deko kraut;
         Textbox textbox;
         private int gespraechAbspielen = 1;
 
@@ -29,7 +30,7 @@ public class Huette extends World
         {
             Deko tisch = new Deko("Tisch.png");
             addObject(tisch, 306, 214);
-            Pizaron pizaron = new Pizaron();
+            pizaron = new Pizaron();
             addObject(pizaron, 300, 135);
             Hindernis magiebuch = new Hindernis("Magiebuch.PNG");
             addObject (magiebuch, 280, 199);
@@ -83,21 +84,22 @@ public class Huette extends World
             switch(emrael.phase)
             {
                     case ZweiterHuettenbesuch:
-                        switch(gespraechAbspielen)
-                        {
-                            
-                        }
+                        skriptZweiterHuettenbesuch(emrael);
+                        break; 
             }
         }
         public void pizaronHinzufuegen()
         {
-            Pizaron pizaron = new Pizaron();
             addObject(pizaron, 300, 135);
         }
         public void bildEinblenden()
         {
-            Deko kraut = new Deko("HerbBild.PNG");
+            kraut = new Deko("HerbBild.png");
             addObject(kraut, 319, 211);
+        }
+        public void bildAusblenden()
+        {
+            removeObject(kraut);
         }
         private void skriptErsterHuettenbesuch(Emrael emrael, Pizaron pizaron) 
         {
@@ -106,7 +108,7 @@ public class Huette extends World
         }
         public void skriptZweiterHuettenbesuch(Emrael emrael) 
         {
-            Textbox textbox = new ZweiterHuettenbesuch(emrael);
+            Textbox textbox = new ZweiterHuettenbesuch(emrael, this);
             addObject(textbox, 300,350);
         }
 }
