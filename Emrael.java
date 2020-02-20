@@ -126,7 +126,7 @@ public class Emrael extends Actor
             huetteSkript(huette);
         }
         
-        System.out.println(phase);
+        //System.out.println(phase);
     }
     
     public void angreifen(Mob mob) {
