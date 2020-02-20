@@ -9,7 +9,7 @@ public class Wald2BeerenErklaert extends Textbox
     Huette huette;
     private GreenfootImage left = new GreenfootImage("Pizaron_lige.png");
     public Wald2BeerenErklaert(Emrael em, Pizaron piz) {
-        drawText("Emrael", "Was ist das denn? Die sind \nja innerhalb weniger Sekunden wieder \nnachgewachsen.");
+        drawText("Emrael", "Was ist das denn? Die wachsen \nja direkt nach, sobald ich mir \neine greife.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
@@ -22,18 +22,22 @@ public class Wald2BeerenErklaert extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
             case 1:
-                drawText("Pizaron", "Das sind sogenannte \n-Wiederbeeren-. Sobald welche gepflückt \nwerden, kommen nach wenigen Sekunden \nneue.");
+                drawText("Pizaron", "Das sind sogenannte \n-Wiederbeeren-. Sobald welche gepflückt \nwerden, kommen nach kurzer Zeit \nneue.");
                 gespraechsteil++;
                 break;
             case 2:
-                drawText("Emrael", "Dann nehme ich am besten \nnoch eine, damit ich wieder \nvollständig geheilt bin.");
+                drawText("Emrael", "Dann nehme ich am besten \nnoch ein paar, damit ich wieder \nvollständig geheilt bin.");
                 gespraechsteil++;
                 break;
             case 3:
-                drawText("Pizaron", "Ich gehe wieder in die \nHütte. Sammele am besten noch \nein wenig Erfahrung, bis du \nmir dann folgst.");
+                drawText("Pizaron", "Indem du -space- gedrückt hälst, \nkannst du dich schneller heilen.");
                 gespraechsteil++;
                 break;
             case 4:
+                drawText("Pizaron", "Ich gehe wieder in die Hütte. \nSammele am besten noch ein wenig \nErfahrung, bis du mir dann folgst.");
+                gespraechsteil++;
+                break;
+            case 5:
                 ende();
                 }
             }
@@ -47,7 +51,7 @@ public class Wald2BeerenErklaert extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.PizaronSollWeg;
-        gespraechsteil = 5;
+        gespraechsteil = 6;
     }
 
 }

@@ -43,9 +43,9 @@ public class Wald3 extends Wald
             addObject(new Hindernis("Baum.png"), (570), 243+(71*i));
         } 
         
-        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 159, 248);
-        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 313, 163);
-        addObject(new Mob(300, 1500, 100, 5, "Krake.PNG"), 477, 286);
+        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 159, 248);
+        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 313, 163);
+        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 477, 286);
         
         Hindernis herb = new Hindernis("Herb.PNG");
         addObject(herb , 86, 88);
@@ -71,5 +71,12 @@ public class Wald3 extends Wald
             insWasser.setPortalFix(158, 208);
             addObject(insWasser, 410+(20*i), 130);
         }
+    }
+    
+    public void wald3Skript()
+    {}
+    public void botanHinzufuegen()
+    {
+        addObject(new Botan(300, 1000, 80, 10, 200, "Botan.png"), 139, 93);
     }
 }

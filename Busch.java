@@ -15,7 +15,7 @@ public class Busch extends Actor
     }
     
     
-    private void setImageBeerenGegessen()
+    public void setImageBeerenGegessen()
     {
         GreenfootImage image = new GreenfootImage("BuschOhne.png");
         setImage(image); 

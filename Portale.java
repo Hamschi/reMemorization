@@ -37,7 +37,7 @@ public class Portale extends Actor
         }
     }
     
-    private void uebergang() {
+    protected void uebergang() {
         List<Emrael> emraels = from.getObjects(Emrael.class);
         Emrael emraelAlt = emraels.get(0);
         List<Emrael> emraelsTo = to.getObjects(Emrael.class);

@@ -61,9 +61,9 @@ public class Wald2 extends Wald
             nw4.setPortalFix(100,80);
             addObject(nw4, 240+(20*i), 450); // nach unten
         }
-        addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 100);
-        addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 350, 300);
-        addObject(new Mob(300, 1000, 80, 10, "Drache.png"), 200, 200);
+        addObject(new Mob(300, 1000, 80, 10, 200, "Drache.png"), 350, 100);
+        addObject(new Mob(300, 1000, 80, 10, 200, "Drache.png"), 350, 300);
+        addObject(new Mob(300, 1000, 80, 10, 60, "Drache.png"), 200, 200);
 
         Busch beeren1 = new Busch();
         addObject(beeren1, 86, 88);
@@ -95,7 +95,6 @@ public class Wald2 extends Wald
             case Wald2BeerenGegessen:
                 if(emrael.istInNaeheVonBusch() && Greenfoot.isKeyDown("space"))
                 {
-                    Greenfoot.delay(100);
                     skriptWald2BeerenGegessen(emrael);
                 }
                 break;
@@ -109,14 +108,14 @@ public class Wald2 extends Wald
     
     public void pizaronLaeuft()
     {
-                    pizaron.setImage("Pizaron_lige.png");
-                    for (int i = 0; i<24; i++)
-                    {
-                        pizaron.setLocation(pizaron.getX()-(2), pizaron.getY());
-                        Greenfoot.delay(1);
-                    }
-                    removeObject(pizaron);
-                    emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
+        pizaron.setImage("Pizaron_lige.png");
+        for (int i = 0; i<24; i++)
+        {
+            pizaron.setLocation(pizaron.getX()-(2), pizaron.getY());
+            Greenfoot.delay(1);
+        }
+        removeObject(pizaron);
+        emrael.phase = Emrael.Phase.ZweiterHuettenbesuch;
     }
 
 

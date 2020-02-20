@@ -7,6 +7,7 @@ public class Mob extends Actor
     int angriffsgeschwindigkeit = 1000;
     int range = 80;
     int schaden = 10;
+    int leben = 60;
     long letzterAngriffStart = 0;
     long letzterAngriffEnde = 0;
     int emraelRichtungX;
@@ -15,13 +16,14 @@ public class Mob extends Actor
     boolean imAngriff = false;
     Lebensleiste lebensleiste;
     
-    public Mob(int ad, int ag, int ra, int scha, String pic)
+    public Mob(int ad, int ag, int ra, int scha, int leb, String pic)
     {
         setImage(new GreenfootImage(pic));
         angriffsdauer = ad;
         angriffsgeschwindigkeit = ag;
         range = ra;
         schaden = scha;
+        leben = leb;
     }
 
     public void act() 
@@ -67,7 +69,7 @@ public class Mob extends Actor
         }
         if (emrael != null) { // zeichne nur, wenn der Mob Emrael im Target hat
             if (lebensleiste == null) {
-                lebensleiste = new Lebensleiste(60);
+                lebensleiste = new Lebensleiste(leben);
                 lebensleiste.setVonMob(true);
             }
             getWorld().addObject(lebensleiste, 500, 40);

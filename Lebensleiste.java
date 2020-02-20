@@ -51,7 +51,7 @@ public class Lebensleiste extends Actor
         leben = leben - s;
     }
     public void heilung() {
-
-            leben = leben +50;
+            leben = leben +1;
+            //Greenfoot.delay(13);
     }
 }

@@ -126,6 +126,11 @@ public class Emrael extends Actor
             huetteSkript(huette);
         }
         
+        if(getWorld() instanceof Wald3)
+        {
+            Wald3 wald3 = (Wald3) getWorld();
+            huetteSkript(huette);
+        }
         //System.out.println(phase);
     }
     
@@ -153,6 +158,7 @@ public class Emrael extends Actor
     private void emraelWillHeilen()
     {
         int emraelNaeheBusch= getObjectsInRange(80, Busch.class).size();
+        
         if((emraelNaeheBusch>0) && (Greenfoot.isKeyDown("space")))
         {
             lebensleiste.heilung();
