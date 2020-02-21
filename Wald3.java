@@ -95,7 +95,8 @@ public class Wald3 extends Wald
                     skriptWald3BotanBesiegt(emrael);
                 }
             case HatKraut:
-                if((emrael.istInNaeheVonKraut() == true) && (Greenfoot.isKeyDown("space")))
+                int mob = getObjects(Mob.class).size();
+                if((emrael.istInNaeheVonKraut() == true) && (Greenfoot.isKeyDown("space")) && (mob==0))
                 {
                     removeObject(herb);
                     emrael.phase = Emrael.Phase.DritterHuettenbesuch;

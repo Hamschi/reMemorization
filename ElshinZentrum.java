@@ -92,4 +92,11 @@ public class ElshinZentrum extends Elshin
         
     }
    
+   // public void wald3Skript()
+    // {
+        // switch(emrael.phase)
+        // {
+
+        // }
+    // }
 }
