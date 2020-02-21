@@ -4,7 +4,6 @@ public class HydreixTreffen extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
     public HydreixTreffen(Emrael em) {
         drawText("Emrael", "Hallo Hydr...");
         gespraechsteil = 1;
@@ -18,7 +17,7 @@ public class HydreixTreffen extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
                 case 1:
-                    drawText("Hydreix", "Duuu Mörder!! Willst du mich \njetzt auch bei den Fischen schlafen \nlassen?");
+                    drawText("Hydreix", "Duuu Mörder!! Hast du es jetzt \nauch noch auf den Beschützer \ndes Ozeans abgesehen?");
                     gespraechsteil++;
                     break;
                 case 2:

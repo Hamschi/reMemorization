@@ -43,6 +43,12 @@ public class UnterwasserEingang extends Unterwasser
             addObject(inDieHoehle, (515), 214+(16*i));
             //addObject(new Portale(this, unterwasserBoss), 515, 214+(16*i));
         } 
+        
+        addObject(new Mob(300, 1000, 80, 10, 150, "HelmKrabbe.png"), 239, 97);
+        addObject(new Mob(300, 1000, 80, 10, 150, "HelmKrabbe.png"), 281, 286);
+        
+        Busch beeren = new Busch();
+        addObject(beeren, 71, 336);
 
         Portale nachWald3 = new Portale(this, wald3);
         nachWald3.setPortalFix(378, 71);

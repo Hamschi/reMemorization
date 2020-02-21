@@ -51,6 +51,8 @@ public class Wald3 extends Wald
         
         herb = new Kraut();
         addObject(herb , 86, 88);
+        Busch beeren = new Busch();
+        addObject(beeren, 567, 175);
         
         for (int i = 0; i<30; i++)
         {
@@ -92,10 +94,11 @@ public class Wald3 extends Wald
                 {
                     skriptWald3BotanBesiegt(emrael);
                 }
-            case DritterHuettenbesuch:
+            case HatKraut:
                 if((emrael.istInNaeheVonKraut() == true) && (Greenfoot.isKeyDown("space")))
                 {
                     removeObject(herb);
+                    emrael.phase = Emrael.Phase.DritterHuettenbesuch;
                 }
         }
     }

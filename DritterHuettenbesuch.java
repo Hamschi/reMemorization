@@ -4,7 +4,6 @@ public class DritterHuettenbesuch extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
     public DritterHuettenbesuch(Emrael em) {
         drawText("Pizaron", "Ah, da bist du ja Emrael. Und die \nKräuter hast du auch dabei.");
         gespraechsteil = 1;
@@ -46,7 +45,7 @@ public class DritterHuettenbesuch extends Textbox
                     gespraechsteil++;
                     break;
                 case 8:
-                    drawText("Pizaron", "Hydreix bewacht diesen Ort, jedoch \nist er eigentlich ganz nett.");
+                    drawText("Pizaron", "Hydreix bewacht diesen Ort, er \nist ein echt coller Typ.");
                     gespraechsteil++;
                     break;
                 case 9:
@@ -54,6 +53,14 @@ public class DritterHuettenbesuch extends Textbox
                     gespraechsteil++;
                     break;
                 case 10:
+                    drawText("Pizaron", "Ich hoffe, du hast nicht \nvergessen, dass man nicht ewig \nohne Sauerstoff auskommen kann.");
+                    gespraechsteil++;
+                    break;
+                case 11:
+                    drawText("Emrael", "Keine Sorge, meine Lunge hält \neine gewisse Zeit im Wasser aus.");
+                    gespraechsteil++;
+                    break;
+                case 12:
                     ende();
                 }
             }
@@ -67,6 +74,6 @@ public class DritterHuettenbesuch extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.HydreixTreffen;
-        gespraechsteil = 11;
+        gespraechsteil = 13;
     }
 }

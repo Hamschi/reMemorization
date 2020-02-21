@@ -4,8 +4,7 @@ public class HydreixBesiegt extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    
+
     public HydreixBesiegt(Emrael em) {
         drawText("Hydreix", "Schämst du dich denn nicht?");
         gespraechsteil = 1;

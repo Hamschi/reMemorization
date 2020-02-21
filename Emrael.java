@@ -27,6 +27,7 @@ public class Emrael extends Actor
     Wald3 wald3;
     Huette huette;
     Pizaron piz;
+    Unterwasser unterwasser;
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
@@ -132,6 +133,12 @@ public class Emrael extends Actor
             Wald3 wald3 = (Wald3) getWorld();
             wald3.wald3Skript();
         }
+        
+        if(getWorld() instanceof UnterwasserBoss)
+        {
+            UnterwasserBoss unterwasserBoss = (UnterwasserBoss) getWorld();
+            unterwasserBoss.unterwasserBossSkript();
+        }
         //System.out.println(phase);
     }
     
@@ -208,8 +215,12 @@ public class Emrael extends Actor
                 // skriptErsterHuettenbesuch(emrael, pizaron);
                 // break;
             case ZweiterHuettenbesuch:
-                    huette.skriptZweiterHuettenbesuch(this);
-                    break;
+                huette.skriptZweiterHuettenbesuch(this);
+                break;
+            case DritterHuettenbesuch:
+                huette.skriptDritterHuettenbesuch(this);
+            case VierterHuettenbesuch:
+                huette.skriptVierterHuettenbesuch(this);
         }
     }
     public enum Phase 
@@ -225,6 +236,7 @@ public class Emrael extends Actor
         ZweiterHuettenbesuch,
         BotanTreffen,
         BotanBesiegt,
+        HatKraut,
         DritterHuettenbesuch,
         HydreixTreffen,
         HydreixBesiegt,

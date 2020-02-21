@@ -37,7 +37,7 @@ public class BotanBesiegt extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.DritterHuettenbesuch;
+        emrael.phase = Emrael.Phase.HatKraut;
         gespraechsteil = 4;
     }
 }

@@ -25,6 +25,17 @@ public class Mob extends Actor
         schaden = scha;
         leben = leb;
     }
+    public Mob(int ad, int ag, int ra, int scha, int leb)
+    {
+        setImage(new GreenfootImage("Hydreix.png"));
+        angriffsdauer = ad;
+        angriffsgeschwindigkeit = ag;
+        range = ra;
+        schaden = scha;
+        leben = leb;
+        GreenfootImage hydreix = getImage();
+        hydreix.scale(hydreix.getWidth() + 50, hydreix.getHeight() + 50);
+    }
 
     public void act() 
     {
