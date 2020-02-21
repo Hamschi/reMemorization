@@ -131,4 +131,17 @@ public class Botan extends Boss
            imAngriff = false;
        }
     }
+
+    public boolean textVorhanden()
+    {
+        int textIstDa = getObjectsInRange(600, BotanTreffen.class).size();
+        if(textIstDa >0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

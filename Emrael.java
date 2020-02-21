@@ -24,6 +24,7 @@ public class Emrael extends Actor
     private int anzahlMobs;
     Wald1 wald1;
     Wald2 wald2;
+    Wald3 wald3;
     Huette huette;
     Pizaron piz;
     
@@ -98,7 +99,7 @@ public class Emrael extends Actor
             setLocation(getX(), getY()+3);
         // Position zuruecksetzen bei einem Hindernis
         boolean istAmRand = (getY()<16 || getY()>382 || getX()<17 || getX()>583);
-        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class) || isTouching(Pizaron.class)) 
+        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class) || isTouching(Pizaron.class) || isTouching(Kraut.class)) 
         {
             setLocation(lastX, lastY);
         }
@@ -110,7 +111,7 @@ public class Emrael extends Actor
         emraelWillHeilen();
         if(getWorld() instanceof Wald2)
         {
-            Wald2 wald2 = (Wald2) getWorld();
+        Wald2 wald2 = (Wald2) getWorld();
             wald2.wald2Skript();
         }
     
@@ -129,7 +130,7 @@ public class Emrael extends Actor
         if(getWorld() instanceof Wald3)
         {
             Wald3 wald3 = (Wald3) getWorld();
-            huetteSkript(huette);
+            wald3.wald3Skript();
         }
         //System.out.println(phase);
     }
@@ -158,7 +159,6 @@ public class Emrael extends Actor
     private void emraelWillHeilen()
     {
         int emraelNaeheBusch= getObjectsInRange(80, Busch.class).size();
-        
         if((emraelNaeheBusch>0) && (Greenfoot.isKeyDown("space")))
         {
             lebensleiste.heilung();
@@ -183,6 +183,11 @@ public class Emrael extends Actor
     public boolean istInNaeheVonBusch()
     {
         return getObjectsInRange(70, Busch.class).size() > 0;
+    }
+    
+    public boolean istInNaeheVonKraut()
+    {
+        return getObjectsInRange(70, Kraut.class).size() > 0;
     }
     
     public void wald1Skript(Wald1 wald1)

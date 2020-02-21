@@ -4,7 +4,6 @@ public class BotanBesiegt extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
     public BotanBesiegt(Emrael em) {
         drawText("Botan", "Bewohner des Waldes...");
         gespraechsteil = 1;
@@ -22,7 +21,7 @@ public class BotanBesiegt extends Textbox
                     gespraechsteil++;
                     break;
                 case 2:
-                    drawText("Emrael", "Dann nehme ich mir mal das Kraut \nund gebe es dann Pizaron.");
+                    drawText("Emrael", "Dann nehme ich mir mal das Kraut \nmit -space- und gebe es dann \nPizaron.");
                     gespraechsteil++;
                     break;
                 case 3: 

@@ -1,9 +1,12 @@
 import greenfoot.*;  
+import java.util.List;
+
 
 public class Wald3 extends Wald
 {
     private Emrael emrael;
     Wald2 wald2;
+    Kraut herb;
 
     public Wald3(Emrael em, Wald2 w2)
     {   
@@ -43,11 +46,10 @@ public class Wald3 extends Wald
             addObject(new Hindernis("Baum.png"), (570), 243+(71*i));
         } 
         
-        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 159, 248);
-        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 313, 163);
-        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 477, 286);
+        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 102, 154);
+        addObject(new Mob(300, 1000, 80, 10, 120, "Krake.PNG"), 183, 95);
         
-        Hindernis herb = new Hindernis("Herb.PNG");
+        herb = new Kraut();
         addObject(herb , 86, 88);
         
         for (int i = 0; i<30; i++)
@@ -74,9 +76,52 @@ public class Wald3 extends Wald
     }
     
     public void wald3Skript()
-    {}
+    {
+        switch(emrael.phase)
+        {
+            case BotanTreffen:
+                if((emrael.istInNaeheVonKraut() == true) && (Greenfoot.isKeyDown("space")))
+                {
+                    skriptWald3BotanTreffen(emrael);
+                    botanHinzufuegen();
+                }
+                break;
+            case BotanBesiegt:
+                int mobs = getObjects(Mob.class).size();
+                if(mobs ==0)
+                {
+                    skriptWald3BotanBesiegt(emrael);
+                }
+            case DritterHuettenbesuch:
+                if((emrael.istInNaeheVonKraut() == true) && (Greenfoot.isKeyDown("space")))
+                {
+                    removeObject(herb);
+                }
+        }
+    }
     public void botanHinzufuegen()
     {
-        addObject(new Botan(300, 1000, 80, 10, 200, "Botan.png"), 139, 93);
+        addObject(new Mob(300, 1000, 80, 10, 200, "botan.png"), 139, 93);
+    }
+    public boolean krautNochDa()
+    {
+        int kraut = getObjects(Kraut.class).size();
+        if(kraut>0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public void skriptWald3BotanTreffen(Emrael emrael) {
+            Textbox textbox = new BotanTreffen(emrael);
+            addObject(textbox, 300,350);
+    }
+    public void skriptWald3BotanBesiegt(Emrael emrael) {
+            Textbox textbox = new BotanBesiegt(emrael);
+            addObject(textbox, 300,350);
     }
 }

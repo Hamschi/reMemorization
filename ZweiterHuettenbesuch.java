@@ -26,7 +26,6 @@ public class ZweiterHuettenbesuch extends Textbox
                 gespraechsteil++;
                 break;
             case 2:
-                huette.bildAusblenden();
                 drawText("Pizaron", "Könntest du mir das Zeug \nim Wald besorgen?");
                 gespraechsteil++;
                 break;
@@ -48,6 +47,7 @@ public class ZweiterHuettenbesuch extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.BotanTreffen;
+        huette.bildAusblenden();
         gespraechsteil = 5;
     }
 }
