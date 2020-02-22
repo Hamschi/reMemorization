@@ -12,6 +12,22 @@ public class UnterwasserBoss extends Unterwasser
         // addObject(emrael, 100, 100);
         // emrael.addLebensleiste();
         // emrael.setBewegungBlockiert(false);
+        prepare(uwe);
+
+    }
+    
+    public UnterwasserBoss()
+    {
+        UnterwasserEingang uwe = new UnterwasserEingang();
+        prepare(uwe);
+    }
+    
+    private void prepare(UnterwasserEingang uwe)
+    {
+        emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
+        addObject(emrael, 250, 150);
+        emrael.addLebensleiste();
         addObject(new Mob(300, 1000, 80, 10, 300), 453, 171);
         for (int i = 0; i<13; i++)
         {
@@ -30,7 +46,7 @@ public class UnterwasserBoss extends Unterwasser
             zumUnterwasserEingang.setPortalFix(480, 236);
             addObject(zumUnterwasserEingang,(30), 30+(20*i));
         }
-
+       
     }
 
     public void unterwasserBossSkript()
@@ -55,7 +71,7 @@ public class UnterwasserBoss extends Unterwasser
     }
 
     public void skriptHydreixBesiegt(Emrael emrael) {
-            Textbox textbox = new HydreixTreffen(emrael);
+            Textbox textbox = new HydreixBesiegt(emrael);
             addObject(textbox, 300,350);
     }
 }

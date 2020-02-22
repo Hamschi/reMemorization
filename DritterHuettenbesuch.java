@@ -17,11 +17,11 @@ public class DritterHuettenbesuch extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
                 case 1:
-                    drawText("Emrael", "Du hast mir gar nicht gesagt \n,dass das Kraut bewacht wird.");
+                    drawText("Emrael", "Du hast mir gar nicht gesagt, \ndass das Kraut bewacht wird.");
                     gespraechsteil++;
                     break;
                 case 2:
-                    drawText("Pizaron", "Achso, ja. Botan spielt sich imer bisschen \nauf.");
+                    drawText("Pizaron", "Achso, ja. Botan spielt sich immer bisschen \nauf.");
                     gespraechsteil++;
                     break;
                 case 3:

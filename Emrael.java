@@ -141,11 +141,11 @@ public class Emrael extends Actor
             unterwasserBoss.unterwasserBossSkript();
         }
         
-        if(getWorld() instanceof ElshinZentrum)
-        {
-            ElshinZentrum elshinZentrum = (ElshinZentrum) getWorld();
-            elshinZentrum.elshinZentrumSkript();
-        }
+        // if(getWorld() instanceof ElshinZentrum)
+        // {
+            // ElshinZentrum elshinZentrum = (ElshinZentrum) getWorld();
+            // elshinZentrum.elshinZentrumSkript();
+        // }
         //System.out.println(phase);
     }
     
@@ -225,8 +225,9 @@ public class Emrael extends Actor
                 huette.skriptZweiterHuettenbesuch(this);
                 break;
             case DritterHuettenbesuch:
-                //huette.skriptDritterHuettenbesuch(this); //Der Teil mit Hydreix, aber erstmal auskommentieren
-                this.phase = Emrael.Phase.VierterHuettenbesuch;
+                huette.skriptDritterHuettenbesuch(this); //Der Teil mit Hydreix, aber erstmal auskommentieren
+                //this.phase = Emrael.Phase.VierterHuettenbesuch;
+                break;
             case VierterHuettenbesuch:
                 huette.skriptVierterHuettenbesuch(this);
         }

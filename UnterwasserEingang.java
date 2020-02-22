@@ -11,28 +11,39 @@ public class UnterwasserEingang extends Unterwasser
         prepare();
     }
     
+    public UnterwasserEingang()
+    {
+        setPaintOrder(Lebensleiste.class, Emrael.class,Hindernis.class, Deko.class);
+        prepare();
+    }
+    
     private void prepare()
     {
+        Emrael emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
+        addObject(emrael, 250, 150);
+        emrael.addLebensleiste();
+        
         Deko hoehle = new Deko("Hoehle.png");
         addObject(hoehle, 526, 169);
         Deko kreis = new Deko("Kreis.png");
         addObject(kreis, 138, 208);
         for (int i = 0; i<13; i++)
         {
-            addObject(new Deko("Fels.png"), (21+(45*i)), 382);
-            addObject(new Deko("Fels.png"), (21+(45*i)), 19);
+            addObject(new Hindernis("Fels.png"), (21+(45*i)), 382);
+            addObject(new Hindernis("Fels.png"), (21+(45*i)), 19);
         } 
         
         for (int i = 0; i<8; i++)
         {
-            addObject(new Deko("Fels.png"), (21), 63+(45*i));
+            addObject(new Hindernis("Fels.png"), (21), 63+(45*i));
             addObject(new Hindernis(), (532), 143+(16*i));
         } 
         
         for (int i = 0; i<2; i++)
         {
-            addObject(new Deko("Fels.png"), (561), 63+(45*i));
-            addObject(new Deko("Fels.png"), (561), 288+(45*i));
+            addObject(new Hindernis("Fels.png"), (561), 63+(45*i));
+            addObject(new Hindernis("Fels.png"), (561), 288+(45*i));
         } 
         
         UnterwasserBoss unterwasserBoss = new UnterwasserBoss(this);
