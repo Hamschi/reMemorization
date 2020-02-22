@@ -8,7 +8,22 @@ public class Banditenteil extends Elshin
     
     public Banditenteil(ElshinZentrum ez)
     {
-        elshinZentrum = ez;
+        prepare(ez);
+    }
+    
+    public Banditenteil()
+    {
+        ElshinZentrum ez = new ElshinZentrum();
+        prepare(ez);
+    }
+    
+    private void prepare(ElshinZentrum ez)
+    {
+        emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
+        addObject(emrael, 250, 150);
+        emrael.addLebensleiste();
+        
         Hindernis kugel = new Hindernis("Kugel.png");
         addObject(kugel, 500, 196);
         for (int i = 0; i<14; i++)
@@ -44,13 +59,6 @@ public class Banditenteil extends Elshin
             p.setPortalFix(530, 320);
             addObject(p, (10), 49+(30*i));
         } 
-        
-        prepare();
-    }
-    
-    private void prepare()
-    {
-
     }
 
 }

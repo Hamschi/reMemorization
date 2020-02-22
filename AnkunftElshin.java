@@ -23,7 +23,7 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 2:
-                    drawText("Bewohner", "Sie!! Sie sind doch Emrael \n, der Barmherzige, hab ich \nrecht?");
+                    drawText("Bewohner", "Sie!! Sie sind doch Emrael, \n der Barmherzige, hab' ich recht?");
                     gespraechsteil++;
                     break;
                 case 3:
@@ -39,7 +39,7 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 6:
-                    drawText("Bewohner", "In nur wenigen Sekunden wurde \nunser Land unfruchtbar und 70% \nder Bevölkerung...");
+                    drawText("Bewohner", "In nur wenigen Sekunden wurde \nunser Land unfruchtbar und knapp 70% \nder Bevölkerung...");
                     gespraechsteil++;
                     break;
                 case 7:
@@ -55,15 +55,15 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 10:
-                    drawText("Emrael", "Nun...in meiner aktuellen \nVerfassung bin ich nicht \nin der Lage, euch zu helfen.");
+                    drawText("Emrael", "Nun...in meiner aktuellen \nVerfassung bin ich nicht in der \nLage, euch zu helfen.");
                     gespraechsteil++;
                     break;
                 case 11:
-                    drawText("Emrael", "Mein Gedächtnis ist nämlich \nauch weg, genauso wie meine \nKräfte.");
+                    drawText("Emrael", "Mein Gedächtnis ist nämlich auch \nweg, genauso wie meine Kräfte.");
                     gespraechsteil++;
                     break;
                 case 12:
-                    drawText("Bewohner", "Dann ergeht es Ihnen \nschlechter als das Leid jenes einzelnen \nvon uns...");
+                    drawText("Bewohner", "Dann ergeht es Ihnen \nschlechter als jeden einzelnen \nvon uns...");
                     gespraechsteil++;
                     break;
                 case 13:
@@ -79,7 +79,7 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 16:
-                    drawText("Emrael", "Auf wiedersehen.");
+                    drawText("Bewohner", "Sie können in der Taverne mal \nden Barkeeper ansprechen, im Dorf wird ganz \ngerne mal getratscht.");
                     gespraechsteil++;
                     break;
                 case 17:
@@ -95,7 +95,7 @@ public class AnkunftElshin extends Textbox
         loescheTextbox();
         setFertig(true);
         emrael.setBewegungBlockiert(false);
-        emrael.phase = Emrael.Phase.VierterHuettenbesuch;
-        gespraechsteil = 5;
+        emrael.phase = Emrael.Phase.WirtTreffen;
+        gespraechsteil = 18;
     }
 }

@@ -4,8 +4,7 @@ public class WirtTreffen extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    
+
     public WirtTreffen(Emrael em) {
         drawText("Wirt", "Guten Abend. Ein Zimmer \nfür eine Nacht bitte, werter \nHerr.");
         gespraechsteil = 1;
@@ -27,7 +26,7 @@ public class WirtTreffen extends Textbox
                     gespraechsteil++;
                     break;
                 case 3:
-                    drawText("Emrael", "Nun ist mir aufgefallen, \ndass es dieser Stadt nicht sehr \ngut geht und dem Grund gehe ich auf \ndie Spur.");
+                    drawText("Emrael", "Nun ist mir aufgefallen, dass es \ndieser Stadt nicht sehr gut geht und dem \nGrund gehe ich auf die Spur.");
                     gespraechsteil++;
                     break;
                 case 4:

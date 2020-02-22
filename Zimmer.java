@@ -4,9 +4,18 @@ import greenfoot.*;
 public class Zimmer extends Haeuser
 {
     Taverne taverne;
+    Emrael emrael;
     public Zimmer(Taverne tavern)
     {
         taverne = tavern;
+        prepare();
+    }
+    
+    private void prepare()
+    {
+        emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
+        addObject(emrael, 299, 343);
         Deko fussmatte = new Deko("Fußmatte.png");
         addObject(fussmatte, 300, 383);
         Deko hocker1 = new Deko("Hocker.PNG");
@@ -22,7 +31,7 @@ public class Zimmer extends Haeuser
 
         for (int i = 0; i<4; i++)
         {
-            addObject(new Deko("BettGruen.png"), 106+(130*i), 57);
+            addObject(new Bett("BettGruen.png"), 106+(130*i), 57);
         }
         for (int i = 0; i<3; i++)
         {
@@ -36,5 +45,22 @@ public class Zimmer extends Haeuser
             p.setPortalFix(520, 70);
             addObject(p, (300+(7*i)), 380);
         }
+    }
+    
+    public void zimmerSkript()
+    {
+        switch(emrael.phase)
+        {
+            case EmraelAusgeruht:
+                if((emrael.istInNaeheVonBett() == true) && (Greenfoot.isKeyDown("space")))
+                {
+                    skriptEmraelAusgeruht(emrael);
+                }
+        }
+    }
+    
+    public void skriptEmraelAusgeruht(Emrael emrael) {
+            Textbox textbox = new EmraelAusgeruht(emrael);
+            addObject(textbox, 300,350);
     }
 }

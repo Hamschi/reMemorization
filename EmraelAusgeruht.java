@@ -4,8 +4,7 @@ public class EmraelAusgeruht extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    
+
     public EmraelAusgeruht(Emrael em) {
         drawText("Emrael", "Gut, dann gehe ich mal zu Pizaron \nund höre mir an, was ich tun soll.");
         gespraechsteil = 1;

@@ -9,7 +9,6 @@ import greenfoot.*;
         {    
             super(600, 400, 1);
             //backgroundMusic.playLoop();
-            prepare();
         }
         
         public Lebensleiste getLebensleiste()
@@ -17,10 +16,4 @@ import greenfoot.*;
             return lebensleiste;
         }
         
-        private void prepare()
-        {
-            Emrael emrael = new Emrael();
-            emrael.setBewegungBlockiert(false);
-            addObject(emrael, 250, 150);
-        }
 }

@@ -4,9 +4,8 @@ public class NPC extends Actor
 {
     GreenfootImage bild;
     
-    public NPC() 
+    public NPC(String pic) 
     {
-     // bild = new GreenfootImage(pic);
-     // setImage(bild);
+     setImage(new GreenfootImage(pic));
     }    
 }

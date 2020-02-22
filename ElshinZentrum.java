@@ -3,6 +3,9 @@ import greenfoot.*;
 public class ElshinZentrum extends Elshin
 {
     Wald4 wald4;
+    Emrael emrael;
+    Hindernis wache1;
+    Hindernis wache2;
     
     public ElshinZentrum(Emrael em, Wald4 wald)
     {
@@ -10,8 +13,18 @@ public class ElshinZentrum extends Elshin
         prepare();
     }
     
+    public ElshinZentrum()
+    {
+        prepare();
+    }
+    
     private void prepare()
     {
+        emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
+        addObject(emrael, 250, 150);
+        emrael.addLebensleiste();
+        
         Haus haus1 = new Haus();
         addObject(haus1, 127, 103);
         Bewohner bewohner = new Bewohner("ImpBew_vl.png");
@@ -90,13 +103,23 @@ public class ElshinZentrum extends Elshin
             addObject(hindernis, (586), 40+(26*i));
         }
         
+        wache1 = new Hindernis("Bandit_liste.png");
+        addObject(wache1, 586, 307);
+        wache2 = new Hindernis("Bandit_liste.png");
+        addObject(wache2, 586, 349);
     }
    
-   // public void wald3Skript()
-    // {
-        // switch(emrael.phase)
-        // {
-
-        // }
-    // }
+   public void elshinZentrumSkript()
+    {
+        switch(emrael.phase)
+        {
+            case AnkunftElshin:
+                skriptAnkunftElshin(emrael);
+        }
+    }
+    
+    public void skriptAnkunftElshin(Emrael emrael) {
+            Textbox textbox = new AnkunftElshin(emrael);
+            addObject(textbox, 300,350);
+    }
 }

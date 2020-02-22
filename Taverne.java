@@ -1,12 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class Taverne extends Haeuser
 {
     ElshinZentrum elshinZentrum;
+    Emrael emrael;
+    
     public Taverne(ElshinZentrum ez)
     {
         elshinZentrum = ez;
+        prepare();
+    }
+    public Taverne()
+    {
+        prepare();
+    }
+    
+    private void prepare()
+    {
+        emrael = new Emrael();
+        emrael.setBewegungBlockiert(false);
+        addObject(emrael, 299, 343);
         Deko tisch = new Deko("Tisch.png");
         addObject(tisch, 500, 150);
         Deko tisch2 = new Deko("Tisch.png");
@@ -23,8 +36,8 @@ public class Taverne extends Haeuser
         addObject(fussmatte, 300, 383);
         Deko fussmatte2 = new Deko("Fußmatte.png");
         addObject(fussmatte2, 514, 17);
-        // NPC barkeeper = new NPC("Barkeeper.png");
-        // addObject(barkeeper,289, 16);
+        Barkeeper barkeeper = new Barkeeper();
+        addObject(barkeeper,289, 16);
         Hindernis unsichtbar = new Hindernis();
         addObject(unsichtbar, 389, 17);
         for (int i = 0; i<3; i++)
@@ -59,5 +72,21 @@ public class Taverne extends Haeuser
             addObject(new Hindernis(), (229+(40*i)), 41);
             addObject(new Hindernis(), (229+(40*i)), 77);
         }
+    }
+   public void taverneSkript()
+    {
+        switch(emrael.phase)
+        {
+            case WirtTreffen:
+                if((emrael.istInNaeheVonBarkeeper() == true) && (Greenfoot.isKeyDown("space")))
+                {
+                    skriptWirtTreffen(emrael);
+                }
+        }
+    }
+    
+    public void skriptWirtTreffen(Emrael emrael) {
+            Textbox textbox = new WirtTreffen(emrael);
+            addObject(textbox, 300,350);
     }
 }

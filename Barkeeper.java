@@ -1,6 +1,6 @@
 import greenfoot.*;  
 
-public class Barkeeper extends NPC
+public class Barkeeper extends Actor
 {
     private GreenfootImage barkeeper = new GreenfootImage("Barkeeper.png");
     

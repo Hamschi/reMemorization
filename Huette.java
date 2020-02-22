@@ -78,6 +78,7 @@ public class Huette extends World
                 skriptErsterHuettenbesuch(emrael, pizaron);
             }
 
+            
         }
         public void huetteSkript()
         {

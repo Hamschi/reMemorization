@@ -101,7 +101,7 @@ public class Emrael extends Actor
             setLocation(getX(), getY()+3);
         // Position zuruecksetzen bei einem Hindernis
         boolean istAmRand = (getY()<16 || getY()>382 || getX()<17 || getX()>583);
-        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class) || isTouching(Pizaron.class) || isTouching(Kraut.class)) 
+        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class) || isTouching(Pizaron.class) || isTouching(Kraut.class) || isTouching(Barkeeper.class)) 
         {
             setLocation(lastX, lastY);
         }
@@ -141,11 +141,24 @@ public class Emrael extends Actor
             unterwasserBoss.unterwasserBossSkript();
         }
         
-        // if(getWorld() instanceof ElshinZentrum)
-        // {
-            // ElshinZentrum elshinZentrum = (ElshinZentrum) getWorld();
-            // elshinZentrum.elshinZentrumSkript();
-        // }
+        if(getWorld() instanceof ElshinZentrum)
+        {
+            ElshinZentrum elshinZentrum = (ElshinZentrum) getWorld();
+            elshinZentrum.elshinZentrumSkript();
+        }
+        
+        if(getWorld() instanceof Taverne)
+        {
+            Taverne taverne = (Taverne) getWorld();
+            taverne.taverneSkript();
+        }
+        
+        if(getWorld() instanceof Zimmer)
+        {
+            Zimmer zimmer = (Zimmer) getWorld();
+            zimmer.zimmerSkript();
+        }
+
         //System.out.println(phase);
     }
     
@@ -198,10 +211,17 @@ public class Emrael extends Actor
     {
         return getObjectsInRange(70, Busch.class).size() > 0;
     }
-    
     public boolean istInNaeheVonKraut()
     {
         return getObjectsInRange(70, Kraut.class).size() > 0;
+    }
+    public boolean istInNaeheVonBarkeeper()
+    {
+        return getObjectsInRange(70, Barkeeper.class).size() > 0;
+    }
+    public boolean istInNaeheVonBett()
+    {
+        return getObjectsInRange(70, Bett.class).size() > 0;
     }
     
     public void wald1Skript(Wald1 wald1)
