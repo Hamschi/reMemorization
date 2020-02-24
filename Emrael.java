@@ -221,7 +221,7 @@ public class Emrael extends Actor
            return 60;
        return getY();
     }
-    
+
     public boolean istInNaeheVonBusch()
     {
         return getObjectsInRange(70, Busch.class).size() > 0;
@@ -275,8 +275,10 @@ public class Emrael extends Actor
                 break;
             case BarbarBesiegt:
                 int anzahlMobs= getObjectsInRange(600, Mob.class).size();
+                //wald1.setBarbarPosition();
                 if(anzahlMobs==0)
                 {
+                    //wald1.barbarWirdZuPizaron();
                     wald1.skriptBarbarBesiegt(this);
                     break;
                 }

@@ -2,7 +2,7 @@ import greenfoot.*;
 
 public class Huette extends World
 {
-        private GreenfootSound backgroundMusic = new GreenfootSound("Huette.mp3");
+        private GreenfootSound musik = new GreenfootSound("Huette.mp3");
         Lebensleiste lebensleiste = new Lebensleiste();
         private GreenfootImage huetteBoden = new GreenfootImage("HuetteBoden.png");
         private boolean ersterHuettenbesuchVorbei = false;
@@ -16,7 +16,7 @@ public class Huette extends World
         {    
             super(600, 400, 1);
             setBackground(huetteBoden);
-            //backgroundMusic.playLoop();
+            
             // emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
             prepare(emrael, wald1);
         }
@@ -126,5 +126,9 @@ public class Huette extends World
         {
             Textbox textbox = new FuenfterHuettenbesuch(emrael);
             addObject(textbox, 300,350);
+        }
+        public void musikAbspielen()
+        {
+            musik.playLoop();
         }
 }

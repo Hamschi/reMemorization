@@ -8,7 +8,8 @@ public class Wald1 extends Wald
     private int laufen = 1;
     Pizaron pizaron;
     Mob barbar;
-    
+    int xPosition =1;
+    int yPosition =1;
 
     public Wald1()
     {    
@@ -104,7 +105,14 @@ public class Wald1 extends Wald
         removeObject(pizaron);
     }
     public void barbarWirdZuPizaron()
-    {}
+    {
+        addObject(pizaron, xPosition, yPosition);
+    }
+    public void setBarbarPosition()
+    {
+        xPosition = barbar.getX();
+        yPosition = barbar.getY();
+    }
     public int getAnzahlEmrael() {
         int emrael = getObjects(Emrael.class).size();
         return emrael;
@@ -122,7 +130,7 @@ public class Wald1 extends Wald
         addObject(textbox, 300, 350);
     }
     public void skriptBarbarBesiegt(Emrael emrael) {
-        textbox = new BarbarBesiegt(emrael);
+        textbox = new BarbarBesiegt(emrael, this);
         addObject(textbox, 300, 350);
     }
 }

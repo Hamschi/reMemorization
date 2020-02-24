@@ -2,7 +2,7 @@ import greenfoot.*;
     
     public class Elshin extends World
     {
-        private GreenfootSound backgroundMusic = new GreenfootSound("Elshin.mp3");
+        private GreenfootSound musik = new GreenfootSound("Elshin.mp3");
         Lebensleiste lebensleiste = new Lebensleiste();
         
         public Elshin()
@@ -15,5 +15,8 @@ import greenfoot.*;
         {
             return lebensleiste;
         }
-        
+        public void musikAbspielen()
+        {
+            musik.playLoop();
+        }
 }

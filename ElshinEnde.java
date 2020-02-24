@@ -4,7 +4,6 @@ public class ElshinEnde extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
     public ElshinEnde(Emrael em) {
         drawText("Yadrin", "Hey Emrael, Barbar ist \neben hier entlang gelaufen.");
         gespraechsteil = 1;
@@ -34,7 +33,7 @@ public class ElshinEnde extends Textbox
                     gespraechsteil++;
                     break;
                 case 5:
-                    drawText("Yadrin", "Besser warten wir damit, \nbis Re:Memorization 2 erscheint.");
+                    drawText("Yadrin", "Besser wir waren damit, \nbis Re:Memorization 2 erscheint.");
                     gespraechsteil++;
                     break;
                 case 6:

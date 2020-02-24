@@ -79,7 +79,7 @@ public class Banditenteil extends Elshin
                 }
             case BradleyBesiegt:
                     int anzahlMobs = getObjects(Mob.class).size();
-                    if(anzahlMobs == 0)
+                    if((anzahlMobs == 0) && emrael.phase == Emrael.Phase.BradleyBesiegt)
                     {
                         skriptBradleyBesiegt(emrael);
                         break;

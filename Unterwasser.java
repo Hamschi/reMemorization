@@ -2,7 +2,7 @@ import greenfoot.*;
 
 public class Unterwasser extends World
 {
-    private GreenfootSound backgroundMusic = new GreenfootSound("Wasser.mp3");
+    private GreenfootSound musik = new GreenfootSound("Wasser.mp3");
     Lebensleiste lebensleiste = new Lebensleiste();
 
     
@@ -16,5 +16,8 @@ public class Unterwasser extends World
     {
         return lebensleiste;
     }
- 
+    public void musikAbspielen()
+        {
+            musik.playLoop();
+        }
 }

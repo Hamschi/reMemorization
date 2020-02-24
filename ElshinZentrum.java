@@ -125,11 +125,23 @@ public class ElshinZentrum extends Elshin
                 break;
             case HinweisBanditen:
                 entferneWachen();
+                break;
+            case ElshinEnde:
+                yadrinHinzufuegen();
+                skriptElshinEnde(emrael);
+                break;
         }
     }
-    
+    public void yadrinHinzufuegen()
+    {
+        addObject(new NPC("Yadrin_hl.png"), 300, 111);
+    }
     public void skriptAnkunftElshin(Emrael emrael) {
             Textbox textbox = new AnkunftElshin(emrael);
+            addObject(textbox, 300,350);
+    }
+    public void skriptElshinEnde(Emrael emrael) {
+            Textbox textbox = new ElshinEnde(emrael);
             addObject(textbox, 300,350);
     }
     
