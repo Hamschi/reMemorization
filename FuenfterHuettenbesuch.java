@@ -4,8 +4,7 @@ public class FuenfterHuettenbesuch extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    
+
     public FuenfterHuettenbesuch(Emrael em) {
         drawText("Emrael", "Hier bin ich.");
         gespraechsteil = 1;
@@ -31,7 +30,7 @@ public class FuenfterHuettenbesuch extends Textbox
                     gespraechsteil++;
                     break;
                 case 4:
-                    drawText("Pizaron", "Denn einmal alle 10 Jahre entfesselt \ndie Kugel ihre Kraft und das passiert schon \ngleich in wenigen Minuten.");
+                    drawText("Pizaron", "Denn einmal alle 10 Jahre entfesselt \ndie Kugel ihre Kraft und das passiert schon \ngleich.");
                     gespraechsteil++;
                     break;
                 case 5:

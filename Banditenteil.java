@@ -24,7 +24,7 @@ public class Banditenteil extends Elshin
         addObject(emrael, 250, 150);
         emrael.addLebensleiste();
         
-        Hindernis kugel = new Hindernis("Kugel.png");
+        Kugel kugel = new Kugel("Kugel.png");
         addObject(kugel, 500, 196);
         for (int i = 0; i<14; i++)
         {   
@@ -59,6 +59,62 @@ public class Banditenteil extends Elshin
             p.setPortalFix(530, 320);
             addObject(p, (10), 49+(30*i));
         } 
+        
+        addObject(new Mob(300, 1000, 80, 10, 150, "Bandit_hl.png"), 252, 356);
+        addObject(new Mob(300, 1000, 80, 10, 150, "Bandit_vl.png"), 252, 44);
     }
-
+    
+    public void banditenteilSkript()
+    {
+        switch(emrael.phase)
+        {
+            case HinweisBanditen:
+                skriptHinweisBanditen(emrael);
+                break;
+            case BradleyKonflikt:
+                if((emrael.istInNaeheVonKugel() == true) && Greenfoot.isKeyDown("space"))
+                {
+                    skriptBradleyKonflikt(emrael);
+                    break;
+                }
+            case BradleyBesiegt:
+                    int anzahlMobs = getObjects(Mob.class).size();
+                    if(anzahlMobs == 0)
+                    {
+                        skriptBradleyBesiegt(emrael);
+                        break;
+                    }
+            case Gedankending:
+                if((emrael.istInNaeheVonKugel() == true) && (Greenfoot.isKeyDown("space")) && (emrael.phase == Emrael.Phase.Gedankending))
+                {
+                    skriptGedankending(emrael);
+                    break;
+                }
+        }
+    }
+    
+    public void yadrinHinzufuegen()
+    {
+        addObject(new Yadrin("Yadrin_vl.png"), 497, 142);
+    }
+    public void bradleyHinzufuegen()
+    {
+        addObject(new Mob(300, 1000, 80, 10, 250, "Bradley_rege.png"), 339, 202);
+    }
+    public void skriptHinweisBanditen(Emrael emrael) {
+            Textbox textbox = new HinweisBanditen(emrael);
+            addObject(textbox, 300,350);
+    }
+    public void skriptBradleyKonflikt(Emrael emrael) {
+            Textbox textbox = new BradleyKonflikt(emrael, this);
+            addObject(textbox, 300,350);
+    }
+    public void skriptBradleyBesiegt(Emrael emrael) {
+            Textbox textbox = new BradleyBesiegt(emrael);
+            addObject(textbox, 300,350);
+    }
+    public void skriptGedankending(Emrael emrael) {
+            Textbox textbox = new Gedankending(emrael);
+            addObject(textbox, 300,350);
+    }
 }

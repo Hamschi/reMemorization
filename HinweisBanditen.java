@@ -4,10 +4,9 @@ public class HinweisBanditen extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    
+
     public HinweisBanditen(Emrael em) {
-        drawText("Hinweis", "Die Banditen sind stark. \nSie dürfen dich nicht sehen. \nBesorge die Kugel mit -space-.");
+        drawText("Hinweis", "Die Banditen sind zu stark. \nSie dürfen dich nicht sehen. \nBesorge dir die Kugel mit -space-.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;

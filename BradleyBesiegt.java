@@ -4,8 +4,6 @@ public class BradleyBesiegt extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    
     public BradleyBesiegt(Emrael em) {
         drawText("Bradley", "Heute hattet ihr Glück, aber \nnächstes Mal werdet ihr \ngnadenlos verlieren.");
         gespraechsteil = 1;
@@ -70,6 +68,6 @@ public class BradleyBesiegt extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.Gedankending;
-        gespraechsteil = 13;
+        gespraechsteil = 12;
     }
 }

@@ -4,13 +4,14 @@ public class BarbarKonflikt extends Textbox
 {
     private int gespraechsteil;
     private Emrael emrael;
-    private Deko kraut;
-    public BarbarKonflikt(Emrael em) {
+    Wald1 wald1;
+    public BarbarKonflikt(Emrael em, Wald1 w1) {
         drawText("Emrael", "Komm heraus Pizaron!!");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
         emrael.setBewegungBlockiert(true);
+        wald1 = w1;
     }
     
     public void act() 
@@ -22,7 +23,7 @@ public class BarbarKonflikt extends Textbox
                     gespraechsteil++;
                     break;
                 case 2:
-
+                    wald1.pizaronHinzufuegen();
                     gespraechsteil++;
                     break;
                 case 3: 
@@ -34,10 +35,11 @@ public class BarbarKonflikt extends Textbox
                     gespraechsteil++;
                     break;
                 case 5: 
-                    drawText("Pizaron", "Ach, ist das so? Du bist \ndir schon im Klaren, dass ndu mich durch deine \nSünden viel stärker gemacht hast?");
+                    drawText("Pizaron", "Ach, ist das so? Du bist \ndir schon im Klaren, dass du mich durch \ndeine Sünden viel stärker gemacht hast?");
                     gespraechsteil++;
                     break;
                 case 6: 
+                    wald1.pizaronWirdZuBarbar();
                     drawText("Pizaron", "Ich sollte dir echt \ndankbar sein, dass du mich zu dieser \nMacht verholfen hast Emrael.");
                     gespraechsteil++;
                     break;

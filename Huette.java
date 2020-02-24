@@ -122,4 +122,9 @@ public class Huette extends World
             Textbox textbox = new VierterHuettenbesuch(emrael);
             addObject(textbox, 300,350);
         }
+        public void skriptFuenfterHuettenbesuch(Emrael emrael) 
+        {
+            Textbox textbox = new FuenfterHuettenbesuch(emrael);
+            addObject(textbox, 300,350);
+        }
 }

@@ -29,6 +29,7 @@ public class Emrael extends Actor
     ElshinZentrum elshinZentrum;
     Pizaron piz;
     Unterwasser unterwasser;
+    private int heilen = 1;
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
@@ -101,7 +102,7 @@ public class Emrael extends Actor
             setLocation(getX(), getY()+3);
         // Position zuruecksetzen bei einem Hindernis
         boolean istAmRand = (getY()<16 || getY()>382 || getX()<17 || getX()>583);
-        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class) || isTouching(Pizaron.class) || isTouching(Kraut.class) || isTouching(Barkeeper.class)) 
+        if (isTouching(Hindernis.class) || isTouching(NPC.class) || istAmRand || isTouching(Busch.class) || isTouching(Bewohner.class) || isTouching(Pizaron.class) || isTouching(Kraut.class) || isTouching(Kugel.class) || isTouching(Barkeeper.class)) 
         {
             setLocation(lastX, lastY);
         }
@@ -158,7 +159,14 @@ public class Emrael extends Actor
             Zimmer zimmer = (Zimmer) getWorld();
             zimmer.zimmerSkript();
         }
-
+        
+        if(getWorld() instanceof Banditenteil)
+        {
+            Banditenteil banditenteil = (Banditenteil) getWorld();
+            banditenteil.banditenteilSkript();
+        }
+        //emraelHeilt();
+        // kampfBradleyHeilen();
         //System.out.println(phase);
     }
     
@@ -191,6 +199,13 @@ public class Emrael extends Actor
             lebensleiste.heilung();
         }
     }
+    private void emraelHeilt()
+    {
+        if((Greenfoot.isKeyDown("2")) && ((this.phase ==Emrael.Phase.BarbarKonflikt) || (this.phase == Emrael.Phase.BarbarBesiegt) || (this.phase == Emrael.Phase.ElshinEnde)))
+        {
+            lebensleiste.heilung();
+        }
+    }
     public int getXNachPortal() {
        if (getX() < 60)
            return 540;
@@ -217,11 +232,34 @@ public class Emrael extends Actor
     }
     public boolean istInNaeheVonBarkeeper()
     {
-        return getObjectsInRange(70, Barkeeper.class).size() > 0;
+        return getObjectsInRange(120, Barkeeper.class).size() > 0;
     }
     public boolean istInNaeheVonBett()
     {
         return getObjectsInRange(70, Bett.class).size() > 0;
+    }
+    public boolean istInNaeheVonKugel()
+    {
+        return getObjectsInRange(70, Kugel.class).size() > 0;
+    }
+    
+    public void kampfBradleyHeilen()
+    {
+        if(this.phase == Emrael.Phase.BradleyKonflikt)
+        {
+            while(this.phase == Emrael.Phase.BradleyKonflikt)
+            {
+                if(heilen%10==0)
+                {
+                    lebensleiste.heilung();
+                    heilen++;
+                }
+                else
+                {
+                    heilen++;
+                }
+            }
+        }
     }
     
     public void wald1Skript(Wald1 wald1)
@@ -231,6 +269,17 @@ public class Emrael extends Actor
             case VorWald2Tutorial:
                 wald1.pizaronLaeuft();
                 this.phase = Emrael.Phase.Wald2Tutorial;
+                break;
+            case BarbarKonflikt:
+                wald1.skriptBarbarKonflikt(this);
+                break;
+            case BarbarBesiegt:
+                int anzahlMobs= getObjectsInRange(600, Mob.class).size();
+                if(anzahlMobs==0)
+                {
+                    wald1.skriptBarbarBesiegt(this);
+                    break;
+                }
         }
     }   
     
@@ -245,11 +294,14 @@ public class Emrael extends Actor
                 huette.skriptZweiterHuettenbesuch(this);
                 break;
             case DritterHuettenbesuch:
-                huette.skriptDritterHuettenbesuch(this); //Der Teil mit Hydreix, aber erstmal auskommentieren
-                //this.phase = Emrael.Phase.VierterHuettenbesuch;
+                huette.skriptDritterHuettenbesuch(this); 
                 break;
             case VierterHuettenbesuch:
                 huette.skriptVierterHuettenbesuch(this);
+                break;
+            case FuenfterHuettenbesuch:
+                huette.skriptFuenfterHuettenbesuch(this);
+                break;
         }
     }
     public enum Phase 

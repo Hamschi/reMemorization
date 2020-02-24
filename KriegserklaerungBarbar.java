@@ -87,6 +87,10 @@ public class KriegserklaerungBarbar extends Textbox
                     gespraechsteil++;
                     break;
                 case 18:
+                    drawText("Emrael", "Keine Sorge. Dieses mal kann \nich mich ja auch selber mit der \nTaste -2- heilen");
+                    gespraechsteil++;
+                    break;
+                case 19:
                     ende();
                 }
             }
@@ -100,6 +104,6 @@ public class KriegserklaerungBarbar extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.BarbarKonflikt;
-        gespraechsteil = 19;
+        gespraechsteil = 20;
     }
 }

@@ -6,13 +6,14 @@ public class Wald1 extends Wald
     Emrael emrael;
     Textbox textbox;
     private int laufen = 1;
+    Pizaron pizaron;
+    Mob barbar;
     
-    
+
     public Wald1()
     {    
         prepare();
     }
-    
     
     private void prepare()
     {
@@ -90,9 +91,20 @@ public class Wald1 extends Wald
                 }
                 removeObject(piz);
         }
-
     }
-
+    public void pizaronHinzufuegen()
+    {
+        pizaron = new Pizaron();
+        addObject(pizaron, 249, 219);
+    }
+    public void pizaronWirdZuBarbar()
+    {
+        Mob barbar = new Mob(300, 1000, 80, 10, 500, "Barbar.png");
+        addObject(barbar, 249, 219);
+        removeObject(pizaron);
+    }
+    public void barbarWirdZuPizaron()
+    {}
     public int getAnzahlEmrael() {
         int emrael = getObjects(Emrael.class).size();
         return emrael;
@@ -103,6 +115,14 @@ public class Wald1 extends Wald
     }
     public void skriptVorWald2Tutorial(Emrael emrael) {
         textbox = new VorWald2Tutorial(emrael);
+        addObject(textbox, 300, 350);
+    }
+    public void skriptBarbarKonflikt(Emrael emrael) {
+        textbox = new BarbarKonflikt(emrael, this);
+        addObject(textbox, 300, 350);
+    }
+    public void skriptBarbarBesiegt(Emrael emrael) {
+        textbox = new BarbarBesiegt(emrael);
         addObject(textbox, 300, 350);
     }
 }

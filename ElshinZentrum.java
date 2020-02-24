@@ -109,12 +109,22 @@ public class ElshinZentrum extends Elshin
         addObject(wache2, 586, 349);
     }
    
+    public void entferneWachen()
+    {
+        wache1.setImage("Bandit_reste.png");
+        removeObject(wache1);
+        wache2.setImage("Bandit_reste.png");
+        removeObject(wache2);
+    }
    public void elshinZentrumSkript()
     {
         switch(emrael.phase)
         {
             case AnkunftElshin:
                 skriptAnkunftElshin(emrael);
+                break;
+            case HinweisBanditen:
+                entferneWachen();
         }
     }
     
@@ -122,4 +132,6 @@ public class ElshinZentrum extends Elshin
             Textbox textbox = new AnkunftElshin(emrael);
             addObject(textbox, 300,350);
     }
+    
+   
 }
