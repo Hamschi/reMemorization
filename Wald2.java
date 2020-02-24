@@ -103,6 +103,7 @@ public class Wald2 extends Wald
                     break;
             case PizaronSollWeg:
                 pizaronLaeuft();
+                break;
         }
     }
     

@@ -52,7 +52,6 @@ public class ElshinEnde extends Textbox
     {
         loescheTextbox();
         setFertig(true);
-        emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.Zwischenphase;
         gespraechsteil = 8;
     }

@@ -5,7 +5,9 @@ public class BarbarBesiegt extends Textbox
     private int gespraechsteil;
     private Emrael emrael;
     private Deko kraut;
+    Wald1 wald1;
     public BarbarBesiegt(Emrael em, Wald1 w1) {
+        wald1 = w1;
         drawText("Barbar", "Ihr widerwertigen Menschen.");
         gespraechsteil = 1;
         setFertig(false);
@@ -26,32 +28,30 @@ public class BarbarBesiegt extends Textbox
                     gespraechsteil++;
                     break;
                 case 3:
-                    gespraechsteil++;
-                    break;
-                case 4:
                     drawText("Emrael", "Pizaron, wie geht es dir?");
                     gespraechsteil++;
                     break;
-                case 5:
+                case 4:
                     drawText("Pizaron", "Pizaron, heiße ich? \nIch kann mich an nichts \nmehr erinnern.");
                     gespraechsteil++;
                     break;
-                case 6:
+                case 5:
                     drawText("Emrael", "Du bist ein Mensch \nder den Leuten in \nder Stadt hilft, ihr \nLand in Ordnung zu bringen. ");
                     gespraechsteil++;
                     break;
-                case 7:
+                case 6:
                     drawText("Pizaron", "So ist das also. \nDann mache ich mich mal \nauf den Weg.");
                     gespraechsteil++;
                     break;
-                case 8:
+                case 7:
+                    wald1.pizaronGehtFort();
                     gespraechsteil++;
                     break;
-                case 9:
+                case 8:
                     drawText("Emrael", "Ich sollte mich \nauch mal wieder zur Stadt \nbegehen. Ich werde erwartet.");
                     gespraechsteil++;
                     break;  
-                case 10: 
+                case 9: 
                     ende();
                 }
             }
@@ -65,6 +65,6 @@ public class BarbarBesiegt extends Textbox
         setFertig(true);
         emrael.setBewegungBlockiert(false);
         emrael.phase = Emrael.Phase.ElshinEnde;
-        gespraechsteil = 11;
+        gespraechsteil = 10;
     }
 }

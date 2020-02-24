@@ -13,7 +13,7 @@ public class Emrael extends Actor
     private int leben;
     private int schnelligkeit;
     private int rüstung;
-    private boolean bewegungBlockiert;
+    public boolean bewegungBlockiert;
     public boolean willHeilen;
     private long letzterAngriffStart;
     private int mobRichtungX;
@@ -277,10 +277,10 @@ public class Emrael extends Actor
                 break;
             case BarbarBesiegt:
                 int anzahlMobs= getObjectsInRange(600, Mob.class).size();
-                //wald1.setBarbarPosition();
+                wald1.setBarbarPosition();
                 if(anzahlMobs==0)
                 {
-                    //wald1.barbarWirdZuPizaron();
+                    wald1.barbarWirdZuPizaron();
                     wald1.skriptBarbarBesiegt(this);
                     break;
                 }
@@ -306,6 +306,11 @@ public class Emrael extends Actor
             case FuenfterHuettenbesuch:
                 huette.skriptFuenfterHuettenbesuch(this);
                 break;
+            case BarbarBesiegt:
+                huette.pizaronEntfernen();
+                break;
+            case ElshinEnde:
+                huette.pizaronEntfernen();
         }
     }
     public enum Phase 

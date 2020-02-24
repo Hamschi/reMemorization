@@ -79,18 +79,18 @@ public class Huette extends World
 
             
         }
-        public void huetteSkript()
-        {
-            switch(emrael.phase)
-            {
-                    // case ZweiterHuettenbesuch:
-                        // skriptZweiterHuettenbesuch(emrael);
-                        // break; 
-            }
-        }
+
         public void pizaronHinzufuegen()
         {
             addObject(pizaron, 300, 135);
+        }
+        public void pizaronEntfernen()
+        {
+            int pizaronVorhanden = getObjects(Pizaron.class).size();
+            if(pizaronVorhanden<0)
+            {
+                removeObject(pizaron);
+            }
         }
         public void bildEinblenden()
         {

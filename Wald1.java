@@ -10,6 +10,7 @@ public class Wald1 extends Wald
     Mob barbar;
     int xPosition =1;
     int yPosition =1;
+    private GreenfootImage right = new GreenfootImage("Pizaron_rege.png");
 
     public Wald1()
     {    
@@ -100,7 +101,7 @@ public class Wald1 extends Wald
     }
     public void pizaronWirdZuBarbar()
     {
-        Mob barbar = new Mob(300, 1000, 80, 10, 500, "Barbar.png");
+        barbar = new Mob(300, 1000, 80, 10, 500, "Barbar.png");
         addObject(barbar, 249, 219);
         removeObject(pizaron);
     }
@@ -110,8 +111,22 @@ public class Wald1 extends Wald
     }
     public void setBarbarPosition()
     {
-        xPosition = barbar.getX();
-        yPosition = barbar.getY();
+        int barbarVorhanden= getObjects(Mob.class).size();
+        if(barbarVorhanden>0)
+        {
+            xPosition = barbar.getX();
+            yPosition = barbar.getY(); 
+        }
+    }
+    public void pizaronGehtFort()
+    {
+        pizaron.setImage(right);
+        while(pizaron.getX()<575)
+        {
+            pizaron.setLocation(pizaron.getX()+(2), pizaron.getY());
+            Greenfoot.delay(1);
+        }
+        removeObject(pizaron);
     }
     public int getAnzahlEmrael() {
         int emrael = getObjects(Emrael.class).size();

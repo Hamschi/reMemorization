@@ -40,8 +40,17 @@ public class Mob extends Actor
     public void act() 
     {
         // Add your action code here.
+        List<Emrael> emraels = getObjectsInRange(200, Emrael.class);
+        if(emraels.size()>0)
+        {
+            Emrael emrael = emraels.get(0);
+            if(emrael.bewegungBlockiert == false)
+            {
+                angreifen();
+            }
+        }
         zuEmraelLaufen();
-        angreifen();
+        
         angriffFortsetzen();
         maleLebenleiste();
     }
