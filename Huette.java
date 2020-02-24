@@ -16,7 +16,6 @@ public class Huette extends World
         {    
             super(600, 400, 1);
             setBackground(huetteBoden);
-            
             // emrael.phase = Emrael.Phase.ErsterHuettenbesuch;
             prepare(emrael, wald1);
         }
@@ -131,4 +130,8 @@ public class Huette extends World
         {
             musik.playLoop();
         }
+        public void musikPausieren()
+    {
+        musik.pause();
+    }
 }

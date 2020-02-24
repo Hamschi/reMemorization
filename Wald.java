@@ -8,11 +8,14 @@ public class Wald extends World
     public Wald()
     {    
         super(600, 400, 1);
-        //backgroundMusic.playLoop();
     }
     
    public void musikAbspielen()
-        {
-            musik.playLoop();
-        }
+    {
+        musik.playLoop();
+    }
+    public void musikPausieren()
+    {
+        musik.pause();
+    }
 }

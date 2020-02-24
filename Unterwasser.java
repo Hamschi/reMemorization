@@ -9,7 +9,6 @@ public class Unterwasser extends World
     public Unterwasser()
     {    
         super(600, 400, 1);
-        //backgroundMusic.playLoop();
     }
     
     public Lebensleiste getLebensleiste()
@@ -20,4 +19,8 @@ public class Unterwasser extends World
         {
             musik.playLoop();
         }
+    public void musikPausieren()
+    {
+        musik.pause();
+    }
 }

@@ -30,6 +30,7 @@ public class Emrael extends Actor
     Pizaron piz;
     Unterwasser unterwasser;
     private int heilen = 1;
+   
     
     public Emrael() {
         lebensleiste = new Lebensleiste();
@@ -222,6 +223,7 @@ public class Emrael extends Actor
        return getY();
     }
 
+    
     public boolean istInNaeheVonBusch()
     {
         return getObjectsInRange(70, Busch.class).size() > 0;

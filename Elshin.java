@@ -8,7 +8,6 @@ import greenfoot.*;
         public Elshin()
         {    
             super(600, 400, 1);
-            //backgroundMusic.playLoop();
         }
         
         public Lebensleiste getLebensleiste()
@@ -19,4 +18,8 @@ import greenfoot.*;
         {
             musik.playLoop();
         }
+        public void musikPausieren()
+    {
+        musik.pause();
+    }
 }

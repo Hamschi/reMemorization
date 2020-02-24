@@ -15,4 +15,8 @@ public class Haeuser extends World
         {
             musik.playLoop();
         }
+        public void musikPausieren()
+    {
+        musik.pause();
+    }
 }
