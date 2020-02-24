@@ -55,7 +55,5 @@ public class Lebensleiste extends Actor
         {
             leben = leben +1;
         }
-        
-            //Greenfoot.delay(13);
     }
 }

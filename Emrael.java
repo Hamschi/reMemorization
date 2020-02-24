@@ -30,6 +30,7 @@ public class Emrael extends Actor
     Pizaron piz;
     Unterwasser unterwasser;
     private int heilen = 1;
+    GreenfootSound musik = new GreenfootSound("Wald.mp3");
    
     
     public Emrael() {
@@ -37,6 +38,13 @@ public class Emrael extends Actor
         phase = Phase.Wald1Einfuehrung;
         bewegungBlockiert = true;
         letzterAngriffStart = 0;
+    }
+    
+    public void setMusik(String dateiname)
+    {
+        musik.stop();
+        musik = new GreenfootSound(dateiname);
+        musik.playLoop();
     }
     
     public void setBild(String bild) {
@@ -166,8 +174,8 @@ public class Emrael extends Actor
             Banditenteil banditenteil = (Banditenteil) getWorld();
             banditenteil.banditenteilSkript();
         }
-        //emraelHeilt();
-        // kampfBradleyHeilen();
+        emraelHeilt();
+        kampfBradleyHeilen();
         //System.out.println(phase);
     }
     
@@ -202,7 +210,7 @@ public class Emrael extends Actor
     }
     private void emraelHeilt()
     {
-        if((Greenfoot.isKeyDown("2")) && ((this.phase ==Emrael.Phase.BarbarKonflikt) || (this.phase == Emrael.Phase.BarbarBesiegt) || (this.phase == Emrael.Phase.ElshinEnde)))
+        if(Greenfoot.isKeyDown("2") && ((phase ==Emrael.Phase.BarbarKonflikt) || (phase == Emrael.Phase.BarbarBesiegt) || (phase == Emrael.Phase.ElshinEnde)))
         {
             lebensleiste.heilung();
         }
@@ -247,20 +255,13 @@ public class Emrael extends Actor
     
     public void kampfBradleyHeilen()
     {
-        if(this.phase == Emrael.Phase.BradleyKonflikt)
+        if(phase == Emrael.Phase.BradleyBesiegt)
         {
-            while(this.phase == Emrael.Phase.BradleyKonflikt)
-            {
                 if(heilen%10==0)
                 {
                     lebensleiste.heilung();
-                    heilen++;
                 }
-                else
-                {
-                    heilen++;
-                }
-            }
+                heilen++;
         }
     }
     

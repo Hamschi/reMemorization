@@ -45,7 +45,6 @@ public class Portale extends Actor
         emraelNeu.phase = emraelAlt.phase;
         if (fixesPortal) {
             emraelNeu.setLocation(xPos, yPos);
-            
         } else {
             emraelNeu.setLocation(emraelAlt.getXNachPortal(), emraelAlt.getYNachPortal());
         }
