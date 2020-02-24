@@ -60,8 +60,8 @@ public class Banditenteil extends Elshin
             addObject(p, (10), 49+(30*i));
         } 
         
-        addObject(new Mob(300, 1000, 80, 10, 150, "Bandit_hl.png"), 252, 356);
-        addObject(new Mob(300, 1000, 80, 10, 150, "Bandit_vl.png"), 252, 44);
+        addObject(new Mob(300, 1000, 80, 10, 500, "Bandit_hl.png"), 252, 356);
+        addObject(new Mob(300, 1000, 80, 10, 500, "Bandit_vl.png"), 252, 44);
     }
     
     public void banditenteilSkript()
@@ -106,7 +106,7 @@ public class Banditenteil extends Elshin
     }
     public void bradleyHinzufuegen()
     {
-        addObject(new Mob(300, 1000, 80, 10, 250, "Bradley_rege.png"), 339, 202);
+        addObject(new Mob(300, 1000, 80, 10, 600, "Bradley_rege.png"), 339, 202);
     }
     public void skriptHinweisBanditen(Emrael emrael) {
             Textbox textbox = new HinweisBanditen(emrael);

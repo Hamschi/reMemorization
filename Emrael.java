@@ -257,7 +257,7 @@ public class Emrael extends Actor
     {
         if(phase == Emrael.Phase.BradleyBesiegt)
         {
-                if(heilen%10==0)
+                if(heilen%20==0)
                 {
                     lebensleiste.heilung();
                 }

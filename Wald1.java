@@ -101,7 +101,7 @@ public class Wald1 extends Wald
     }
     public void pizaronWirdZuBarbar()
     {
-        barbar = new Mob(300, 1000, 80, 10, 500, "Barbar.png");
+        barbar = new Mob(300, 1000, 80, 10, 2000, "Barbar.png");
         addObject(barbar, 249, 219);
         removeObject(pizaron);
     }

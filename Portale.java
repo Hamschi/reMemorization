@@ -43,6 +43,7 @@ public class Portale extends Actor
         List<Emrael> emraelsTo = to.getObjects(Emrael.class);
         Emrael emraelNeu = emraelsTo.get(0);
         emraelNeu.phase = emraelAlt.phase;
+        emraelNeu.lebensleiste.leben = emraelAlt.lebensleiste.leben;
         if (fixesPortal) {
             emraelNeu.setLocation(xPos, yPos);
         } else {
