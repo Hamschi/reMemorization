@@ -88,6 +88,13 @@ public class Banditenteil extends Elshin
                 if((emrael.istInNaeheVonKugel() == true) && (Greenfoot.isKeyDown("space")) && (emrael.phase == Emrael.Phase.Gedankending))
                 {
                     skriptGedankending(emrael);
+                    emrael.phase = Emrael.Phase.KriegserklaerungBarbar;
+                    break;
+                }
+            case KriegserklaerungBarbar:
+                if(emrael.phase == Emrael.Phase.KriegserklaerungBarbar)
+                {
+                    skriptKriegserklaerungBarbar(emrael);
                     break;
                 }
         }
@@ -115,6 +122,10 @@ public class Banditenteil extends Elshin
     }
     public void skriptGedankending(Emrael emrael) {
             Textbox textbox = new Gedankending(emrael);
+            addObject(textbox, 300,350);
+    }
+    public void skriptKriegserklaerungBarbar(Emrael emrael) {
+            Textbox textbox = new KriegserklaerungBarbar(emrael);
             addObject(textbox, 300,350);
     }
 }
