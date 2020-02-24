@@ -26,7 +26,7 @@ public class HydreixBesiegt extends Textbox
                     gespraechsteil++;
                     break;
                 case 3:
-                    drawText("Emrael", "Wenn du mir damit verzeihst \n,dann tue ich das für dich.");
+                    drawText("Emrael", "Wenn du mir damit verzeihst, \ndann tue ich das für dich.");
                     gespraechsteil++;
                     break;
                 case 4:

@@ -6,7 +6,7 @@ public class WirtTreffen extends Textbox
     private Emrael emrael;
 
     public WirtTreffen(Emrael em) {
-        drawText("Wirt", "Guten Abend. Ein Zimmer \nfür eine Nacht bitte, werter \nHerr.");
+        drawText("Emrael", "Guten Abend. Ein Zimmer \nfür eine Nacht bitte, werter \nHerr.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
@@ -18,7 +18,7 @@ public class WirtTreffen extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
                 case 1:
-                    drawText("Wirt", "Oh, was führt denn Emrael, den \nBarmherzigen zu so einem einfachen \nWirtshaus wie meines?");
+                    drawText("Wirt", "Oh, was führt denn Emrael, den \nBarmherzigen zu so einem einfachen \nWirtshaus wie dem meines?");
                     gespraechsteil++;
                     break;
                 case 2:
@@ -54,7 +54,7 @@ public class WirtTreffen extends Textbox
                     gespraechsteil++;
                     break;
                 case 10:
-                    drawText("Wirt", "Bleiben Sie doch eine Nacht. Dann \nkönnen Sie sich noch mit anderen \nGästen unterhalten");
+                    drawText("Wirt", "Bleiben Sie doch eine Nacht. \nEs ist ziemlich spät geworden.");
                     gespraechsteil++;
                     break;
                 case 11:
@@ -62,7 +62,7 @@ public class WirtTreffen extends Textbox
                     gespraechsteil++;
                     break;
                 case 12:
-                    drawText("Wirt", "Das ist mir eine \nEhre. Ruhen Sie sich im Bett \nmit -space- aus.");
+                    drawText("Wirt", "Das ist mir eine Ehre. Ruhen \nSie sich im Bett mit -space- aus.");
                     gespraechsteil++;
                     break;
                 case 13:

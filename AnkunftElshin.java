@@ -7,7 +7,7 @@ public class AnkunftElshin extends Textbox
     private Deko kraut;
     
     public AnkunftElshin(Emrael em) {
-        drawText("Emrael", "Das ist also Elshin. Nicht sonderlich \nschön hier. Alles vollkommen ausgetrocknet \n... so viele Heimatlose.");
+        drawText("Emrael", "Das ist also Elshin. Nicht sonderlich \nschön hier. Alles vollkommen ausgetrocknet \n... so verlassen diese Gegend.");
         gespraechsteil = 1;
         setFertig(false);
         emrael = em;
@@ -23,11 +23,11 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 2:
-                    drawText("Bewohner", "Sie!! Sie sind doch Emrael, \n der Barmherzige, hab' ich recht?");
+                    drawText("Bewohner", "Sie!! Sie sind doch Emrael, \nder Barmherzige, hab' ich recht?");
                     gespraechsteil++;
                     break;
                 case 3:
-                    drawText("Emrael", "Der Barmherzige? Zumindest \nheiße ich Emrael.");
+                    drawText("Emrael", "Der Barmherzige? Zumindest heiße \nich Emrael.");
                     gespraechsteil++;
                     break;
                 case 4:
@@ -67,7 +67,7 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 13:
-                    drawText("Emrael", "Glauben Sie mir, aktuell \nist für mich nichts wichtiger, \nals euch zu helfen, nachdem \nich die Geschichte gehört \nhabe.");
+                    drawText("Emrael", "Glauben Sie mir, aktuell ist \nfür mich nichts wichtiger, als euch \nzu helfen, nachdem ich die \nGeschichte gehört habe.");
                     gespraechsteil++;
                     break;
                 case 14:
@@ -79,7 +79,7 @@ public class AnkunftElshin extends Textbox
                     gespraechsteil++;
                     break;
                 case 16:
-                    drawText("Bewohner", "Sie können in der Taverne mal \nden Barkeeper ansprechen, im Dorf wird ganz \ngerne mal getratscht.");
+                    drawText("Bewohner", "Sie können in der Taverne mal den \nBarkeeper mit -space- ansprechen, im Dorf wurde am \nAnfang gerne mal getratscht.");
                     gespraechsteil++;
                     break;
                 case 17:

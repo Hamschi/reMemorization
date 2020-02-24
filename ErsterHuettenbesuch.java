@@ -98,7 +98,7 @@ import greenfoot.*;
                 gespraechsteil++;
                 break;
             case 19:
-                drawText("Pizaron", "ich würde vorschlagen, wir testen deine \nFähigkeiten erstmal bei ein paar Waldlebewesen");
+                drawText("Pizaron", "Ich würde vorschlagen, wir testen deine \nFähigkeiten erstmal bei ein paar Waldlebewesen.");
                 gespraechsteil++;
                 break;
             case 20:

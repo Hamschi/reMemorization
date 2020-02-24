@@ -19,7 +19,7 @@ public class BradleyBesiegt extends Textbox
                 case 1:
                 
                 case 2:
-                    drawText("Yadrin", "Was? Die Kugel sollte sich \ndoch erst in wenigen Minuten entfalten?.");
+                    drawText("Yadrin", "Was? Die Kugel sollte sich \ndoch erst in wenigen Minuten entfalten?");
                     gespraechsteil++;
                     break;
                 case 3:
@@ -31,7 +31,7 @@ public class BradleyBesiegt extends Textbox
                     gespraechsteil++;
                     break;
                 case 5:
-                    drawText("Emrael", "Der Orden des Lichts? Ist das \nder Ort, wo ich herkomme?.");
+                    drawText("Emrael", "Der Orden des Lichts? Ist das \nder Ort, wo ich herkomme?");
                     gespraechsteil++;
                     break;
                 case 6:

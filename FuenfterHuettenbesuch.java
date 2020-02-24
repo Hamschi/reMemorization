@@ -22,11 +22,11 @@ public class FuenfterHuettenbesuch extends Textbox
                     gespraechsteil++;
                     break;
                 case 2:
-                    drawText("Pizaron", "Banditen. Dieser Banditenkönig Bradley \nund seine Bande habe es \ngeschafft, mir etwas wichtiges zu stehlen.");
+                    drawText("Pizaron", "Banditen. Dieser Banditenkönig Bradley \nund seine Bande haben es \ngeschafft, mir etwas wichtiges zu stehlen.");
                     gespraechsteil++;
                     break;
                 case 3:
-                    drawText("Pizaron", "Die Kugel des absoluten Scheins. \nWenn sie in die falschen Hände gerät, \nkann es schlimme Folgen mit sich bringen.");
+                    drawText("Pizaron", "Die Kugel des magischen Scheins. \nWenn sie in die falschen Hände gerät, \nkann es schlimme Folgen mit sich bringen.");
                     gespraechsteil++;
                     break;
                 case 4:

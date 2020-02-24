@@ -51,7 +51,7 @@ public class KriegserklaerungBarbar extends Textbox
                     gespraechsteil++;
                     break;
                 case 9:
-                    drawText("Emrael", "Er hat mich dazu gebracht, \nLebewesen zu töten und wollte \njetzt, dass ich ihm noch die \nKugel stehle.");
+                    drawText("Emrael", "Er hat mich dazu gebracht, \nLebewesen zu töten und wollte jetzt, \ndass ich ihm noch die Kugel stehle.");
                     gespraechsteil++;
                     break;
                 case 10:
@@ -59,7 +59,7 @@ public class KriegserklaerungBarbar extends Textbox
                     gespraechsteil++;
                     break;
                 case 11:
-                    drawText("Yadrin", "Ich werde mit dir kommen. \nEr hat dich schon einmal \nbesiegt und ich will dich kein \nweiteres Mal verlieren.");
+                    drawText("Yadrin", "Ich werde mit dir kommen. Er \nhat dich schon einmal besiegt und \nich will dich kein weiteres Mal verlieren.");
                     gespraechsteil++;
                     break;
                 case 12:
@@ -71,7 +71,7 @@ public class KriegserklaerungBarbar extends Textbox
                     gespraechsteil++;
                     break;
                 case 14:
-                    drawText("Emrael", "Ich habe schon einmal gegen ihn \nverloren, aber das passiert \nicht nochmal. Ich bin \njetzt auch stärker.");
+                    drawText("Emrael", "Ich habe schon einmal gegen ihn \nverloren, aber das passiert nicht \nnochmal. Ich bin jetzt auch stärker.");
                     gespraechsteil++;
                     break;
                 case 15:

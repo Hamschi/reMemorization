@@ -39,11 +39,11 @@ public class VierterHuettenbesuch extends Textbox
                     gespraechsteil++;
                     break;
                 case 6:
-                    drawText("Emrael", "Und ich werde nicht Gewalt anwenden \nmüssen?");
+                    drawText("Emrael", "Und ich werde keine Gewalt anwenden \nmüssen?");
                     gespraechsteil++;
                     break;
                 case 7:
-                    drawText("Pizaron", "Wenn du die Sache gut tust \n, dann nicht. Mehr Informationen gebe \nich dir morgen früh.");
+                    drawText("Pizaron", "Wenn du die Sache gut tust, \ndann nicht. Mehr Informationen gebe \nich dir morgen früh.");
                     gespraechsteil++;
                     break;
                 case 8:

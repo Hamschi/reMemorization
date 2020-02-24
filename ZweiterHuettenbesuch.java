@@ -21,7 +21,7 @@ public class ZweiterHuettenbesuch extends Textbox
         if(Greenfoot.isKeyDown("space")) {
             switch (gespraechsteil) {
             case 1:
-                drawText("Pizaron", "Für meinen neuen Trank benötige \nich noch -Bitterkraut-.");
+                drawText("Pizaron", "Für meinen neuen Trank benötige \nich noch -Sanftkraut-.");
                 huette.bildEinblenden();
                 gespraechsteil++;
                 break;

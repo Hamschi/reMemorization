@@ -54,7 +54,7 @@ public class BradleyKonflikt extends Textbox
                     gespraechsteil++;
                     break;
                 case 9:
-                    drawText("Yadrin", "Was? Das heißt, du erinnerst \ndich nicht an deinen besten Freund Yadrin?.");
+                    drawText("Yadrin", "Was? Das heißt, du erinnerst dich \nnicht an deinen besten Freund Yadrin?.");
                     gespraechsteil++;
                     break;
                 case 10:
@@ -62,11 +62,11 @@ public class BradleyKonflikt extends Textbox
                     gespraechsteil++;
                     break;
                 case 11:
-                    drawText("Yadrin", "Kein Problem. Vielleicht hilft dir \nein Kampf gegen diese Banditen \nauf die Sprünge. haha");
+                    drawText("Yadrin", "Kein Problem. Vielleicht hilft dir \nein Kampf gegen diese Banditen \nauf die Sprünge haha");
                     gespraechsteil++;
                     break;
                 case 12:
-                    drawText("Bradley", "Gerne doch, wenn ihr unbedingt sterben wollt, nur zu.");
+                    drawText("Bradley", "Gerne doch, wenn ihr unbedingt sterben \nwollt, nur zu.");
                     gespraechsteil++;
                     break;
                 case 13:

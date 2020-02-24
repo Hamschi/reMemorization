@@ -45,7 +45,7 @@ public class DritterHuettenbesuch extends Textbox
                     gespraechsteil++;
                     break;
                 case 8:
-                    drawText("Pizaron", "Hydreix bewacht diesen Ort, er \nist ein echt coller Typ.");
+                    drawText("Pizaron", "Hydreix bewacht diesen Ort, er \nist ein echt cooler Typ.");
                     gespraechsteil++;
                     break;
                 case 9:

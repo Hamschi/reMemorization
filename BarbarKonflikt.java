@@ -31,7 +31,7 @@ public class BarbarKonflikt extends Textbox
                     gespraechsteil++;
                     break;
                 case 4: 
-                    drawText("Emrael", "Nicht nur das, meine Kräfte sind \nauch wieder da. Dieses Mal werde \nich dich zu Fall \nbringen.");
+                    drawText("Emrael", "Nicht nur das, meine Kräfte sind \nauch wieder da. Dieses Mal werde \nich dich zu Fall bringen.");
                     gespraechsteil++;
                     break;
                 case 5: 
@@ -40,7 +40,7 @@ public class BarbarKonflikt extends Textbox
                     break;
                 case 6: 
                     wald1.pizaronWirdZuBarbar();
-                    drawText("Pizaron", "Ich sollte dir echt \ndankbar sein, dass du mich zu dieser \nMacht verholfen hast Emrael.");
+                    drawText("Pizaron", "Ich sollte dir echt \ndankbar sein, dass du mir zu dieser \nMacht verholfen hast Emrael.");
                     gespraechsteil++;
                     break;
                 case 7: 
